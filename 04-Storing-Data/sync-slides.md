@@ -22,8 +22,8 @@ Breakout at about 5 after the hour:
 #
 ## Overview
 - Go over Assignment 3 results
-- PRs from the command line
 - Intro Docker
+- PRs from the command line
 
 
 # 
@@ -48,29 +48,6 @@ Breakout at about 5 after the hour:
 - The following few slides review the flow of when things are due and what readings/videos go with which week.
 :::
 
-## Between Class 3 & Class 4
-
-- async material in Week 3 syllabus
-- Readings in Week 3 syllabus
-- Assignment 03
-- Final Assignment 02 was due last week
-
-
-## Class 4 (i.e., today)
-
-- Groupwork & present Assignment 03
-- Activities Week 3 async topic
-- Review Query Project (spans Assignments 2-4)
-- Activities for Assignment 04 (writing up project questions and answers)
-
-## Between Class 4 & Class 5
-
-- async material in Week 4 syllabus (RDBs & NoSQL)
-- Readings in Week 4 syllabus
-- Assignment 04
-- Final Assignment 03 due this week
-
-
 ## Where are we in the Query Project?
 
 - Assignment 3: Answer your Project Questions
@@ -79,59 +56,6 @@ Breakout at about 5 after the hour:
 ::: notes
 use bigquery or bq cli for assignment 3
 :::
-
-
-# 
-
-## Creating a GitHub Pull-Request(PR)
-- From the command-line
-
-## Clone a repo from GitHub
-
-```
-git clone \
-  https://github.com/mids-w205-martin-mims/assignment-02-htmartin
-```
-
-    cd assignment-02-htmartin
-
-## Create a branch to work from
-
-    git branch my-cool-feature
-
-## Switch to that branch
-
-    git checkout my-cool-feature
-
-## Make changes to code
-
-    vi README.md
-
-::: notes
-- M: no vi in container? droplets?
-:::
-
-## Commit those changes
-
-    git commit -m'updated README' README.md
-
-## Push those up to GitHub
-
-    git push origin my-cool-feature
-
-
-## Note  
-- If this is the first time you've pushed to the remote `my-cool-feature` branch, then this command will automatically _create_ that branch in your github repo and then push your changes to it.
-
-## Pull Request from the GitHub Web-UI
-
-- Select "New Pull-Request"
-
-- Select branches so that you are "Requesting to merge changes from `my-cool-feature` branch _into_ `master`."
-
-- Select your instructor(s) to review.
-
-- Submit
 
 
 #
@@ -209,6 +133,59 @@ in one go (edited)
 
 then they're only "in" one place
 :::
+
+
+# 
+
+## Creating a GitHub Pull-Request(PR)
+- From the command-line
+
+## Clone a repo from GitHub
+
+```
+git clone \
+  https://github.com/mids-w205-martin-mims/assignment-02-htmartin
+```
+
+    cd assignment-02-htmartin
+
+## Create a branch to work from
+
+    git branch my-cool-feature
+
+## Switch to that branch
+
+    git checkout my-cool-feature
+
+## Make changes to code
+
+    vi README.md
+
+::: notes
+- M: no vi in container? droplets?
+:::
+
+## Commit those changes
+
+    git commit -m'updated README' README.md
+
+## Push those up to GitHub
+
+    git push origin my-cool-feature
+
+
+## Note  
+- If this is the first time you've pushed to the remote `my-cool-feature` branch, then this command will automatically _create_ that branch in your github repo and then push your changes to it.
+
+## Pull Request from the GitHub Web-UI
+
+- Select "New Pull-Request"
+
+- Select branches so that you are "Requesting to merge changes from `my-cool-feature` branch _into_ `master`."
+
+- Select your instructor(s) to review.
+
+- Submit
 
 
 #
