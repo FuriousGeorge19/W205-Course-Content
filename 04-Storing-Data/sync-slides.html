@@ -52,8 +52,8 @@
 <h2>Overview</h2>
 <ul>
 <li>Go over Assignment 3 results</li>
-<li>PRs from the command line</li>
 <li>Intro Docker</li>
+<li>PRs from the command line</li>
 </ul>
 </section>
 </section>
@@ -88,33 +88,6 @@
 </ul>
 </aside>
 </section>
-<section id="between-class-3-class-4" class="level2">
-<h2>Between Class 3 &amp; Class 4</h2>
-<ul>
-<li>async material in Week 3 syllabus</li>
-<li>Readings in Week 3 syllabus</li>
-<li>Assignment 03</li>
-<li>Final Assignment 02 was due last week</li>
-</ul>
-</section>
-<section id="class-4-i.e.-today" class="level2">
-<h2>Class 4 (i.e., today)</h2>
-<ul>
-<li>Groupwork &amp; present Assignment 03</li>
-<li>Activities Week 3 async topic</li>
-<li>Review Query Project (spans Assignments 2-4)</li>
-<li>Activities for Assignment 04 (writing up project questions and answers)</li>
-</ul>
-</section>
-<section id="between-class-4-class-5" class="level2">
-<h2>Between Class 4 &amp; Class 5</h2>
-<ul>
-<li>async material in Week 4 syllabus (RDBs &amp; NoSQL)</li>
-<li>Readings in Week 4 syllabus</li>
-<li>Assignment 04</li>
-<li>Final Assignment 03 due this week</li>
-</ul>
-</section>
 <section id="where-are-we-in-the-query-project" class="level2">
 <h2>Where are we in the Query Project?</h2>
 <ul>
@@ -127,61 +100,6 @@
 </section>
 </section>
 <section id="section-3" class="slide level1">
-<h1></h1>
-<section id="creating-a-github-pull-requestpr" class="level2">
-<h2>Creating a GitHub Pull-Request(PR)</h2>
-<ul>
-<li>From the command-line</li>
-</ul>
-</section>
-<section id="clone-a-repo-from-github" class="level2">
-<h2>Clone a repo from GitHub</h2>
-<pre><code>git clone \
-  https://github.com/mids-w205-martin-mims/assignment-02-htmartin</code></pre>
-<pre><code>cd assignment-02-htmartin</code></pre>
-</section>
-<section id="create-a-branch-to-work-from" class="level2">
-<h2>Create a branch to work from</h2>
-<pre><code>git branch my-cool-feature</code></pre>
-</section>
-<section id="switch-to-that-branch" class="level2">
-<h2>Switch to that branch</h2>
-<pre><code>git checkout my-cool-feature</code></pre>
-</section>
-<section id="make-changes-to-code" class="level2">
-<h2>Make changes to code</h2>
-<pre><code>vi README.md</code></pre>
-<aside class="notes">
-<ul>
-<li>M: no vi in container? droplets?</li>
-</ul>
-</aside>
-</section>
-<section id="commit-those-changes" class="level2">
-<h2>Commit those changes</h2>
-<pre><code>git commit -m&#39;updated README&#39; README.md</code></pre>
-</section>
-<section id="push-those-up-to-github" class="level2">
-<h2>Push those up to GitHub</h2>
-<pre><code>git push origin my-cool-feature</code></pre>
-</section>
-<section id="note" class="level2">
-<h2>Note</h2>
-<ul>
-<li>If this is the first time you’ve pushed to the remote <code>my-cool-feature</code> branch, then this command will automatically <em>create</em> that branch in your github repo and then push your changes to it.</li>
-</ul>
-</section>
-<section id="pull-request-from-the-github-web-ui" class="level2">
-<h2>Pull Request from the GitHub Web-UI</h2>
-<ul>
-<li><p>Select “New Pull-Request”</p></li>
-<li><p>Select branches so that you are “Requesting to merge changes from <code>my-cool-feature</code> branch <em>into</em> <code>master</code>.”</p></li>
-<li><p>Select your instructor(s) to review.</p></li>
-<li><p>Submit</p></li>
-</ul>
-</section>
-</section>
-<section id="section-4" class="slide level1">
 <h1></h1>
 <section id="docker-where-am-i" class="level2">
 <h2>Docker: Where am I?</h2>
@@ -239,7 +157,7 @@
 </aside>
 </section>
 </section>
-<section id="section-5" class="slide level1">
+<section id="section-4" class="slide level1">
 <h1></h1>
 <section id="idiomatic-docker" class="level2">
 <h2>Idiomatic docker</h2>
@@ -254,6 +172,61 @@
 <p>I hope some of this simplifies when we start using the containers to <em>just</em> run a command… i.e., <code>docker run [&lt;opts&gt;] &lt;image&gt; [&lt;command&gt;]</code> … e.g., ME: check this query for backticks from bq cli sql <code>docker run -it --rm midsw205/base bq query --use_legacy_sql=false 'select count(*) from mytable'</code> in one go (edited)</p>
 <p>then they’re only “in” one place</p>
 </aside>
+</section>
+</section>
+<section id="section-5" class="slide level1">
+<h1></h1>
+<section id="creating-a-github-pull-requestpr" class="level2">
+<h2>Creating a GitHub Pull-Request(PR)</h2>
+<ul>
+<li>From the command-line</li>
+</ul>
+</section>
+<section id="clone-a-repo-from-github" class="level2">
+<h2>Clone a repo from GitHub</h2>
+<pre><code>git clone \
+  https://github.com/mids-w205-martin-mims/assignment-02-htmartin</code></pre>
+<pre><code>cd assignment-02-htmartin</code></pre>
+</section>
+<section id="create-a-branch-to-work-from" class="level2">
+<h2>Create a branch to work from</h2>
+<pre><code>git branch my-cool-feature</code></pre>
+</section>
+<section id="switch-to-that-branch" class="level2">
+<h2>Switch to that branch</h2>
+<pre><code>git checkout my-cool-feature</code></pre>
+</section>
+<section id="make-changes-to-code" class="level2">
+<h2>Make changes to code</h2>
+<pre><code>vi README.md</code></pre>
+<aside class="notes">
+<ul>
+<li>M: no vi in container? droplets?</li>
+</ul>
+</aside>
+</section>
+<section id="commit-those-changes" class="level2">
+<h2>Commit those changes</h2>
+<pre><code>git commit -m&#39;updated README&#39; README.md</code></pre>
+</section>
+<section id="push-those-up-to-github" class="level2">
+<h2>Push those up to GitHub</h2>
+<pre><code>git push origin my-cool-feature</code></pre>
+</section>
+<section id="note" class="level2">
+<h2>Note</h2>
+<ul>
+<li>If this is the first time you’ve pushed to the remote <code>my-cool-feature</code> branch, then this command will automatically <em>create</em> that branch in your github repo and then push your changes to it.</li>
+</ul>
+</section>
+<section id="pull-request-from-the-github-web-ui" class="level2">
+<h2>Pull Request from the GitHub Web-UI</h2>
+<ul>
+<li><p>Select “New Pull-Request”</p></li>
+<li><p>Select branches so that you are “Requesting to merge changes from <code>my-cool-feature</code> branch <em>into</em> <code>master</code>.”</p></li>
+<li><p>Select your instructor(s) to review.</p></li>
+<li><p>Submit</p></li>
+</ul>
 </section>
 </section>
 <section id="section-6" class="slide level1">
