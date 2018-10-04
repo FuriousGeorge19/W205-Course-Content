@@ -299,17 +299,17 @@ the live classroom for specific weeks in the term.
 
 #### Asynchronous Content
 
-    5.1 Introduction to the Cloud
-      5.1.1 - Virtualization and Containers [screencast]
-      5.1.2 - Infrastructure Encapsulation and Isolation [screencast]
-      5.1.3 - Composing Containers [screencast]
-      5.1.4 - Failure in Distributed Systems [lecture]
+    5.1 Hadoop
+      5.1.1 - Hadoop [lecture]
+      5.1.2 - Hadoop Walkthrough [screencast]
+      5.1.3 - The Hadoop Ecosystem [screencast]
+      5.1.4 - Using Hadoop [screencast]
 
-    5.2 Hadoop
-      5.2.1 - Hadoop [lecture]
-      5.2.2 - Hadoop Walkthrough [screencast]
-      5.2.3 - The Hadoop Ecosystem [screencast]
-      5.2.4 - Using Hadoop [screencast]
+    5.2 Introduction to the Cloud
+      5.2.1 - Virtualization and Containers [screencast]
+      5.2.2 - Infrastructure Encapsulation and Isolation [screencast]
+      5.2.3 - Composing Containers [screencast]
+      5.2.4 - Failure in Distributed Systems [lecture]
     
 #### Due Friday after Week 5 Synchronous Session: 
 - Assignment 04 - Querying data from BigQuery - finishing up  (Query Project)
@@ -357,7 +357,7 @@ the live classroom for specific weeks in the term.
 
 
 #### Due Friday after Week 6 Synchronous Session: 
-- Assignment 05 - Employ notebooks to synthesize query project results (Query Project)
+- Assignment 05 - Use a python redis client library to connect to the redis server on a cluster.
 
 
 ## Week 07 - Sourcing Data
