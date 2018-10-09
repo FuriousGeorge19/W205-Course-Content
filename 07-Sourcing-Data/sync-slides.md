@@ -315,7 +315,7 @@ docker-compose down
 ## Pull data
 
 ```
-curl -L -o github-example-large.json https://goo.gl/2Z2fPw
+curl -L -o github-example-large.json https://goo.gl/Y4MD58
 ```
 
 ::: notes
