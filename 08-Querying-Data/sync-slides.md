@@ -132,7 +132,7 @@ docker-compose exec kafka kafka-topics --create --topic players --partitions 1 -
 - In `~/w205/`
 
 ```
-curl -L -o players.json https://goo.gl/d8U3Yw
+curl -L -o players.json https://goo.gl/vsuCpZ
 ```
 
 ::: notes
@@ -400,7 +400,7 @@ docker-compose exec kafka kafka-topics --create --topic commits --partitions 1 -
 
 ## Download the dataset for github commits
 ```
-curl -L -o github-example-large.json https://goo.gl/2Z2fPw
+curl -L -o github-example-large.json https://goo.gl/Y4MD58
 ```
 
 ## Publish some stuff to kafka
