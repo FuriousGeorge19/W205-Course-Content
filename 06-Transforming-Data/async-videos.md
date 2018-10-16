@@ -57,7 +57,7 @@ direct links:
 direct links:
 [video](https://ucb-mids.s3.amazonaws.com/prod/output_video_general/f18a2a0f0309f48bcc61a9101880bd62/mp4_med.mp4),
 [slides](https://s3.amazonaws.com/ucb-mids/prod/UCB-MIDS_0019/Slides/Unit+6/6.2.1-ETL-You-Dont-Always-Get-What-You-Want.pdf)
-
+tags:core
 
 #
 ## 6.3 Hadoop ETL
