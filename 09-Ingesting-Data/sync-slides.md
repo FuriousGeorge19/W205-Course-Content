@@ -264,9 +264,9 @@ def purchase_sword():
 :::
 
 ##
-- Save this as `~/w205/flask-with-kafka/game_api.py` and run it via
+- Save this as `~/w205/flask-with-kafka/basic_game_api.py` and run it via
 ```
-docker-compose exec mids env FLASK_APP=/w205/flask-with-kafka/game_api.py flask run
+docker-compose exec mids env FLASK_APP=/w205/flask-with-kafka/basic_game_api.py flask run
 ```
 
 ::: notes
