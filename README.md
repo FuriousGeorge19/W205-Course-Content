@@ -1,5 +1,5 @@
 # MIDS w205 - Fundamentals of Data Engineering 
-### Spring 2018
+### Spring 2019
 
 ## Course Description
 
