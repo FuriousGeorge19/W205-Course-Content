@@ -1,5 +1,7 @@
-# MIDS w205 - Fundamentals of Data Engineering 
-### Spring 2019
+# MIDS w205 - Fundamentals of Data Engineering
+
+Spring 2019
+
 
 ## Course Description
 
@@ -129,6 +131,25 @@ Tutorial materials that focus on technical skills associated with data
 engineering technologies, tools, and platforms. These tutorials also provide a
 practical foundation for the discussions and activities that will take place in
 the live classroom for specific weeks in the term.
+
+-   [Introduction](#introduction)
+    -   [Week 01 - Introduction](#week-01---introduction)
+    -   [Week 02 - Working with Data](#week-02---working-with-data)
+    -   [Week 03 - Welcome to the Queryside](#week-03---welcome-to-the-queryside)
+-   [The Basics](#the-basics)
+    -   [Week 04 - Storing Data](#week-04---storing-data)
+    -   [Week 05 - Storing Data II](#week-05---storing-data-ii)
+    -   [Week 06 - Transforming Data](#week-06---transforming-data)
+    -   [Week 07 - Sourcing Data](#week-07---sourcing-data)
+    -   [Week 08 - Querying Data](#week-08---querying-data)
+-   [Streaming](#streaming)
+    -   [Week 09 - Ingesting Data](#week-09---ingesting-data)
+    -   [Week 10 - Transforming Streaming Data](#week-10---transforming-streaming-data)
+    -   [Week 11 - Storing Data III](#week-11---storing-data-iii)
+    -   [Week 12 - Querying Data II](#week-12---querying-data-ii)
+-   [Putting it All Together](#putting-it-all-together)
+    -   [Week 13 - Understanding Data](#week-13---understanding-data)
+    -   [Week 14 - Patterns for Data Pipelines](#week-14---patterns-for-data-pipelines)
 
 # Introduction
 
