@@ -316,34 +316,20 @@ blob/master/01-Introduction/async-videos.md
 This section is a walk through of how we will iterate through assignments.
 :::
 
-## Class 1
-
-- Preview, discussion, walkthrough set up for github for Assignment 1
 
 ## Between Class 1 & Class 2
 
 - async material for Week 1
 - Readings for Week 1
-- Turn in Assignment 01
 
-## Class 2
 
-- Groups share Assignment 01
-- Preview Query Project
-- Preview, discussion, SQL query activities to prepare for Assignment 2
-- Can revise Assignment 01 & turn in morning after Class 2
 
 ## Between Class 2 & Class 3
 
 - async material for Week 2
 - Readings for Week 2
-- Turn in Assignment 02
 
-## Class 3
 
-- Groups share Assignment 02
-- Preview, discussion, do google cloud platform setup and sql statements for Assignment 03
-- Can revise Assignment 02 & turn in morning after Class 3
 
 
 #
@@ -416,9 +402,13 @@ bonuses as above
 
 ## Levels of Expertise
 ::: notes
-If you're brand new to something, you'll get it taken care of. If you've nailed it, get creative
-talk about survey results?
+- If you're brand new to something, you'll get it taken care of. 
+- If you've nailed it, get creative
 :::
+
+
+##Async
+-   To get ready for project 1, videos - how events are generated
 
 
 #
