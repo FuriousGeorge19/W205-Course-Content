@@ -25,8 +25,6 @@ author: Week 02 - sync session
 we defer cli-support for this until next week
 :::
 
-## Due tomorrow morning
-
 
 # 
 ## Some things about this class
