@@ -149,6 +149,9 @@
 <li>What are your recommendations for offers (justify based on your findings)?</li>
 </ul></li>
 </ul>
+<aside class="notes">
+<p>You will not answer these questions this week just answer the questions assigned for this week</p>
+</aside>
 </section>
 </section>
 <section id="section-5" class="slide level1">
@@ -166,7 +169,7 @@
 </section>
 <section id="working-with-bq-gui" class="level2">
 <h2>Working with BQ gui</h2>
-<p><a href="https://bigquery.cloud.google.com/table/bigquery-public-data:san_francisco.bikeshare_status" class="uri">https://bigquery.cloud.google.com/table/bigquery-public-data:san_francisco.bikeshare_status</a></p>
+<p><a href="https://bigquery.cloud.google.com/table/bigquery-public-data:san_francisco.bikeshare_stations" class="uri">https://bigquery.cloud.google.com/table/bigquery-public-data:san_francisco.bikeshare_stations</a></p>
 </section>
 <section id="tutorial" class="level2">
 <h2>Tutorial</h2>
@@ -187,7 +190,7 @@ FROM Customers;</code></pre>
 FROM Customers</code></pre>
 <aside class="notes">
 <ul>
-<li>Nearly all other sql implementations (and what students will see in the tutorial), end statements with a <code>;</code></li>
+<li>Nearly all other sql implementations (and what you will see in the tutorial), end statements with a <code>;</code></li>
 <li>BQ doesn’t</li>
 <li>btw, the CAPITALIZATION isn’t necessary :)</li>
 </ul>
@@ -206,22 +209,6 @@ FROM `bigquery-public-data.san_francisco.bikeshare_trips`</code></pre>
 <li>Google was going to create their own sql that worked different :)</li>
 <li>It’s silly, but the way the table reference part, the “FROM” part, is written is different.</li>
 <li>So, now there’s the <code>#standardSQL</code> flag</li>
-</ul>
-</aside>
-</section>
-<section id="the-big-difference" class="level2">
-<h2>The Big Difference</h2>
-<pre><code>SELECT distinct(bikes_available) 
-FROM [bigquery-public-data:san_francisco.bikeshare_status]</code></pre>
-<p>NO</p>
-<pre><code>#standardSQL
-SELECT distinct(bikes_available) 
-FROM `bigquery-public-data.san_francisco.bikeshare_status`</code></pre>
-<p>YES</p>
-<aside class="notes">
-<ul>
-<li>It’s in doing things with distinct that I’ve noticed the biggest differences from regular (aka “standard” SQL)</li>
-<li>You get: Error: syntax error at: 1.1 - 1.42. SELECT DISTINCT is currently not supported. Please use GROUP BY instead to get the same effect.</li>
 </ul>
 </aside>
 </section>
@@ -332,73 +319,11 @@ WHERE station_id = 90</code></pre>
 <p>Stuff to explore:</p>
 <ul>
 <li>each station “has” different unique numbers of bikes [probably b/c e.g., docks are added to stations, etc, etc, etc]</li>
+<li><p>if you create a view, use these queries:</p>
+<p>#standardSQL SELECT distinct (station_id), total_bikes FROM <code>ambient-cubist-185918.bike_trips_data.total_bikes</code></p>
+<p>#standardSQL SELECT distinct station_id, total_bikes FROM <code>ambient-cubist-185918.bike_trips_data.total_bikes</code> WHERE station_id = 22</p></li>
 </ul>
-<p><strong>Next slides will help unpack what they find here</strong></p>
-</aside>
-</section>
-<section id="whats-up-with-that" class="level2">
-<h2>What’s up with that?</h2>
-<aside class="notes">
-<p>Getitng into queries to help figure out the issue from last slide</p>
-</aside>
-</section>
-<section id="section-13" class="level2">
-<h2></h2>
-<pre><code>#standardSQL
-SELECT station_id, docks_available, bikes_available, time, 
-(docks_available + bikes_available) as total_bikes
-FROM `bigquery-public-data.san_francisco.bikeshare_status`
-WHERE station_id = 90
-ORDER BY total_bikes</code></pre>
-<aside class="notes">
-<p>The point:</p>
-<ul>
-<li>query returns 8916 results</li>
-<li>but if ordered by <code>total_bikes</code>, can click “First” and “Last” to see what the values are</li>
-</ul>
-</aside>
-</section>
-<section id="get-a-table-with-total_bikes-in-it" class="level2">
-<h2>Get a table with <code>total_bikes</code> in it</h2>
-<aside class="notes">
-<p>“Ok, so we don’t want to go clicking through 8900 results to figure out what the unique values for <code>total_bikes</code> for a station are.”</p>
-<ul>
-<li>On this one, just show it</li>
-</ul>
-</aside>
-</section>
-<section id="section-14" class="level2">
-<h2></h2>
-<pre><code>#standardSQL
-SELECT station_id, docks_available, bikes_available, time, 
-(docks_available + bikes_available) as total_bikes
-FROM `bigquery-public-data.san_francisco.bikeshare_status`</code></pre>
-<aside class="notes">
-<ul>
-<li>This is the query to create the <code>total_bikes</code> table (which is totally a view, but BQ is weird about views, something about legacy sql vs standard sql)</li>
-<li>Do “Save Table”</li>
-<li>Window will pop up, need to have added a dataset to your project earlier, then enter dataset name and add a name for the table.</li>
-<li>I’m calling it <code>total_bikes</code></li>
-</ul>
-</aside>
-</section>
-<section id="section-15" class="level2">
-<h2></h2>
-<pre><code>#standardSQL
-SELECT distinct (station_id), total_bikes
- FROM `ambient-cubist-185918.bike_trips_data.total_bikes`</code></pre>
-<aside class="notes">
 <p>This shows that you get multiple entries for each <code>station_id</code> b/c diff values of total bikes</p>
-</aside>
-</section>
-<section id="section-16" class="level2">
-<h2></h2>
-<pre><code>#standardSQL
-SELECT distinct station_id, total_bikes
-FROM `ambient-cubist-185918.bike_trips_data.total_bikes`
-WHERE station_id = 22</code></pre>
-<aside class="notes">
-<p>This lets you explore each station’s total number of bikes</p>
 </aside>
 </section>
 <section id="independent-queries" class="level2">
@@ -409,18 +334,18 @@ WHERE station_id = 22</code></pre>
 </aside>
 </section>
 </section>
-<section id="section-17" class="slide level1">
+<section id="section-13" class="slide level1">
 <h1></h1>
 <section id="secureshell-ssh" class="level2">
 <h2>SecureShell (SSH)</h2>
 </section>
 </section>
-<section id="section-18" class="slide level1">
+<section id="section-14" class="slide level1">
 <h1></h1>
 <section id="remote-terminal-connections" class="level2">
 <h2>remote terminal connections</h2>
 </section>
-<section id="section-19" class="level2">
+<section id="section-15" class="level2">
 <h2></h2>
 <pre><code>ssh science@xxx.xxx.xxx.xxx</code></pre>
 <aside class="notes">
@@ -428,12 +353,12 @@ WHERE station_id = 22</code></pre>
 </aside>
 </section>
 </section>
-<section id="section-20" class="slide level1">
+<section id="section-16" class="slide level1">
 <h1></h1>
 <section id="copying-files" class="level2">
 <h2>copying files</h2>
 </section>
-<section id="section-21" class="level2">
+<section id="section-17" class="level2">
 <h2></h2>
 <p>On your laptop, run</p>
 <pre><code>scp some_file science@xxx.xxx.xxx.xxx:</code></pre>
@@ -444,7 +369,7 @@ WHERE station_id = 22</code></pre>
 <p>note the colon!</p>
 </aside>
 </section>
-<section id="section-22" class="level2">
+<section id="section-18" class="level2">
 <h2></h2>
 <p>On your laptop, run</p>
 <pre><code>scp science@xxx.xxx.xxx.xxx:~/w205/a_file.py .</code></pre>
@@ -454,7 +379,7 @@ WHERE station_id = 22</code></pre>
 </aside>
 </section>
 </section>
-<section id="section-23" class="slide level1">
+<section id="section-19" class="slide level1">
 <h1></h1>
 <section id="summary" class="level2">
 <h2>Summary</h2>
@@ -467,7 +392,7 @@ WHERE station_id = 22</code></pre>
 </ul>
 </section>
 </section>
-<section id="section-24" class="slide level1">
+<section id="section-20" class="slide level1">
 <h1></h1>
 <p><img class="logo" src="images/berkeley-school-of-information-logo.png"/></p>
 </section>

@@ -100,7 +100,9 @@ Go over what the dataset is on the webpage
   * What are the 5 most popular trips that you would call "commuter trips"?
   * What are your recommendations for offers (justify based on your findings)?
 
-
+::: notes
+You will not answer these questions this week just answer the questions assigned for this week 
+:::
 # 
 ## Get Going: Google account
 
@@ -115,7 +117,7 @@ Go over what the dataset is on the webpage
 
 ## Working with BQ gui
 
-<https://bigquery.cloud.google.com/table/bigquery-public-data:san_francisco.bikeshare_status>
+<https://bigquery.cloud.google.com/table/bigquery-public-data:san_francisco.bikeshare_stations>
 
 ## Tutorial
 
@@ -136,7 +138,7 @@ VS
     FROM Customers
 
 ::: notes
-- Nearly all other sql implementations (and what students will see in the tutorial), end statements with a `;`
+- Nearly all other sql implementations (and what you will see in the tutorial), end statements with a `;`
 - BQ doesn't
 - btw, the CAPITALIZATION isn't necessary :)
 :::
@@ -159,26 +161,7 @@ VS
 - So, now there's the `#standardSQL` flag
 :::
 
-## The Big Difference
 
-
-    SELECT distinct(bikes_available) 
-    FROM [bigquery-public-data:san_francisco.bikeshare_status]
-
-
-NO
-
-
-    #standardSQL
-    SELECT distinct(bikes_available) 
-    FROM `bigquery-public-data.san_francisco.bikeshare_status`
-
-YES
-
-::: notes
-- It's in doing things with distinct that I've noticed the biggest differences from regular (aka "standard" SQL)
-- You get: Error: syntax error at: 1.1 - 1.42. SELECT DISTINCT is currently not supported. Please use GROUP BY instead to get the same effect.
-:::
 
 ## For this class
 
@@ -289,74 +272,20 @@ I decided that a station's total bikes would `= docks_available + bikes_availabl
 Stuff to explore:
 
 - each station "has" different unique numbers of bikes [probably b/c e.g., docks are added to stations, etc, etc, etc]
+- if you create a view, use these queries:
 
-**Next slides will help unpack what they find here**
-:::
-
-## What's up with that?
-
-::: notes
-Getitng into queries to help figure out the issue from last slide
-:::
-
-##
-
-	#standardSQL
-	SELECT station_id, docks_available, bikes_available, time, 
-	(docks_available + bikes_available) as total_bikes
-	FROM `bigquery-public-data.san_francisco.bikeshare_status`
-	WHERE station_id = 90
-    ORDER BY total_bikes
-
-
-::: notes
-The point: 
-
-- query returns 8916 results 
-- but if ordered by `total_bikes`, can click "First" and "Last" to see what the values are
-:::
-
-## Get a table with `total_bikes` in it
-
-::: notes
-"Ok, so we don't want to go clicking through 8900 results to figure out what the unique values for `total_bikes` for a station are."
-
-- On this one, just show it
-:::
-
-## 
-
-	#standardSQL
-	SELECT station_id, docks_available, bikes_available, time, 
-	(docks_available + bikes_available) as total_bikes
-	FROM `bigquery-public-data.san_francisco.bikeshare_status`
-
-::: notes
-- This is the query to create the `total_bikes` table (which is totally a view, but BQ is weird about views, something about legacy sql vs standard sql)
-- Do "Save Table"
-- Window will pop up, need to have added a dataset to your project earlier, then enter dataset name and add a name for the table.
-- I'm calling it `total_bikes`
-:::
-
-## 
 
 	#standardSQL
 	SELECT distinct (station_id), total_bikes
 	 FROM `ambient-cubist-185918.bike_trips_data.total_bikes`
-
-::: notes
-This shows that you get multiple entries for each `station_id` b/c diff values of total bikes
-:::
-
-##
 
 	#standardSQL
 	SELECT distinct station_id, total_bikes
 	FROM `ambient-cubist-185918.bike_trips_data.total_bikes`
 	WHERE station_id = 22
 
-::: notes
-This lets you explore each station's total number of bikes
+
+This shows that you get multiple entries for each `station_id` b/c diff values of total bikes
 :::
 
 
