@@ -31,11 +31,6 @@ we defer cli-support for this until next week
 # 
 ## Some things about this class
 
-## How to read
-
-- Two screens (or devices)
-- Reading
-- Following along with coding
 
 ## Pacing
 
@@ -52,17 +47,7 @@ We'll be reading/watching screencasts ahead of what we can do
 
 ![](images/pipeline-overall.svg)
 
-## Events
 
-- What sort of events feed this pipeline?
-- How were these events captured?
-
-::: notes
-Fed from device events:
-
-- station kiosk (?)
-- user app (?)
-:::
 
 ## Main thing to pay attention to
 
@@ -208,7 +193,18 @@ YES
 ::: notes
 We're doing this one, but you can use either
 :::
+#
+## Events
 
+- What sort of events feed this pipeline?
+- How were these events captured?
+
+::: notes
+Fed from device events:
+
+- station kiosk (?)
+- user app (?)
+:::
 
 #
 ## Querying Data

@@ -70,14 +70,6 @@
 <section id="some-things-about-this-class" class="level2">
 <h2>Some things about this class</h2>
 </section>
-<section id="how-to-read" class="level2">
-<h2>How to read</h2>
-<ul>
-<li>Two screens (or devices)</li>
-<li>Reading</li>
-<li>Following along with coding</li>
-</ul>
-</section>
 <section id="pacing" class="level2">
 <h2>Pacing</h2>
 <ul>
@@ -94,20 +86,6 @@
 <section id="where-are-we-in-the-pipeline" class="level2">
 <h2>Where are we in the pipeline</h2>
 <p><img data-src="images/pipeline-overall.svg" /></p>
-</section>
-<section id="events" class="level2">
-<h2>Events</h2>
-<ul>
-<li>What sort of events feed this pipeline?</li>
-<li>How were these events captured?</li>
-</ul>
-<aside class="notes">
-<p>Fed from device events:</p>
-<ul>
-<li>station kiosk (?)</li>
-<li>user app (?)</li>
-</ul>
-</aside>
 </section>
 <section id="main-thing-to-pay-attention-to" class="level2">
 <h2>Main thing to pay attention to</h2>
@@ -263,6 +241,23 @@ FROM `bigquery-public-data.san_francisco.bikeshare_status`</code></pre>
 </section>
 <section id="section-7" class="slide level1">
 <h1></h1>
+<section id="events" class="level2">
+<h2>Events</h2>
+<ul>
+<li>What sort of events feed this pipeline?</li>
+<li>How were these events captured?</li>
+</ul>
+<aside class="notes">
+<p>Fed from device events:</p>
+<ul>
+<li>station kiosk (?)</li>
+<li>user app (?)</li>
+</ul>
+</aside>
+</section>
+</section>
+<section id="section-8" class="slide level1">
+<h1></h1>
 <section id="querying-data" class="level2">
 <h2>Querying Data</h2>
 </section>
@@ -281,7 +276,7 @@ FROM `bigquery-public-data.san_francisco.bikeshare_status`</code></pre>
 <p>[Obviously more useful on more complicated queries]</p>
 </aside>
 </section>
-<section id="section-8" class="level2">
+<section id="section-9" class="level2">
 <h2></h2>
 <pre><code>#standardSQL
 SELECT count(*)
@@ -294,7 +289,7 @@ FROM `bigquery-public-data.san_francisco.bikeshare_status`</code></pre>
 <section id="how-many-stations-are-there" class="level2">
 <h2>How many stations are there?</h2>
 </section>
-<section id="section-9" class="level2">
+<section id="section-10" class="level2">
 <h2></h2>
 <pre><code>#standardSQL
 SELECT count(distinct station_id)
@@ -306,7 +301,7 @@ FROM `bigquery-public-data.san_francisco.bikeshare_status`</code></pre>
 <section id="how-long-a-time-period-do-these-data-cover" class="level2">
 <h2>How long a time period do these data cover?</h2>
 </section>
-<section id="section-10" class="level2">
+<section id="section-11" class="level2">
 <h2></h2>
 <pre><code>#standardSQL
 SELECT min(time), max(time)
@@ -326,7 +321,7 @@ FROM `bigquery-public-data.san_francisco.bikeshare_status`</code></pre>
 <p>Break into groups here. Give them a few minutes, have someone from each group screen share and present their query. If they don’t tell you, ask why they made the choices they made. I decided that a station’s total bikes would <code>= docks_available + bikes_available</code>.</p>
 </aside>
 </section>
-<section id="section-11" class="level2">
+<section id="section-12" class="level2">
 <h2></h2>
 <pre><code>#standardSQL
 SELECT station_id, 
@@ -347,7 +342,7 @@ WHERE station_id = 90</code></pre>
 <p>Getitng into queries to help figure out the issue from last slide</p>
 </aside>
 </section>
-<section id="section-12" class="level2">
+<section id="section-13" class="level2">
 <h2></h2>
 <pre><code>#standardSQL
 SELECT station_id, docks_available, bikes_available, time, 
@@ -372,7 +367,7 @@ ORDER BY total_bikes</code></pre>
 </ul>
 </aside>
 </section>
-<section id="section-13" class="level2">
+<section id="section-14" class="level2">
 <h2></h2>
 <pre><code>#standardSQL
 SELECT station_id, docks_available, bikes_available, time, 
@@ -387,7 +382,7 @@ FROM `bigquery-public-data.san_francisco.bikeshare_status`</code></pre>
 </ul>
 </aside>
 </section>
-<section id="section-14" class="level2">
+<section id="section-15" class="level2">
 <h2></h2>
 <pre><code>#standardSQL
 SELECT distinct (station_id), total_bikes
@@ -396,7 +391,7 @@ SELECT distinct (station_id), total_bikes
 <p>This shows that you get multiple entries for each <code>station_id</code> b/c diff values of total bikes</p>
 </aside>
 </section>
-<section id="section-15" class="level2">
+<section id="section-16" class="level2">
 <h2></h2>
 <pre><code>#standardSQL
 SELECT distinct station_id, total_bikes
@@ -414,18 +409,18 @@ WHERE station_id = 22</code></pre>
 </aside>
 </section>
 </section>
-<section id="section-16" class="slide level1">
+<section id="section-17" class="slide level1">
 <h1></h1>
 <section id="secureshell-ssh" class="level2">
 <h2>SecureShell (SSH)</h2>
 </section>
 </section>
-<section id="section-17" class="slide level1">
+<section id="section-18" class="slide level1">
 <h1></h1>
 <section id="remote-terminal-connections" class="level2">
 <h2>remote terminal connections</h2>
 </section>
-<section id="section-18" class="level2">
+<section id="section-19" class="level2">
 <h2></h2>
 <pre><code>ssh science@xxx.xxx.xxx.xxx</code></pre>
 <aside class="notes">
@@ -433,12 +428,12 @@ WHERE station_id = 22</code></pre>
 </aside>
 </section>
 </section>
-<section id="section-19" class="slide level1">
+<section id="section-20" class="slide level1">
 <h1></h1>
 <section id="copying-files" class="level2">
 <h2>copying files</h2>
 </section>
-<section id="section-20" class="level2">
+<section id="section-21" class="level2">
 <h2></h2>
 <p>On your laptop, run</p>
 <pre><code>scp some_file science@xxx.xxx.xxx.xxx:</code></pre>
@@ -449,7 +444,7 @@ WHERE station_id = 22</code></pre>
 <p>note the colon!</p>
 </aside>
 </section>
-<section id="section-21" class="level2">
+<section id="section-22" class="level2">
 <h2></h2>
 <p>On your laptop, run</p>
 <pre><code>scp science@xxx.xxx.xxx.xxx:~/w205/a_file.py .</code></pre>
@@ -459,7 +454,7 @@ WHERE station_id = 22</code></pre>
 </aside>
 </section>
 </section>
-<section id="section-22" class="slide level1">
+<section id="section-23" class="slide level1">
 <h1></h1>
 <section id="summary" class="level2">
 <h2>Summary</h2>
@@ -472,7 +467,7 @@ WHERE station_id = 22</code></pre>
 </ul>
 </section>
 </section>
-<section id="section-23" class="slide level1">
+<section id="section-24" class="slide level1">
 <h1></h1>
 <p><img class="logo" src="images/berkeley-school-of-information-logo.png"/></p>
 </section>
@@ -490,11 +485,16 @@ WHERE station_id = 22</code></pre>
         // Transition style
         transition: 'linear', // none/fade/slide/convex/concave/zoom
 
+        math: {
+          config: 'TeX-AMS_HTML-full'
+        },
+
         // Optional reveal.js plugins
         dependencies: [
           { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
           { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
-          { src: 'reveal.js/plugin/notes/notes.js', async: true }
+          { src: 'reveal.js/plugin/notes/notes.js', async: true },
+          { src: 'reveal.js/plugin/math/math.js', async: true }
         ]
       });
     </script>
