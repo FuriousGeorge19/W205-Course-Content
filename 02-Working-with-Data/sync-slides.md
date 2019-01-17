@@ -90,6 +90,17 @@ business requirements get encoded as queries of data
 ::: notes
 Go over what the dataset is on the webpage
 :::
+# 
+## Get Going: Google account
+
+- Go to <https://cloud.google.com/bigquery/>
+- Click on "Try it Free"
+- It asks for credit card, but you get $300 free and it does not autorenew after the $300 credit is used, 
+
+::: notes
+(**OR CHANGE THIS IF SOME SORT OF OTHER ACCESS INFO**)
+:::
+
 
 ## Problem Statement
 - You're a data scientist at Ford GoBike (<https://www.fordgobike.com/>), the company running Bay Area Bikeshare. You are trying to increase ridership, and you want to offer deals through the mobile app to do so. What deals do you offer though? Currently, your company has three options: a flat price for a single one-way trip, a day pass that allows unlimited 30-minute rides for 24 hours and an annual membership. 
@@ -102,16 +113,6 @@ Go over what the dataset is on the webpage
 
 ::: notes
 You will not answer these questions this week just answer the questions assigned for this week 
-:::
-# 
-## Get Going: Google account
-
-- Go to <https://cloud.google.com/bigquery/>
-- Click on "Try it Free"
-- It asks for credit card, but you get $300 free and it does not autorenew after the $300 credit is used, 
-
-::: notes
-(**OR CHANGE THIS IF SOME SORT OF OTHER ACCESS INFO**)
 :::
 
 
