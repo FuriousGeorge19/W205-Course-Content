@@ -8,8 +8,9 @@ author: Week 02 - sync session
 # 
 
 ## Assignment 1
-- We will usually do a breakout to share solutions and ask questions, but this week's was pretty straightforward.
+- Breakout
 - Questions on process?
+
 
 ## Your droplet set up
 
@@ -88,12 +89,12 @@ business requirements get encoded as queries of data
 ::: notes
 Go over what the dataset is on the webpage
 :::
-# 
+
 ## Get Going: Google account
 
 - Go to <https://cloud.google.com/bigquery/>
 - Click on "Try it Free"
-- It asks for credit card, but you get $300 free and it does not autorenew after the $300 credit is used, 
+- It asks for credit card, but you get free credit and it does not autorenew after the credit is used 
 
 ::: notes
 (**OR CHANGE THIS IF SOME SORT OF OTHER ACCESS INFO**)
@@ -101,7 +102,11 @@ Go over what the dataset is on the webpage
 
 
 ## Problem Statement
-- You're a data scientist at Ford GoBike (<https://www.fordgobike.com/>), the company running Bay Area Bikeshare. You are trying to increase ridership, and you want to offer deals through the mobile app to do so. What deals do you offer though? Currently, your company has three options: a flat price for a single one-way trip, a day pass that allows unlimited 30-minute rides for 24 hours and an annual membership. 
+- You're a data scientist at Ford GoBike (<https://www.fordgobike.com/>), the company running Bay Area Bikeshare. You are trying to increase ridership, and you want to offer deals through the mobile app to do so. What deals do you offer though? Currently, your company has three options: 
+
+- a flat price for a single one-way trip, 
+- a day pass that allows unlimited 30-minute rides for 24 hours, 
+- and an annual membership. 
 
 ## Questions
 
@@ -116,7 +121,7 @@ You will not answer these questions this week just answer the questions assigned
 
 ## Working with BQ gui
 
-<https://bigquery.cloud.google.com/table/bigquery-public-data:san_francisco.bikeshare_stations>
+<https://cloud.google.com/bigquery/public-data/bay-bike-share>
 
 ## Tutorial
 

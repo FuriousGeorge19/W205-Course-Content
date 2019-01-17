@@ -38,7 +38,7 @@
 <section id="assignment-1" class="level2">
 <h2>Assignment 1</h2>
 <ul>
-<li>We will usually do a breakout to share solutions and ask questions, but this week’s was pretty straightforward.</li>
+<li>Breakout</li>
 <li>Questions on process?</li>
 </ul>
 </section>
@@ -131,15 +131,12 @@
 <p>Go over what the dataset is on the webpage</p>
 </aside>
 </section>
-</section>
-<section id="section-5" class="slide level1">
-<h1></h1>
 <section id="get-going-google-account" class="level2">
 <h2>Get Going: Google account</h2>
 <ul>
 <li>Go to <a href="https://cloud.google.com/bigquery/" class="uri">https://cloud.google.com/bigquery/</a></li>
 <li>Click on “Try it Free”</li>
-<li>It asks for credit card, but you get $300 free and it does not autorenew after the $300 credit is used,</li>
+<li>It asks for credit card, but you get free credit and it does not autorenew after the credit is used</li>
 </ul>
 <aside class="notes">
 <p>(<strong>OR CHANGE THIS IF SOME SORT OF OTHER ACCESS INFO</strong>)</p>
@@ -148,7 +145,10 @@
 <section id="problem-statement" class="level2">
 <h2>Problem Statement</h2>
 <ul>
-<li>You’re a data scientist at Ford GoBike (<a href="https://www.fordgobike.com/" class="uri">https://www.fordgobike.com/</a>), the company running Bay Area Bikeshare. You are trying to increase ridership, and you want to offer deals through the mobile app to do so. What deals do you offer though? Currently, your company has three options: a flat price for a single one-way trip, a day pass that allows unlimited 30-minute rides for 24 hours and an annual membership.</li>
+<li><p>You’re a data scientist at Ford GoBike (<a href="https://www.fordgobike.com/" class="uri">https://www.fordgobike.com/</a>), the company running Bay Area Bikeshare. You are trying to increase ridership, and you want to offer deals through the mobile app to do so. What deals do you offer though? Currently, your company has three options:</p></li>
+<li>a flat price for a single one-way trip,</li>
+<li>a day pass that allows unlimited 30-minute rides for 24 hours,</li>
+<li><p>and an annual membership.</p></li>
 </ul>
 </section>
 <section id="questions" class="level2">
@@ -166,14 +166,14 @@
 </section>
 <section id="working-with-bq-gui" class="level2">
 <h2>Working with BQ gui</h2>
-<p><a href="https://bigquery.cloud.google.com/table/bigquery-public-data:san_francisco.bikeshare_stations" class="uri">https://bigquery.cloud.google.com/table/bigquery-public-data:san_francisco.bikeshare_stations</a></p>
+<p><a href="https://cloud.google.com/bigquery/public-data/bay-bike-share" class="uri">https://cloud.google.com/bigquery/public-data/bay-bike-share</a></p>
 </section>
 <section id="tutorial" class="level2">
 <h2>Tutorial</h2>
 <p><a href="https://www.w3schools.com/sql/default.asp" class="uri">https://www.w3schools.com/sql/default.asp</a></p>
 </section>
 </section>
-<section id="section-6" class="slide level1">
+<section id="section-5" class="slide level1">
 <h1></h1>
 <section id="some-annoying-specific-stuff-about-bq" class="level2">
 <h2>Some annoying specific stuff about BQ</h2>
@@ -223,7 +223,7 @@ FROM `bigquery-public-data.san_francisco.bikeshare_status`</code></pre>
 </aside>
 </section>
 </section>
-<section id="section-7" class="slide level1">
+<section id="section-6" class="slide level1">
 <h1></h1>
 <section id="events" class="level2">
 <h2>Events</h2>
@@ -240,7 +240,7 @@ FROM `bigquery-public-data.san_francisco.bikeshare_status`</code></pre>
 </aside>
 </section>
 </section>
-<section id="section-8" class="slide level1">
+<section id="section-7" class="slide level1">
 <h1></h1>
 <section id="querying-data" class="level2">
 <h2>Querying Data</h2>
@@ -260,7 +260,7 @@ FROM `bigquery-public-data.san_francisco.bikeshare_status`</code></pre>
 <p>[Obviously more useful on more complicated queries]</p>
 </aside>
 </section>
-<section id="section-9" class="level2">
+<section id="section-8" class="level2">
 <h2></h2>
 <pre><code>#standardSQL
 SELECT count(*)
@@ -273,7 +273,7 @@ FROM `bigquery-public-data.san_francisco.bikeshare_status`</code></pre>
 <section id="how-many-stations-are-there" class="level2">
 <h2>How many stations are there?</h2>
 </section>
-<section id="section-10" class="level2">
+<section id="section-9" class="level2">
 <h2></h2>
 <pre><code>#standardSQL
 SELECT count(distinct station_id)
@@ -285,7 +285,7 @@ FROM `bigquery-public-data.san_francisco.bikeshare_status`</code></pre>
 <section id="how-long-a-time-period-do-these-data-cover" class="level2">
 <h2>How long a time period do these data cover?</h2>
 </section>
-<section id="section-11" class="level2">
+<section id="section-10" class="level2">
 <h2></h2>
 <pre><code>#standardSQL
 SELECT min(time), max(time)
@@ -305,7 +305,7 @@ FROM `bigquery-public-data.san_francisco.bikeshare_status`</code></pre>
 <p>Break into groups here. Give them a few minutes, have someone from each group screen share and present their query. If they don’t tell you, ask why they made the choices they made. I decided that a station’s total bikes would <code>= docks_available + bikes_available</code>.</p>
 </aside>
 </section>
-<section id="section-12" class="level2">
+<section id="section-11" class="level2">
 <h2></h2>
 <pre><code>#standardSQL
 SELECT station_id, 
@@ -331,18 +331,18 @@ WHERE station_id = 90</code></pre>
 </aside>
 </section>
 </section>
-<section id="section-13" class="slide level1">
+<section id="section-12" class="slide level1">
 <h1></h1>
 <section id="secureshell-ssh" class="level2">
 <h2>SecureShell (SSH)</h2>
 </section>
 </section>
-<section id="section-14" class="slide level1">
+<section id="section-13" class="slide level1">
 <h1></h1>
 <section id="remote-terminal-connections" class="level2">
 <h2>remote terminal connections</h2>
 </section>
-<section id="section-15" class="level2">
+<section id="section-14" class="level2">
 <h2></h2>
 <pre><code>ssh science@xxx.xxx.xxx.xxx</code></pre>
 <aside class="notes">
@@ -350,12 +350,12 @@ WHERE station_id = 90</code></pre>
 </aside>
 </section>
 </section>
-<section id="section-16" class="slide level1">
+<section id="section-15" class="slide level1">
 <h1></h1>
 <section id="copying-files" class="level2">
 <h2>copying files</h2>
 </section>
-<section id="section-17" class="level2">
+<section id="section-16" class="level2">
 <h2></h2>
 <p>On your laptop, run</p>
 <pre><code>scp some_file science@xxx.xxx.xxx.xxx:</code></pre>
@@ -366,7 +366,7 @@ WHERE station_id = 90</code></pre>
 <p>note the colon!</p>
 </aside>
 </section>
-<section id="section-18" class="level2">
+<section id="section-17" class="level2">
 <h2></h2>
 <p>On your laptop, run</p>
 <pre><code>scp science@xxx.xxx.xxx.xxx:~/w205/a_file.py .</code></pre>
@@ -376,7 +376,7 @@ WHERE station_id = 90</code></pre>
 </aside>
 </section>
 </section>
-<section id="section-19" class="slide level1">
+<section id="section-18" class="slide level1">
 <h1></h1>
 <section id="summary" class="level2">
 <h2>Summary</h2>
@@ -389,7 +389,7 @@ WHERE station_id = 90</code></pre>
 </ul>
 </section>
 </section>
-<section id="section-20" class="slide level1">
+<section id="section-19" class="slide level1">
 <h1></h1>
 <p><img class="logo" src="images/berkeley-school-of-information-logo.png"/></p>
 </section>
