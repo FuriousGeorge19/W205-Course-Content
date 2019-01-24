@@ -102,6 +102,7 @@ direct links:
 
 ##
 3.3.1: `queryside-caching-and-aggregation`
+TAG: Supplemental
 
 <video preload="none" controls webkit-playsinline="" id="d3db6149-f50c-488c-a21b-e447fe51e45e" width="700" height="394" poster="https://ucb-mids.s3.amazonaws.com/prod/output_video_general/e4dd909a02bae47cd87ae98c5d8f4320/0_high.jpg" tabindex="-1" src="https://ucb-mids.s3.amazonaws.com/prod/output_video_general/e4dd909a02bae47cd87ae98c5d8f4320/mp4_med.mp4">
   <source type="video/mp4" src="https://ucb-mids.s3.amazonaws.com/prod/output_video_general/e4dd909a02bae47cd87ae98c5d8f4320/mp4_med.mp4">
