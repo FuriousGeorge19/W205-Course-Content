@@ -374,6 +374,7 @@ bq query --use_legacy_sql=false 'SELECT min(time), max(time) FROM `bigquery-publ
 - Working with query tools (bigquery and Athena)
 - Getting a glimpse of how to use jupyter notebooks for Assignment 4
 - Looking ahead at some bits of docker manipulation from the command line, getting ready for Project 2. 
+- Also you'll see your first supplemental tag
 
 
 #
