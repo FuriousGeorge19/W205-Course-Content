@@ -21,10 +21,12 @@ Breakout at about 5 after the hour:
 
 #
 ## Overview
-- Go over Assignment 3 results
+- Go over Assignment 3 
 - Intro Docker
 - PRs from the command line
+# 
 
+## Assignment 3 Breakout
 
 # 
 
@@ -192,6 +194,17 @@ git clone \
 ## Summary
 - git branching
 - using docker
+
+::: notes
+docker-compose is for this
+:::
+
+# Week 4 videos 
+- Relational Data Stores  
+- NoSQL Data Stores
+- Understand the RDB store we've been working with with big query
+- Get ready to work with the nosql store redis next week as we start Project 2
+
 
 ##
 
