@@ -24,8 +24,8 @@ Breakout at about 5 after the hour:
 - Go over Assignment 3 
 - Intro Docker
 - PRs from the command line
-# 
 
+# 
 ## Assignment 3 Breakout
 
 # 
@@ -199,7 +199,8 @@ git clone \
 docker-compose is for this
 :::
 
-# Week 4 videos 
+
+## Week 4 videos 
 - Relational Data Stores  
 - NoSQL Data Stores
 - Understand the RDB store we've been working with with big query
