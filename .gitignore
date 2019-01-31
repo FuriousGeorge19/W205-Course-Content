@@ -21,3 +21,5 @@ docs/title.md
 *.aac
 *.wav
 *.flac
+
+.DS_Store
