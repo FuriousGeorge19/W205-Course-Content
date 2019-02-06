@@ -527,6 +527,9 @@ print date sorted list of where all bikes are
 		- Save the relevant portion of your history as user name-annotations.md
 		- Annotate the file with explanations of what you were doing at each point (See htmartin-annotations.md)
 
+## Assignment 5: Bonus& More bonus
+- extra challenge
+- not about extra credit
 
 
 ## Summary
@@ -541,8 +544,11 @@ running a query within that
 
 ## Week 5 Videos
 
-- Virtualization
 - Hadoop
+- Some basics. We won't use Hadoop until later in the project
+- Virtualization
+- The notion of using docker-compose to bring up clusters of services. This is the core of Project 2.
+
 
 
 #
