@@ -26,7 +26,9 @@ Breakout at about 5 after the hour:
 ## Today
 - Assignment 04 wraps up the Query Project
 - Creating basic `docker-compose` clusters
-- NoSQL stores with `docker-compose`
+- NoSQL store (Redis) with `docker-compose`
+- Redis to track state
+
 
 ::: notes
 - Watching RDBs and NoSQL videos b/t week 4 & week 5
@@ -511,6 +513,19 @@ print date sorted list of where all bikes are
 
 
 #
+## Assignment 5
+
+- Follow the steps we did in class to get redis and the mids base container talking. = Follow the steps we did in class 
+- What you turn in:
+	- In your /assignment-05-<user-name> repo:
+				- docker-compose.ymls
+				- once you've run the example on your terminal
+					- Run history > <user-name>-history.txt (ok for this to be messy)
+					- Save the relevant portion of your history as <user-name>-annotations.md
+					- Annotate the file with explanations of what you were doing at each point (See htmartin-annotations.md)
+
+
+
 ## Summary
 
 ## { data-background="images/pipeline-overall.svg" }
