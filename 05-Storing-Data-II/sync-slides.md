@@ -9,16 +9,14 @@ author: Week 05 - sync session
 
 
 #
-## While we're getting started
+## Assignment 04 Breakout
 
-- Review your Assignment 04
-- Get ready to share
+
 
 ::: notes
 Breakout at about 5 after the hour:
 - Check in with each group on their solution to the assignment
 - Answer questions as people have them on what they had trouble with
-- Have 3-4 people present
 :::
 
 
@@ -38,11 +36,7 @@ Breakout at about 5 after the hour:
 - (docker compose + how to run a notebook in the container)
 :::
 
-## Between Class 5 & Class 6
 
-- async material in Week 5 syllabus (Virtualization, Hadoop)
-- Readings in Week 5 syllabus
-- Assignment 05
 
 
 ## Class 6
@@ -410,7 +404,7 @@ Just for fun,
 
 
 #
-## Extras
+
 
 ## Redis to track state
 
@@ -526,6 +520,11 @@ Using docker compose
 Assembled a set of services
 running a query within that
 :::
+
+## Week 5 Videos
+
+- Virtualization
+- Hadoop
 
 
 #

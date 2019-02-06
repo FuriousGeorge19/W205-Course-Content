@@ -8,19 +8,19 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="http://people.ischool.berkeley.edu/~mark.mims/course-development/2017-mids-w205/templates/reveal.js//css/reveal.css">
+  <link rel="stylesheet" href="reveal.js/css/reveal.css">
   <style type="text/css">code{white-space: pre;}</style>
-  <link rel="stylesheet" href="http://people.ischool.berkeley.edu/~mark.mims/course-development/2017-mids-w205/templates/reveal.js//css/theme/mids.css" id="theme">
+  <link rel="stylesheet" href="reveal.js/css/theme/mids.css" id="theme">
   <!-- Printing and PDF exports -->
   <script>
     var link = document.createElement( 'link' );
     link.rel = 'stylesheet';
     link.type = 'text/css';
-    link.href = window.location.search.match( /print-pdf/gi ) ? 'http://people.ischool.berkeley.edu/~mark.mims/course-development/2017-mids-w205/templates/reveal.js//css/print/pdf.css' : 'http://people.ischool.berkeley.edu/~mark.mims/course-development/2017-mids-w205/templates/reveal.js//css/print/paper.css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
     document.getElementsByTagName( 'head' )[0].appendChild( link );
   </script>
   <!--[if lt IE 9]>
-  <script src="http://people.ischool.berkeley.edu/~mark.mims/course-development/2017-mids-w205/templates/reveal.js//lib/js/html5shiv.js"></script>
+  <script src="reveal.js/lib/js/html5shiv.js"></script>
   <![endif]-->
 </head>
 <body>
@@ -84,6 +84,7 @@
 <source type="video/mp4" src="https://ucb-mids.s3.amazonaws.com/prod/output_video_general/f18a2a0f0309f48bcc61a9101880bd62/mp4_med.mp4">
 <p><track kind="subtitles" src="https://corp-tech.s3.amazonaws.com/captioning/captions/5ab954d78fa3d81b3c7e38c3.vtt" label="Overlay" srclang="en"> <track kind="transcript" src="https://corp-tech.s3.amazonaws.com/captioning/captions/5ab954d78fa3d81b3c7e38c3.html" label="Full" srclang="en"> </video></p>
 <p>direct links: <a href="https://ucb-mids.s3.amazonaws.com/prod/output_video_general/f18a2a0f0309f48bcc61a9101880bd62/mp4_med.mp4">video</a>, <a href="https://s3.amazonaws.com/ucb-mids/prod/UCB-MIDS_0019/Slides/Unit+6/6.2.1-ETL-You-Dont-Always-Get-What-You-Want.pdf">slides</a></p>
+<p>tags:core</p>
 </section>
 </section>
 <section id="section-7" class="slide level1">
@@ -153,8 +154,8 @@
     </div>
   </div>
 
-  <script src="http://people.ischool.berkeley.edu/~mark.mims/course-development/2017-mids-w205/templates/reveal.js//lib/js/head.min.js"></script>
-  <script src="http://people.ischool.berkeley.edu/~mark.mims/course-development/2017-mids-w205/templates/reveal.js//js/reveal.js"></script>
+  <script src="reveal.js/lib/js/head.min.js"></script>
+  <script src="reveal.js/js/reveal.js"></script>
 
   <script>
 
@@ -164,11 +165,16 @@
         // Transition style
         transition: 'linear', // none/fade/slide/convex/concave/zoom
 
+        math: {
+          config: 'TeX-AMS_HTML-full'
+        },
+
         // Optional reveal.js plugins
         dependencies: [
-          { src: 'http://people.ischool.berkeley.edu/~mark.mims/course-development/2017-mids-w205/templates/reveal.js//lib/js/classList.js', condition: function() { return !document.body.classList; } },
-          { src: 'http://people.ischool.berkeley.edu/~mark.mims/course-development/2017-mids-w205/templates/reveal.js//plugin/zoom-js/zoom.js', async: true },
-          { src: 'http://people.ischool.berkeley.edu/~mark.mims/course-development/2017-mids-w205/templates/reveal.js//plugin/notes/notes.js', async: true }
+          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
+          { src: 'reveal.js/plugin/notes/notes.js', async: true },
+          { src: 'reveal.js/plugin/math/math.js', async: true }
         ]
       });
     </script>
