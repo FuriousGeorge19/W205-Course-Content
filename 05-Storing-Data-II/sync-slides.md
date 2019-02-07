@@ -386,7 +386,7 @@ remember, you can copy/paste this from the `course-content` repo
 
 ## Extras
 
-#
+
 
 ## Automate notebook startup
 
