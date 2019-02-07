@@ -204,8 +204,8 @@ exit</code></pre>
 </section>
 <section id="section-10" class="slide level1">
 <h1></h1>
-<section id="more-docker-compose-with-redis" class="level2">
-<h2>More docker-compose with Redis</h2>
+<section id="clusters-with-docker-compose" class="level2">
+<h2>Clusters with docker-compose</h2>
 </section>
 <section id="setup" class="level2">
 <h2>Setup</h2>
@@ -345,10 +345,52 @@ services:
 </section>
 <section id="section-12" class="slide level1">
 <h1></h1>
+<section id="wrapping-up" class="level2">
+<h2>Wrapping Up</h2>
+</section>
+<section id="assignment-5" class="level2">
+<h2>Assignment 5</h2>
+<ul>
+<li>Follow the steps we did in class to get redis and the mids base container talking. = Follow the steps we did in class</li>
+<li>What you turn in:
+<ul>
+<li>In your /assignment-05-user name repo:
+<ul>
+<li>docker-compose.ymls</li>
+<li>once you’ve run the example on your terminal</li>
+<li>Run history &gt; -user name-history.txt (ok for this to be messy)</li>
+<li>Save the relevant portion of your history as user name-annotations.md</li>
+<li>Annotate the file with explanations of what you were doing at each point (See htmartin-annotations.md)</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="assignment-5-bonus-more-bonus" class="level2">
+<h2>Assignment 5: Bonus&amp; More bonus</h2>
+<ul>
+<li>extra challenge</li>
+<li>not about extra credit</li>
+</ul>
+</section>
+<section id="week-5-videos" class="level2">
+<h2>Week 5 Videos</h2>
+<ul>
+<li>Hadoop</li>
+<li>Some basics. We won’t use Hadoop until later in the project</li>
+<li>Virtualization</li>
+<li>The notion of using docker-compose to bring up clusters of services. This is the core of Project 2.</li>
+</ul>
+</section>
+<section id="extras" class="level2">
+<h2>Extras</h2>
+</section>
+</section>
+<section id="section-13" class="slide level1">
+<h1></h1>
 <section id="automate-notebook-startup" class="level2">
 <h2>Automate notebook startup</h2>
 </section>
-<section id="section-13" class="level2">
+<section id="section-14" class="level2">
 <h2></h2>
 <p>Just for fun,</p>
 <pre><code>---
@@ -401,7 +443,7 @@ print(value)</code></pre>
 <pre><code>docker-compose down</code></pre>
 </section>
 </section>
-<section id="section-14" class="slide level1">
+<section id="section-15" class="slide level1">
 <h1></h1>
 <section id="redis-to-track-state" class="level2">
 <h2>Redis to track state</h2>
@@ -421,7 +463,7 @@ curl -L -o trips.csv https://goo.gl/QvHLKe</code></pre>
 <pre><code>volumes:
   - ~/w205:/w205</code></pre>
 </section>
-<section id="section-15" class="level2">
+<section id="section-16" class="level2">
 <h2></h2>
 <pre><code>---
 version: &#39;2&#39;
@@ -458,12 +500,12 @@ services:
 <section id="open-new-python3-notebook-1" class="level2">
 <h2>Open New Python3 Notebook</h2>
 </section>
-<section id="section-16" class="level2">
+<section id="section-17" class="level2">
 <h2></h2>
 <pre><code>import redis
 import pandas as pd</code></pre>
 </section>
-<section id="section-17" class="level2">
+<section id="section-18" class="level2">
 <h2></h2>
 <pre><code>trips=pd.read_csv(&#39;trips.csv&#39;)
 
@@ -471,7 +513,7 @@ date_sorted_trips = trips.sort_values(by=&#39;end_date&#39;)
 
 date_sorted_trips.head()</code></pre>
 </section>
-<section id="section-18" class="level2">
+<section id="section-19" class="level2">
 <h2></h2>
 <pre><code>for trip in date_sorted_trips.itertuples():
   print(trip.end_date, &#39;&#39;, trip.bike_number, &#39;&#39;, trip.end_station_name)</code></pre>
@@ -479,7 +521,7 @@ date_sorted_trips.head()</code></pre>
 <p>print date sorted list of where all bikes are</p>
 </aside>
 </section>
-<section id="section-19" class="level2">
+<section id="section-20" class="level2">
 <h2></h2>
 <pre><code>current_bike_locations = redis.Redis(host=&#39;redis&#39;, port=&#39;6379&#39;)
 current_bike_locations.keys()</code></pre>
@@ -489,7 +531,7 @@ current_bike_locations.keys()</code></pre>
 <pre><code>for trip in date_sorted_trips.itertuples():
   current_bike_locations.set(trip.bike_number, trip.end_station_name)</code></pre>
 </section>
-<section id="section-20" class="level2">
+<section id="section-21" class="level2">
 <h2></h2>
 <pre><code>current_bike_locations.keys()</code></pre>
 </section>
@@ -502,55 +544,7 @@ current_bike_locations.keys()</code></pre>
 <pre><code>docker-compose down</code></pre>
 </section>
 </section>
-<section id="section-21" class="slide level1">
-<h1></h1>
-<section id="wrapping-up" class="level2">
-<h2>Wrapping Up</h2>
-</section>
-<section id="assignment-5" class="level2">
-<h2>Assignment 5</h2>
-<ul>
-<li>Follow the steps we did in class to get redis and the mids base container talking. = Follow the steps we did in class</li>
-<li>What you turn in:
-<ul>
-<li>In your /assignment-05-user name repo:
-<ul>
-<li>docker-compose.ymls</li>
-<li>once you’ve run the example on your terminal</li>
-<li>Run history &gt; -user name-history.txt (ok for this to be messy)</li>
-<li>Save the relevant portion of your history as user name-annotations.md</li>
-<li>Annotate the file with explanations of what you were doing at each point (See htmartin-annotations.md)</li>
-</ul></li>
-</ul></li>
-</ul>
-</section>
-<section id="assignment-5-bonus-more-bonus" class="level2">
-<h2>Assignment 5: Bonus&amp; More bonus</h2>
-<ul>
-<li>extra challenge</li>
-<li>not about extra credit</li>
-</ul>
-</section>
-<section id="summary" class="level2">
-<h2>Summary</h2>
-</section>
-<section id="section-22" class="level2" data-background="images/pipeline-overall.svg">
-<h2></h2>
-<aside class="notes">
-<p>Using docker compose Assembled a set of services running a query within that</p>
-</aside>
-</section>
-<section id="week-5-videos" class="level2">
-<h2>Week 5 Videos</h2>
-<ul>
-<li>Hadoop</li>
-<li>Some basics. We won’t use Hadoop until later in the project</li>
-<li>Virtualization</li>
-<li>The notion of using docker-compose to bring up clusters of services. This is the core of Project 2.</li>
-</ul>
-</section>
-</section>
-<section id="section-23" class="slide level1">
+<section id="section-22" class="slide level1">
 <h1></h1>
 <p><img class="logo" src="images/berkeley-school-of-information-logo.png"/></p>
 </section>

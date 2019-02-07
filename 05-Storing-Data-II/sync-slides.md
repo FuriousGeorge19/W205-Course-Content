@@ -208,7 +208,7 @@ Start up the cluster
 
 
 #
-## More docker-compose with Redis
+## Clusters with docker-compose
 
 ## Setup
 
@@ -350,6 +350,43 @@ remember, you can copy/paste this from the `course-content` repo
     docker-compose down
 
 #
+
+
+## Wrapping Up
+
+## Assignment 5
+
+- Follow the steps we did in class to get redis and the mids base container talking. = Follow the steps we did in class 
+- What you turn in:
+	- In your /assignment-05-user name repo:
+		- docker-compose.ymls
+		- once you've run the example on your terminal
+		- Run history > -user name-history.txt (ok for this to be messy)
+		- Save the relevant portion of your history as user name-annotations.md
+		- Annotate the file with explanations of what you were doing at each point (See htmartin-annotations.md)
+
+## Assignment 5: Bonus& More bonus
+- extra challenge
+- not about extra credit
+
+
+
+
+
+## Week 5 Videos
+
+- Hadoop
+- Some basics. We won't use Hadoop until later in the project
+- Virtualization
+- The notion of using docker-compose to bring up clusters of services. This is the core of Project 2.
+
+
+
+
+## Extras
+
+#
+
 ## Automate notebook startup
 
 ##
@@ -510,44 +547,6 @@ print date sorted list of where all bikes are
 ## Drop cluster
 
     docker-compose down
-
-
-#
-
-## Wrapping Up
-
-## Assignment 5
-
-- Follow the steps we did in class to get redis and the mids base container talking. = Follow the steps we did in class 
-- What you turn in:
-	- In your /assignment-05-user name repo:
-		- docker-compose.ymls
-		- once you've run the example on your terminal
-		- Run history > -user name-history.txt (ok for this to be messy)
-		- Save the relevant portion of your history as user name-annotations.md
-		- Annotate the file with explanations of what you were doing at each point (See htmartin-annotations.md)
-
-## Assignment 5: Bonus& More bonus
-- extra challenge
-- not about extra credit
-
-
-## Summary
-
-## { data-background="images/pipeline-overall.svg" }
-
-::: notes
-Using docker compose
-Assembled a set of services
-running a query within that
-:::
-
-## Week 5 Videos
-
-- Hadoop
-- Some basics. We won't use Hadoop until later in the project
-- Virtualization
-- The notion of using docker-compose to bring up clusters of services. This is the core of Project 2.
 
 
 
