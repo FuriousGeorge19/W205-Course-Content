@@ -12,10 +12,12 @@ author: Week 06 - sync session
 - Review your Assignment 05
 - Get ready to share
 
-## Groups present notebooks
+## Assignment 05 Breakout
+
+-  bonus activities?
+-  What is different about the redis-standalone & redis-cluster examples? 
 
 ::: notes
-do nb and make recommendations
 :::
 
 ## Due Friday (PR)
@@ -130,42 +132,7 @@ services:
       - "29092"
 ```
 
-::: notes
 
-Save the following snippet as `~/w205/kafka/docker-compose.yml` on your host
-filesystem
-
-```
----
-version: '2'
-services:
-  zookeeper:
-    image: confluentinc/cp-zookeeper:latest
-    environment:
-      ZOOKEEPER_CLIENT_PORT: 32181
-      ZOOKEEPER_TICK_TIME: 2000
-    expose:
-      - "2181"
-      - "2888"
-      - "32181"
-      - "3888"
-
-  kafka:
-    image: confluentinc/cp-kafka:latest
-    depends_on:
-      - zookeeper
-    environment:
-      KAFKA_BROKER_ID: 1
-      KAFKA_ZOOKEEPER_CONNECT: zookeeper:32181
-      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:29092
-      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
-    volumes:
-      - ~/w205:/w205
-    expose:
-      - "9092"
-      - "29092"
-```
-:::
 
 ## Docker compose spin things up
 
@@ -541,11 +508,21 @@ docker-compose exec mids bash -c "kafkacat -C -b kafka:29092 -t foo -o beginning
     * Save the relevant portion of your history as `<user-name>-annotations.md`
     * Annotate the file with explanations of what you were doing at each point (See `htmartin-annotations.md`)
 
+## Week 6 Videos
+
+- Discussion of traditional ETL (get it out of the way).
+- contrast with  Hadoop ETL.
+- How Spark handles compute.
+- Distribution of jobs across clusters.
+- Schedulers
+- Give you a context for how what we're doing in Project 2 would work in reality.
+
 #
 ## Summary
 - Test that we can spin up containers, publish & consume messages with simple numbers messages.
 - Work through some actual data from github
 - Prep for assignment
+
 
 
 #

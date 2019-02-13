@@ -42,10 +42,14 @@
 <li>Get ready to share</li>
 </ul>
 </section>
-<section id="groups-present-notebooks" class="level2">
-<h2>Groups present notebooks</h2>
+<section id="assignment-05-breakout" class="level2">
+<h2>Assignment 05 Breakout</h2>
+<ul>
+<li>bonus activities?</li>
+<li>What is different about the redis-standalone &amp; redis-cluster examples?</li>
+</ul>
 <aside class="notes">
-<p>do nb and make recommendations</p>
+
 </aside>
 </section>
 <section id="due-friday-pr" class="level2">
@@ -157,37 +161,6 @@ services:
     expose:
       - &quot;9092&quot;
       - &quot;29092&quot;</code></pre>
-<aside class="notes">
-<p>Save the following snippet as <code>~/w205/kafka/docker-compose.yml</code> on your host filesystem</p>
-<pre><code>---
-version: &#39;2&#39;
-services:
-  zookeeper:
-    image: confluentinc/cp-zookeeper:latest
-    environment:
-      ZOOKEEPER_CLIENT_PORT: 32181
-      ZOOKEEPER_TICK_TIME: 2000
-    expose:
-      - &quot;2181&quot;
-      - &quot;2888&quot;
-      - &quot;32181&quot;
-      - &quot;3888&quot;
-
-  kafka:
-    image: confluentinc/cp-kafka:latest
-    depends_on:
-      - zookeeper
-    environment:
-      KAFKA_BROKER_ID: 1
-      KAFKA_ZOOKEEPER_CONNECT: zookeeper:32181
-      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:29092
-      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
-    volumes:
-      - ~/w205:/w205
-    expose:
-      - &quot;9092&quot;
-      - &quot;29092&quot;</code></pre>
-</aside>
 </section>
 <section id="docker-compose-spin-things-up" class="level2">
 <h2>Docker compose spin things up</h2>
@@ -530,6 +503,17 @@ docker-compose exec mids bash -c &quot;cat /w205/kafka/github-example-large.json
 </ul></li>
 </ul>
 </section>
+<section id="week-6-videos" class="level2">
+<h2>Week 6 Videos</h2>
+<ul>
+<li>Discussion of traditional ETL (get it out of the way).</li>
+<li>contrast with Hadoop ETL.</li>
+<li>How Spark handles compute.</li>
+<li>Distribution of jobs across clusters.</li>
+<li>Schedulers</li>
+<li>Give you a context for how what we’re doing in Project 2 would work in reality.</li>
+</ul>
+</section>
 </section>
 <section id="section-15" class="slide level1">
 <h1></h1>
@@ -593,11 +577,16 @@ docker-compose exec mids bash -c &quot;cat /w205/kafka/github-example-large.json
         // Transition style
         transition: 'linear', // none/fade/slide/convex/concave/zoom
 
+        math: {
+          config: 'TeX-AMS_HTML-full'
+        },
+
         // Optional reveal.js plugins
         dependencies: [
           { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
           { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
-          { src: 'reveal.js/plugin/notes/notes.js', async: true }
+          { src: 'reveal.js/plugin/notes/notes.js', async: true },
+          { src: 'reveal.js/plugin/math/math.js', async: true }
         ]
       });
     </script>
