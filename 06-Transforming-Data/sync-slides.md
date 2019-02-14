@@ -434,7 +434,7 @@ docker-compose exec mids bash -c "cat /w205/kafka/github-example-large.json | jq
 Go over | jq stuff
 :::
 
-## Publish some test messages to that topic with the kafka console producer
+## Publish some test messages 
 
 ```
 docker-compose exec mids bash -c "cat /w205/kafka/github-example-large.json | jq '.[]' -c | kafkacat -P -b kafka:29092 -t foo && echo 'Produced 100 messages.'"
