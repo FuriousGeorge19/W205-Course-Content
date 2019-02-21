@@ -42,15 +42,8 @@
 </ul>
 <p>Please get course-eval links from slack</p>
 </section>
-<section id="assignment-review" class="level2">
-<h2>Assignment Review</h2>
-<ul>
-<li>Review your Assignment 06</li>
-<li>Get ready to share</li>
-</ul>
-<aside class="notes">
-<p>Breakout at about 5 after the hour: - Check in with each group - have students share screen</p>
-</aside>
+<section id="assignment-06-breakout" class="level2">
+<h2>Assignment 06 Breakout</h2>
 </section>
 </section>
 <section id="section-1" class="slide level1">
@@ -454,8 +447,8 @@ Nico Williams</code></pre>
 </section>
 <section id="section-8" class="slide level1">
 <h1></h1>
-<section id="assignment-07" class="level2">
-<h2>Assignment 07</h2>
+<section id="assignment-7" class="level2">
+<h2>Assignment 7</h2>
 <ul>
 <li>Use Project 2 data</li>
 <li>Step through this process (use spark to read from kafka)</li>
@@ -470,6 +463,14 @@ Nico Williams</code></pre>
 <li>Annotate the file with explanations of what you were doing at each point.</li>
 </ul></li>
 </ul></li>
+</ul>
+</section>
+<section id="week-7-videos" class="level2">
+<h2>Week 7 Videos:</h2>
+<ul>
+<li>Sourcing Data</li>
+<li>Context for Project 2 : The idea is where do you get the data that flows into our pipeline? You wouldn’t usually get it from a file.</li>
+<li>Big Question: What do I need to do to data coming in to get it into Kafka? change the API client code? change app server code?</li>
 </ul>
 </section>
 </section>
@@ -503,11 +504,16 @@ Nico Williams</code></pre>
         // Transition style
         transition: 'linear', // none/fade/slide/convex/concave/zoom
 
+        math: {
+          config: 'TeX-AMS_HTML-full'
+        },
+
         // Optional reveal.js plugins
         dependencies: [
           { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
           { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
-          { src: 'reveal.js/plugin/notes/notes.js', async: true }
+          { src: 'reveal.js/plugin/notes/notes.js', async: true },
+          { src: 'reveal.js/plugin/math/math.js', async: true }
         ]
       });
     </script>
