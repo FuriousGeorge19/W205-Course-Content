@@ -417,7 +417,7 @@ docker-compose exec mids \
 ::: notes
 ```
      docker-compose exec mids bash -c "cat /w205/github-example-large.json | jq '.[]' -c | kafkacat -P -b kafka:29092 -t foo && echo 'Produced 100 messages.'"
-     ```
+```
 :::
 
 ## Should see something like
