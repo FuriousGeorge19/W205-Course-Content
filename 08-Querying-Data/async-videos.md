@@ -54,6 +54,8 @@ direct links:
 [video](https://ucb-mids.s3.amazonaws.com/prod/output_video_general/c38c7114b9ffb228aa7551556eae16cb/mp4_med.mp4),
 [slides](https://s3.amazonaws.com/ucb-mids/prod/UCB-MIDS_0019/Slides/Unit+8/8.1.2-Business-Decisions-as-Queries.pdf)
 
+- TAG: Supplemental
+
 ##
 8.1.3: `query-walkthrough`
 
