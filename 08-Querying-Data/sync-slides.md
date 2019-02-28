@@ -602,10 +602,10 @@ docker-compose down
 
 ## Week 8 Videos
 
-Context for similar pipeline in reality( aka, at scale, in production)
-Presto query walkthrough
-Partitioning
-How query jobs are scheduled & executed with distributed resources
+- Context for similar pipeline in reality( aka, at scale, in production)
+- Presto query walkthrough
+- Partitioning
+- How query jobs are scheduled & executed with distributed resources
 
 #
 
