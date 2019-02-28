@@ -78,6 +78,9 @@
 <source type="video/mp4" src="https://ucb-mids.s3.amazonaws.com/prod/output_video_general/c38c7114b9ffb228aa7551556eae16cb/mp4_med.mp4">
 <p><track kind="subtitles" src="https://corp-tech.s3.amazonaws.com/captioning/captions/5ab954ce8fa3d81b3c7e38bd.vtt" label="Overlay" srclang="en"> <track kind="transcript" src="https://corp-tech.s3.amazonaws.com/captioning/captions/5ab954ce8fa3d81b3c7e38bd.html" label="Full" srclang="en"> </video></p>
 <p>direct links: <a href="https://ucb-mids.s3.amazonaws.com/prod/output_video_general/c38c7114b9ffb228aa7551556eae16cb/mp4_med.mp4">video</a>, <a href="https://s3.amazonaws.com/ucb-mids/prod/UCB-MIDS_0019/Slides/Unit+8/8.1.2-Business-Decisions-as-Queries.pdf">slides</a></p>
+<ul>
+<li>TAG: Supplemental</li>
+</ul>
 </section>
 <section id="section-6" class="level2">
 <h2></h2>
@@ -122,6 +125,9 @@
 <source type="video/mp4" src="https://ucb-mids.s3.amazonaws.com/prod/output_video_general/6d63dbd3206465e479ca9c691e0bc055/mp4_med.mp4">
 <p><track kind="subtitles" src="https://corp-tech.s3.amazonaws.com/captioning/captions/5ab954b28fa3d81b3c7e38b2.vtt" label="Overlay" srclang="en"> <track kind="transcript" src="https://corp-tech.s3.amazonaws.com/captioning/captions/5ab954b28fa3d81b3c7e38b2.html" label="Full" srclang="en"> </video></p>
 <p>direct links: <a href="https://ucb-mids.s3.amazonaws.com/prod/output_video_general/6d63dbd3206465e479ca9c691e0bc055/mp4_med.mp4">video</a>, <a href="https://s3.amazonaws.com/ucb-mids/prod/UCB-MIDS_0019/Slides/Unit+8/8.3.2-Tools.pdf">slides</a></p>
+<ul>
+<li>TAG: Supplemental</li>
+</ul>
 </section>
 </section>
 <section id="section-12" class="slide level1">
@@ -142,11 +148,16 @@
         // Transition style
         transition: 'linear', // none/fade/slide/convex/concave/zoom
 
+        math: {
+          config: 'TeX-AMS_HTML-full'
+        },
+
         // Optional reveal.js plugins
         dependencies: [
           { src: 'http://people.ischool.berkeley.edu/~mark.mims/course-development/2017-mids-w205/templates/reveal.js//lib/js/classList.js', condition: function() { return !document.body.classList; } },
           { src: 'http://people.ischool.berkeley.edu/~mark.mims/course-development/2017-mids-w205/templates/reveal.js//plugin/zoom-js/zoom.js', async: true },
-          { src: 'http://people.ischool.berkeley.edu/~mark.mims/course-development/2017-mids-w205/templates/reveal.js//plugin/notes/notes.js', async: true }
+          { src: 'http://people.ischool.berkeley.edu/~mark.mims/course-development/2017-mids-w205/templates/reveal.js//plugin/notes/notes.js', async: true },
+          { src: 'http://people.ischool.berkeley.edu/~mark.mims/course-development/2017-mids-w205/templates/reveal.js//plugin/math/math.js', async: true }
         ]
       });
     </script>

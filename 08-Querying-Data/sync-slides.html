@@ -76,6 +76,17 @@
 <p>Walk through the docker-compose.yml file</p>
 </aside>
 </section>
+<section id="download-the-dataset-for-world-cup-players" class="level2">
+<h2>Download the dataset for World Cup players</h2>
+<ul>
+<li>In <code>~/w205/</code></li>
+</ul>
+<pre><code>curl -L -o players.json https://goo.gl/vsuCpZ</code></pre>
+<aside class="notes">
+<p>easier than github dataset b/c it’s flat</p>
+<p>really could be <code>~/w205/&lt;your_workspace&gt;</code> for this week!</p>
+</aside>
+</section>
 <section id="spin-up-the-cluster" class="level2">
 <h2>Spin up the cluster</h2>
 <pre><code>docker-compose up -d</code></pre>
@@ -133,17 +144,6 @@ drwx-wx-wx   - root   supergroup          0 2018-02-20 22:31 /tmp/hive</code></p
 <section id="should-show" class="level2">
 <h2>Should show</h2>
 <pre><code>Created topic &quot;players&quot;.</code></pre>
-</section>
-<section id="download-the-dataset-for-github-players" class="level2">
-<h2>Download the dataset for github players</h2>
-<ul>
-<li>In <code>~/w205/</code></li>
-</ul>
-<pre><code>curl -L -o players.json https://goo.gl/vsuCpZ</code></pre>
-<aside class="notes">
-<p>easier than github dataset b/c it’s flat</p>
-<p>really could be <code>~/w205/&lt;your_workspace&gt;</code> for this week!</p>
-</aside>
 </section>
 <section id="use-kafkacat-to-produce-test-messages-to-the-players-topic" class="level2">
 <h2>Use kafkacat to produce test messages to the <code>players</code> topic</h2>
@@ -551,6 +551,15 @@ Created topic “commits”.</li>
 </ul>
 </aside>
 </section>
+<section id="week-8-videos" class="level2">
+<h2>Week 8 Videos</h2>
+<ul>
+<li>Context for similar pipeline in reality( aka, at scale, in production)</li>
+<li>Presto query walkthrough</li>
+<li>Partitioning</li>
+<li>How query jobs are scheduled &amp; executed with distributed resources</li>
+</ul>
+</section>
 </section>
 <section id="section-11" class="slide level1">
 <h1></h1>
@@ -570,11 +579,16 @@ Created topic “commits”.</li>
         // Transition style
         transition: 'linear', // none/fade/slide/convex/concave/zoom
 
+        math: {
+          config: 'TeX-AMS_HTML-full'
+        },
+
         // Optional reveal.js plugins
         dependencies: [
           { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
           { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
-          { src: 'reveal.js/plugin/notes/notes.js', async: true }
+          { src: 'reveal.js/plugin/notes/notes.js', async: true },
+          { src: 'reveal.js/plugin/math/math.js', async: true }
         ]
       });
     </script>
