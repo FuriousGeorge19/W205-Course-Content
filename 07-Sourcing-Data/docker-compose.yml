@@ -11,9 +11,7 @@ services:
       - "2888"
       - "32181"
       - "3888"
-    extra_hosts:
-      - "moby:127.0.0.1"
-
+   
   kafka:
     image: confluentinc/cp-kafka:latest
     depends_on:
@@ -28,9 +26,7 @@ services:
     expose:
       - "9092"
       - "29092"
-    extra_hosts:
-      - "moby:127.0.0.1"
-
+    
   spark:
     image: midsw205/spark-python:0.0.5
     stdin_open: true
@@ -38,14 +34,10 @@ services:
     volumes:
       - ~/w205:/w205
     command: bash
-    extra_hosts:
-      - "moby:127.0.0.1"
-
+   
   mids:
     image: midsw205/base:latest
     stdin_open: true
     tty: true
     volumes:
       - ~/w205:/w205
-    extra_hosts:
-      - "moby:127.0.0.1"
