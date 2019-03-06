@@ -443,16 +443,26 @@ services:
 </aside>
 </section>
 </section>
+<section id="section-16" class="slide level1">
+<h1></h1>
+<section id="week-9-videos" class="level2">
+<h2>Week 9 Videos</h2>
+<ul>
+<li>Basics of brokers, producers, consumers, topics</li>
+<li>Context for using Kafka in a pipeline in reality( aka, at scale, in production)</li>
+</ul>
+</section>
+</section>
 <section id="summary" class="slide level1">
 <h1>Summary</h1>
-<section id="section-16" class="level2" data-background="images/pipeline-steel-thread-for-mobile-app.svg">
+<section id="section-17" class="level2" data-background="images/pipeline-steel-thread-for-mobile-app.svg">
 <h2></h2>
 <aside class="notes">
 <p>(repeat from earlier)</p>
 <p>Let’s walk through this - user interacts with mobile app - mobile app makes API calls to web services - API server handles requests: - handles actual business requirements (e.g., process purchase) - logs events to kafka - spark then: - pulls events from kafka - filters/flattens/transforms events - writes them to storage - presto then queries those events</p>
 </aside>
 </section>
-<section id="section-17" class="level2">
+<section id="section-18" class="level2">
 <h2></h2>
 <p><img data-src="images/pipeline-events-ingestion-from-app-server-more-detail.svg" style="border:0;box-shadow:none" /></p>
 <aside class="notes">
@@ -462,7 +472,7 @@ services:
 </aside>
 </section>
 </section>
-<section id="section-18" class="slide level1">
+<section id="section-19" class="slide level1">
 <h1></h1>
 <p><img class="logo" src="images/berkeley-school-of-information-logo.png"/></p>
 </section>
@@ -480,11 +490,16 @@ services:
         // Transition style
         transition: 'linear', // none/fade/slide/convex/concave/zoom
 
+        math: {
+          config: 'TeX-AMS_HTML-full'
+        },
+
         // Optional reveal.js plugins
         dependencies: [
           { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
           { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
-          { src: 'reveal.js/plugin/notes/notes.js', async: true }
+          { src: 'reveal.js/plugin/notes/notes.js', async: true },
+          { src: 'reveal.js/plugin/math/math.js', async: true }
         ]
       });
     </script>
