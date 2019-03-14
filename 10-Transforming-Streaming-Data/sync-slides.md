@@ -504,8 +504,15 @@ raw_events.cache()
 
     docker-compose down
 
+#
 
+## Week 10 Videos
 
+- Context for how what we're doing in Project 3 works in reality.
+- Streaming, batch, and microbatch
+- Microbatch window size
+- Performing computations- in memory vs.cached
+- How to set up pipelines to take action(recommendations, promotions etc) when streaming events come in
 
 
 
