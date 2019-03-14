@@ -331,30 +331,15 @@ docker-compose exec mids kafkacat -C -b kafka:29092 -t events -o beginning -e
 ## Breakout 1 Discussion
 
 - Discuss business requirements for the project
-- Which fields should we include?
-
-::: notes
 - What are the kinds of events that I need to track as data scientist at the game company?
   * List events
   * Give business reasons for tracking them 
   * Groups report out
       * e.g., one event is "join a guild", what sort of business reason would you be tracking "join a guild"?
       * What other events other than the ones we're tracking now would you want to track?
-:::
 
 
-## Breakout 2 Discussion
 
-- What info is available with these events?
-- How should the events be structured?
-
-
-::: notes
-- 2nd breakout is the tech version - 
-  * what flask request objects?
-  * what info do they have?
-  * what is the schema?
-:::
 
 
 # 
@@ -444,6 +429,17 @@ docker-compose exec mids kafkacat -C -b kafka:29092 -t events -o beginning -e
 ...
 ```
 
+#
+
+
+## Breakout 2 Discussion
+
+- What info is available with these events?
+- How should the events be structured?
+- i.e.,
+  * what flask request objects?
+  * what info do they have?
+  * what is the schema?
 
 
 
