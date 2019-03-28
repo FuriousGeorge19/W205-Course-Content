@@ -118,7 +118,7 @@ FROM `bigquery-public-data.san_francisco.bikeshare_trips`</code></pre>
 curl -L -o annot_fpid.json https://goo.gl/qWiu7d
 curl -L -o lp_data.csv https://goo.gl/FDFPYB</code></pre>
 <aside class="notes">
-<p>make sure they go into <code>~/w205</code> on your droplet.</p>
+<p>make sure they go into <code>~/w205</code> on your cloud instance.</p>
 <p>i.e., <code>cd w205</code> first</p>
 </aside>
 </section>
@@ -280,7 +280,7 @@ sort | uniq -c | sort -gr | head -10</code></pre>
 </section>
 <section id="setup" class="level2">
 <h2>setup</h2>
-<p>(from your mids droplet)</p>
+<p>(from your mids cloud instance)</p>
 <ul>
 <li><p>auth the GCP client</p>
 <pre><code>gcloud init</code></pre>

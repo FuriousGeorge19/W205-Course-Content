@@ -89,7 +89,7 @@ curl -L -o lp_data.csv https://goo.gl/FDFPYB
 ```
 
 ::: notes
-make sure they go into `~/w205` on your droplet.
+make sure they go into `~/w205` on your cloud instance.
 
 i.e., `cd w205` first
 :::
@@ -265,7 +265,7 @@ Descending
 
 ## setup
 
-(from your mids droplet)
+(from your mids cloud instance)
 
 - auth the GCP client
   ```
