@@ -279,10 +279,6 @@ Use curl
 - `docker-compose exec mids curl http://localhost:5000/`
 - `docker-compose exec mids curl http://localhost:5000/purchase_a_sword`
 
-or from a browser
-- `http://<droplet_ip>:5000/`
-- `http://<droplet_ip>:5000/purchase_a_sword`
-
 
 ::: notes
 ```
