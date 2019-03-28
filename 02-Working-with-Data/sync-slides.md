@@ -12,7 +12,7 @@ author: Week 02 - sync session
 - Questions on process?
 
 
-## Your droplet set up
+## Your cloud instance set up
 
 - repos cloned:
     - `course-content`
