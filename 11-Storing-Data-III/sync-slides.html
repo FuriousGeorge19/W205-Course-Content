@@ -344,12 +344,10 @@ cp ~/w205/course-content/11-Storing-Data-III/*.py .</code></pre>
 <pre><code>docker-compose exec mids env FLASK_APP=/w205/spark-from-files/game_api.py flask run --host 0.0.0.0</code></pre>
 </aside>
 </section>
-<section id="generate-events-from-browser" class="level2">
-<h2>Generate events from browser</h2>
-<ul>
-<li>localhost:5000/</li>
-<li>localhost:5000/purchase_a_sword</li>
-</ul>
+<section id="generate-events" class="level2">
+<h2>Generate events</h2>
+<p>Use curl - <code>docker-compose exec mids curl http://localhost:5000/</code> - <code>docker-compose exec mids curl http://localhost:5000/purchase_a_sword</code></p>
+<p>or from a browser - <code>http://&lt;droplet_ip&gt;:5000/</code> - <code>http://&lt;droplet_ip&gt;:5000/purchase_a_sword</code></p>
 <aside class="notes">
 <pre><code>    docker-compose exec mids curl http://localhost:5000/
     docker-compose exec mids curl http://localhost:5000/purchase_a_sword</code></pre>
@@ -702,11 +700,16 @@ ValueError: RDD is empty</code></pre>
         // Transition style
         transition: 'linear', // none/fade/slide/convex/concave/zoom
 
+        math: {
+          config: 'TeX-AMS_HTML-full'
+        },
+
         // Optional reveal.js plugins
         dependencies: [
           { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
           { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
-          { src: 'reveal.js/plugin/notes/notes.js', async: true }
+          { src: 'reveal.js/plugin/notes/notes.js', async: true },
+          { src: 'reveal.js/plugin/math/math.js', async: true }
         ]
       });
     </script>
