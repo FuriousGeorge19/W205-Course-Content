@@ -164,7 +164,7 @@ git clone \
     vi README.md
 
 ::: notes
-- M: no vi in container? droplets?
+- M: no vi in container?
 :::
 
 ## Commit those changes
