@@ -113,31 +113,63 @@
 <section id="cloud-instances" class="level2">
 <h2>Cloud Instances</h2>
 <aside class="notes">
-<p>We’ll be working from cloud instances (“Droplets”) in this class</p>
+<p>We’ll be working from cloud instances in this class</p>
 </aside>
 </section>
-<section id="access" class="level2">
-<h2>Access</h2>
+<section id="section-4" class="level2">
+<h2></h2>
+<ol type="1">
+<li>Sign up for GCP account</li>
+<li>Create a w205 image in your account</li>
+<li>Create your instance</li>
+<li>Access your instance</li>
+</ol>
+<aside class="notes">
+<p>walk through this in class using cloud.google.com</p>
+</aside>
+</section>
+<section id="create-a-w205-image-in-your-account" class="level2">
+<h2>Create a w205 image in your account</h2>
+<aside class="notes">
 <ul>
-<li><p>URL:</p>
-<pre><code>http://&lt;ip_address&gt;:8000/</code></pre></li>
-<li><p>Login: <code>science</code></p></li>
-<li><p>Password: (provided over slack)</p></li>
+<li>name the image something you’ll remember</li>
+<li>select cloud storage object as the source</li>
+<li>paste in the bucket url for the current w205 image</li>
+<li>takes 5-10mins to create</li>
 </ul>
-<aside class="notes">
-<p>Instructors hand out ip addresses and passwords</p>
-<p>Students familiar with SecureShell can ssh directly to the droplets</p>
 </aside>
 </section>
-<section id="jupyterhub-terminal" class="level2">
-<h2>JupyterHub Terminal</h2>
+<section id="create-your-instance" class="level2">
+<h2>Create your instance</h2>
 <aside class="notes">
-<p>copy/paste files via the jupyterhub file browser</p>
-<p>We’ll use SecureShell for this in the future</p>
+<ul>
+<li>Change bootdisk to our w205 image created above</li>
+<li>Change 10G bootdisk to 100G bootdisk</li>
+<li>Allow default service account to access all Google Cloud APIs</li>
+<li>allow <code>http</code> traffic (not <code>https</code> for now)</li>
+</ul>
 </aside>
 </section>
+<section id="access-your-instance" class="level2">
+<h2>Access your instance</h2>
+<p>SSH in and set a password</p>
+<pre><code>sudo passwd &lt;username&gt;</code></pre>
+<aside class="notes">
+<p>gcp creates/injects usernames when you first ssh into the instance</p>
+<p>ssh access uses keys, but we’ll need a password set in order to use jupyterhub</p>
+</aside>
 </section>
-<section id="section-4" class="slide level1">
+<section id="access-jupyterhub" class="level2">
+<h2>Access JupyterHub</h2>
+<ul>
+<li><p>JupyterHub:</p>
+<pre><code>http://&lt;ip_address&gt;/</code></pre></li>
+<li><p>Login: (created by google cloud)</p></li>
+<li><p>Password: (created by you)</p></li>
+</ul>
+</section>
+</section>
+<section id="section-5" class="slide level1">
 <h1></h1>
 <section id="docker" class="level2">
 <h2>Docker</h2>
@@ -145,7 +177,7 @@
 <p>What is docker? Very brief version</p>
 </aside>
 </section>
-<section id="section-5" class="level2">
+<section id="section-6" class="level2">
 <h2></h2>
 <p><img data-src="images/dontpanic.jpeg" /></p>
 <aside class="notes">
@@ -154,7 +186,7 @@
 <p>For now, just follow along</p>
 </aside>
 </section>
-<section id="section-6" class="level2">
+<section id="section-7" class="level2">
 <h2></h2>
 <ul>
 <li><p>pull the image:</p>
@@ -176,7 +208,7 @@
 </aside>
 </section>
 </section>
-<section id="section-7" class="slide level1">
+<section id="section-8" class="slide level1">
 <h1></h1>
 <section id="git" class="level2">
 <h2>Git</h2>
@@ -202,7 +234,7 @@
 </aside>
 </section>
 </section>
-<section id="section-8" class="slide level1">
+<section id="section-9" class="slide level1">
 <h1></h1>
 <section id="signup-assignment" class="level2">
 <h2>Signup Assignment</h2>
@@ -266,7 +298,7 @@
 </aside>
 </section>
 </section>
-<section id="section-9" class="slide level1">
+<section id="section-10" class="slide level1">
 <h1></h1>
 <section id="how-this-class-works" class="level2">
 <h2>How this class works</h2>
@@ -343,7 +375,7 @@ blob/master/01-Introduction/async-videos.md</code></pre>
 </ul>
 </section>
 </section>
-<section id="section-10" class="slide level1">
+<section id="section-11" class="slide level1">
 <h1></h1>
 <section id="student-projects" class="level2">
 <h2>Student Projects</h2>
@@ -356,7 +388,7 @@ blob/master/01-Introduction/async-videos.md</code></pre>
 <li>Understanding User Behavior</li>
 </ol>
 </section>
-<section id="section-11" class="level2" data-background="images/pipeline-overall.svg">
+<section id="section-12" class="level2" data-background="images/pipeline-overall.svg">
 <h2></h2>
 <aside class="notes">
 <p>Back to the pipeline - What part are we in?</p>
@@ -427,7 +459,7 @@ blob/master/01-Introduction/async-videos.md</code></pre>
 </ul>
 </section>
 </section>
-<section id="section-12" class="slide level1">
+<section id="section-13" class="slide level1">
 <h1></h1>
 <p><img data-src="images/berkeley-school-of-information-logo.png" class="logo" /></p>
 </section>
