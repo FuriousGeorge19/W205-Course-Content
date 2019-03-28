@@ -199,56 +199,34 @@ Check out <https://classroom.github.com/videos> for more info.
 
 ## AWS and GCP
 
-Students will directly use a variety of AWS and GCP services throughout this
-course.  We'll prefer that students create free-tier individual accounts with
-AWS and GCP (we walk them through this process during the second class).  If a
-student has already spent their free tier, there are potential sources of help
-from the department.  Let's try to take that on a case-by-case basis.
+Students will directly use a variety of GCP services throughout this course.
+We'll prefer that students use free-tier individual accounts with GCP (we walk
+them through this process during the first class). We can probably support
+students who wish to use AWS instead of GCP at some point.  This will require
+testing our mids w205 student tools AMI. If a student has already spent their
+free tier, there are potential sources of help from the department.  Let's try
+to take that on a case-by-case basis.
 
-## DigitalOcean
+## MIDS w205 Student Tools Images
 
-We have a DigitalOcean account for MIDS w205 instructors with resources
-available to stand up an instance per-student for the duration of the
-semester.
-
-There's a MachineLearning One-Click (MLOC) image that provides a handful
-of particularly useful tools for this class right out of the box:
+We maintain an image for the students to use for the cloud instances we expect
+them to use throughout the semester. This provides a handful of particularly
+useful tools for this class right out of the box:
 
 - common python (2&3) ML tools and libraries
-- common R tools and libraries
-- jupyterhub (listening on port `TCP/8000`)
+- jupyterhub (listening on port `TCP/80`)
     - with terminal access!
     - `basic_auth` over bare `http`, so be careful
-- r-studio server (listening on port `TCP/8787` iirc)
-    - `basic_auth` over bare `http`, so be careful
-    
-### Instructor Droplets
 
-Each instructor has a single `8core/16GB` instance, with more available as
-necessary.  These are spun from the MLOC image described above with, most
-notably/usefully docker, pythonlibs, and jupyterhub.  You'll have to add any
-users and set passwords for students to use jupyterhub.
+Here are [cloud instance setup
+instructions](https://s3-us-west-2.amazonaws.com/mids-w205-fund-of-data-eng/setup-mids-utils-on-gcp.mp4).
 
-### Student Droplets
-
-For students, we're starting with a handful of `2core/2GB` instances
-per section, with the ability to create more if instructors wish.  These
-are spun from the MLOC image mentioned above with docker, pythonlibs,
-jupyterhub, and R-studio server.
-
-Unlike the instructor droplets, each student droplet has a password set for
-access.  Instructors can simply hand out an `{ IP addr, password }` pair to any
-students that require it.  The students can immediately go to town on
-jupyterhub on port 8000 for notebook or web-based terminal access to the
-droplet.
-
-The thinking here is to provide these instances as a backup in case students
-are having troubles on individual machines during classes.  The web-based
-terminal access to droplets can provide a solid work-around for students who
-might have restricted access to their laptops.
+These are maintained under the packer directory in our
+[docker-images](https://github.com/mids-w205-fund-of-data-eng/docker-images/)
+repo.
 
 
-# Cloud and Container Images
+# Docker Images
 
 TODO: Most of what we do will be included in the activity template repos,
 but it's worth going over some basic requirements we have here.
@@ -257,7 +235,7 @@ We'll use a number of docker images, but our go-to will be
 
     midsw205/base
 
-which anyone can get (also on the droplets above) using
+which anyone can get (also on the cloud instances above) using
 
     docker pull midsw205/base:latest
 

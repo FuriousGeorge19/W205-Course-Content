@@ -63,8 +63,10 @@ Students will:
 ## Course Tools
 
 In this class we will be using cloud instances on Google Cloud Platform (GCP).
-We will set these up in the first week of class, but if you'd like to get a head
-start, here are [instructions](http://www.example.com/) for how to do that.
+We will set these up in the first week of class, but if you'd like to get a
+head start, here are [video
+instructions](https://s3-us-west-2.amazonaws.com/mids-w205-fund-of-data-eng/setup-mids-utils-on-gcp.mp4)
+for how to do that.
 
 To follow those instructions, you'll need the following Google Cloud Storage
 URL for our current w205 student tools image:
