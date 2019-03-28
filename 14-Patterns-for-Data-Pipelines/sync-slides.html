@@ -119,7 +119,6 @@ cp ~/w205/course-content/14-Patterns-for-Data-Pipelines/*.py .
 <section id="announcements" class="level2">
 <h2>Announcements</h2>
 <ul>
-<li>droplets - copy all your stuff out by 27Apr2018</li>
 <li>repos - fork or clone your repos by 27Apr2018</li>
 <li>future - <code>course-content</code> tagged by semester</li>
 </ul>
@@ -460,7 +459,6 @@ cp ~/w205/course-content/14-Patterns-for-Data-Pipelines/*.py .
 <pre><code>create external table if not exists default.sword_purchases (Accept string, Host string, User_Agent string, event_type string, timestamp string, raw_event string) stored as parquet location &#39;/tmp/sword_purchases&#39;  tblproperties (&quot;parquet.compress&quot;=&quot;SNAPPY&quot;);</code></pre>
 <p>and then <code>ctrl-D</code> to exit the hive shell</p>
 <p>Note: you might browse the metastore in hue… <code>open http://localhost:8888/</code> (login/pw is <code>cloudera/cloudera</code>)</p>
-<p>for droplets, <code>s/localhost/&lt;droplet_ip&gt;/</code></p>
 </aside>
 </section>
 <section id="query-this-with-presto" class="level2">
@@ -548,7 +546,7 @@ done</code></pre>
 <aside class="notes">
 <p>remember, there’s a two minute stream interval</p>
 <p>Note: you might run hive directly from hue… <code>open http://localhost:8888/</code> (login/pw is <code>cloudera/cloudera</code>). We recommend Presto as a much better query option in general, but hue has its uses.</p>
-<p>for droplets, <code>s/localhost/&lt;droplet_ip&gt;/</code> - hue can be used as a gui to browse the hdfs file directory, can upload and download files, change permissions, a lot of complications with hdfs are about permissions, so this easy access to what’s up can be really helpful. - That’s why we’ve been writing to the tmp directory is to avoid dealing with permissions for this class. - can also do a query editor in hue - e.g., select * from default.sword_purchases. - hive will try to kick off a bunch of map reduce jobs under the hood, and we haven’t set up the resources to handle that. - therefore, Presto is better.</p>
+<p>for cloud instances, <code>s/localhost/&lt;cloud_instance_ip&gt;/</code> - hue can be used as a gui to browse the hdfs file directory, can upload and download files, change permissions, a lot of complications with hdfs are about permissions, so this easy access to what’s up can be really helpful. - That’s why we’ve been writing to the tmp directory is to avoid dealing with permissions for this class. - can also do a query editor in hue - e.g., select * from default.sword_purchases. - hive will try to kick off a bunch of map reduce jobs under the hood, and we haven’t set up the resources to handle that. - therefore, Presto is better.</p>
 </aside>
 </section>
 </section>
@@ -734,11 +732,16 @@ docker run -it --rm mytools which jq</code></pre>
         // Transition style
         transition: 'linear', // none/fade/slide/convex/concave/zoom
 
+        math: {
+          config: 'TeX-AMS_HTML-full'
+        },
+
         // Optional reveal.js plugins
         dependencies: [
           { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
           { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
-          { src: 'reveal.js/plugin/notes/notes.js', async: true }
+          { src: 'reveal.js/plugin/notes/notes.js', async: true },
+          { src: 'reveal.js/plugin/math/math.js', async: true }
         ]
       });
     </script>

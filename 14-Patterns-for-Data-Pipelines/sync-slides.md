@@ -25,7 +25,6 @@ cp ~/w205/course-content/14-Patterns-for-Data-Pipelines/*.py .
 #
 ## Announcements
 
-- droplets - copy all your stuff out by 27Apr2018
 - repos - fork or clone your repos by 27Apr2018
 - future - `course-content` tagged by semester
 
@@ -383,7 +382,6 @@ and then `ctrl-D` to exit the hive shell
 
 Note: you might browse the metastore in hue... `open http://localhost:8888/` (login/pw is `cloudera/cloudera`)
 
-for droplets, `s/localhost/<droplet_ip>/`
 :::
 
 ## Query this with presto
@@ -499,7 +497,7 @@ remember, there's a two minute stream interval
 Note: you might run hive directly from hue... `open http://localhost:8888/` (login/pw is `cloudera/cloudera`).
 We recommend Presto as a much better query option in general, but hue has its uses.
 
-for droplets, `s/localhost/<droplet_ip>/`
+for cloud instances, `s/localhost/<cloud_instance_ip>/`
 - hue can be used as a gui to browse the hdfs file directory, can upload and download files, change permissions, a lot of complications with hdfs are about permissions, so this easy access to what's up can be really helpful.
 - That's why we've been writing to the tmp directory is to avoid dealing with permissions for this class.
 - can also do a query editor in hue - e.g., select * from default.sword_purchases.
