@@ -60,6 +60,20 @@ Students will:
 - Understand how basic data privacy, security, and chain-of-custody works.
 
 
+## Course Tools
+
+Student work throughout this course is done on a cloud instance running on
+Google Cloud Platform (GCP).
+
+Instructions for creating your cloud instance for the semester can be found
+[here](http://www.example.com/).
+
+To follow those instructions, you'll need the following Google Cloud Storage
+URL for our current student tools image:
+
+    gs://mids-w205/mids-w205-tools-bionic-1553717198.tar.gz
+
+
 ## Evaluation & Grading
 
 ### Assignments
