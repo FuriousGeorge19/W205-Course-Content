@@ -251,7 +251,7 @@ services:
 <section id="web-app" class="level2">
 <h2>Web-app</h2>
 <ul>
-<li>Take our instrumented web-app from before <code>~/w205/full-stack/game_api.py</code></li>
+<li>Take our instrumented web-app from before <code>~/w205/full-stack2/game_api.py</code></li>
 </ul>
 <div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="co">#!/usr/bin/env python</span></a>
 <a class="sourceLine" id="cb5-2" data-line-number="2"><span class="im">import</span> json</a>
@@ -288,10 +288,10 @@ services:
 <section id="run-flask" class="level2">
 <h2>run flask</h2>
 <pre><code>docker-compose exec mids \
-  env FLASK_APP=/w205/full-stack/game_api.py \
+  env FLASK_APP=/w205/full-stack2/game_api.py \
   flask run --host 0.0.0.0</code></pre>
 <aside class="notes">
-<pre><code>docker-compose exec mids env FLASK_APP=/w205/full-stack/game_api.py flask run --host 0.0.0.0</code></pre>
+<pre><code>docker-compose exec mids env FLASK_APP=/w205/full-stack2/game_api.py flask run --host 0.0.0.0</code></pre>
 </aside>
 </section>
 <section id="set-up-to-watch-kafka" class="level2">
@@ -1011,11 +1011,16 @@ done</code></pre>
         // Transition style
         transition: 'linear', // none/fade/slide/convex/concave/zoom
 
+        math: {
+          config: 'TeX-AMS_HTML-full'
+        },
+
         // Optional reveal.js plugins
         dependencies: [
           { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
           { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
-          { src: 'reveal.js/plugin/notes/notes.js', async: true }
+          { src: 'reveal.js/plugin/notes/notes.js', async: true },
+          { src: 'reveal.js/plugin/math/math.js', async: true }
         ]
       });
     </script>
