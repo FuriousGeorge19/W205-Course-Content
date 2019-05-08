@@ -177,7 +177,7 @@ For now, just follow along
   docker run \
     -it \
     --rm \
-    -v /home/science/w205:/w205 \
+    -v ~/w205:/w205 \
     midsw205/base:latest \
     bash
   ```
@@ -187,7 +187,7 @@ For now, just follow along
 Like we said, we'll get into what all those options mean etc, just keep track for now
 
 ```
-docker run -it --rm -v /home/science/w205:/w205 midsw205/base:latest bash
+docker run -it --rm -v ~/w205:/w205 midsw205/base:latest bash
 ```
 :::
 
