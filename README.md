@@ -255,7 +255,7 @@ the live classroom for specific weeks in the term.
 
 >   Analytics For Hackers: How To Think About Event Data
 >   by Michelle Wetzler
->   https://blog.keen.io/analytics-for-hackers-how-to-think-about-event-data-cabeefe1f3d9
+>   https://blog.keen.io/analytics-for-hackers-how-to-think-about-event-data/
 
 #### Asynchronous Content
 
