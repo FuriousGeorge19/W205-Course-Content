@@ -1,6 +1,6 @@
 # MIDS w205 - Fundamentals of Data Engineering
 
-Spring 2019
+
 
 
 ## Course Description
@@ -105,30 +105,14 @@ For example, for Assignment 1:
 3. we will review it and address questions during Week 2's synchronous session
 4. the final version of the assignment will be due the end of week 2
 
+So each assignment is due the Friday of the week following the week in which it
+was assigned. This leaves you at least a week to complete each assignment.
 
-|   Assignment | Due Date    |
-|         ---: | :---------- |
-|       signup | Will not be graded – does not count - provided for students to practice with |
-|           01 | Friday, January 18th, 2019, 11:59 pm Berkeley time |
-|           02 | Friday, January 25th, 2019, 11:59 pm Berkeley time |
-|           03 | Friday, February 1st, 2019, 11:59 pm Berkeley time |
-|           04 | Friday, February 8th, 2019, 11:59 pm Berkeley time |
-|           05 | Friday, February 15th, 2019, 11:59 pm Berkeley time |
-|           06 | Friday, February 22nd, 2019, 11:59 pm Berkeley time |
-|           07 | Friday, March 1st, 2019, 11:59 pm Berkeley time |
-|           08 | Friday, March 8th, 2019, 11:59 pm Berkeley time |
-|           09 | Friday, March 15th, 2019, 11:59 pm Berkeley time |
-|           10 | Friday, March 22nd, 2019, 11:59 pm Berkeley time |
-| Spring Break | no class – nothing due |
-|           11 | Friday, April 5th, 2019, 11:59 pm Berkeley time |
-|           12 | Friday, April 19th, 2019, 11:59 pm Berkeley time (extra week provided for advanced options) |
+No work may be accepted after the last day of instruction (Unless an incomplete
+has been approved due to extreme circumstances by the Dean’s office).
 
-No work may be accepted after Friday, April 19th, 2019, 11:59 pm Berkeley time
-(Unless an incomplete has been approved due to extreme circumstances by the
-Dean’s office).
-
-The dates above are provided as a default reference.  They may vary by section,
-so check with your section instructor for definitive due dates.
+Assignments may vary by section, so check with your section instructor for
+definitive due dates.
 
 
 ### How Grades are Assigned
