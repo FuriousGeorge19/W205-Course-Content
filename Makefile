@@ -6,6 +6,7 @@ slides:
 	@for week in $(weeks); do \
 	  $(MAKE) -C $$week; \
 	done
+	$(MAKE) -C tutorials
 
 README.md: docs/README.md
 	@echo "---" $@ "---"
@@ -18,12 +19,14 @@ pdfs:
 	@for week in $(weeks); do \
 	  $(MAKE) -C $$week $@; \
 	done
+	$(MAKE) -C tutorials $@
 
 clean:
 	@for week in $(weeks); do \
 	  $(MAKE) -C $$week $@; \
 	done
 	$(MAKE) -C docs $@
+	$(MAKE) -C tutorials $@
 
 realclean: clean
 	rm -f README.md
