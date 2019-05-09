@@ -2,7 +2,6 @@
 slides = $(wildcard *-*.md)
 default: $(slides:.md=.html)
 pdfs: $(slides:.md=.pdf)
-pdfs: pdf
 
 run_pandoc := docker run --rm -t \
 	-v `pwd`:/source \
