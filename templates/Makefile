@@ -6,14 +6,14 @@ pdfs: pdf
 
 run_pandoc := docker run --rm -t \
 	-v `pwd`:/source \
-	-v `python -c 'import os, sys; print os.path.realpath("images")'`:/source/images \
-	-v `python -c 'import os, sys; print os.path.realpath("reveal.js")'`:/source/reveal.js \
+	-v `python -c 'import os, sys; print(os.path.realpath("images"))'`:/source/images \
+	-v `python -c 'import os, sys; print(os.path.realpath("reveal.js"))'`:/source/reveal.js \
 	midsw205/pandoc:2.0.7
 
 run_decktape := docker run --rm -t \
 	-v `pwd`:/slides \
-	-v `python -c 'import os, sys; print os.path.realpath("images")'`:/slides/images \
-	-v `python -c 'import os, sys; print os.path.realpath("reveal.js")'`:/slides/reveal.js \
+	-v `python -c 'import os, sys; print(os.path.realpath("images"))'`:/slides/images \
+	-v `python -c 'import os, sys; print(os.path.realpath("reveal.js"))'`:/slides/reveal.js \
 	astefanutti/decktape:2.8.3 
 
 %.html : %.md
