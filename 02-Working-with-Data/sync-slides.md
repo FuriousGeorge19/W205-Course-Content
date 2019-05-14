@@ -59,7 +59,6 @@ How would we build this ourselves?
 
 
 # 
-## Big Ideas
 
 ## Business Decisions
 
@@ -90,16 +89,6 @@ business requirements get encoded as queries of data
 Go over what the dataset is on the webpage
 :::
 
-## Get Going: Google account
-
-- Go to <https://cloud.google.com/bigquery/>
-- Click on "Try it Free"
-- It asks for credit card, but you get free credit and it does not autorenew after the credit is used 
-
-::: notes
-(**OR CHANGE THIS IF SOME SORT OF OTHER ACCESS INFO**)
-:::
-
 
 ## Problem Statement
 - You're a data scientist at Ford GoBike (<https://www.fordgobike.com/>), the company running Bay Area Bikeshare. You are trying to increase ridership, and you want to offer deals through the mobile app to do so. What deals do you offer though? Currently, your company has three options: 
@@ -121,7 +110,7 @@ You will not answer these questions this week just answer the questions assigned
 
 ## Working with BQ gui
 
-<https://cloud.google.com/bigquery/public-data/bay-bike-share>
+<https://console.cloud.google.com/bigquery>
 
 ## Tutorial
 
