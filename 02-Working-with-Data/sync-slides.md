@@ -84,7 +84,7 @@ business requirements get encoded as queries of data
 
 - In the Query Project, you will get practice with SQL while learning about Google Cloud Platform (GCP) and BiqQuery. You'll answer business-driven questions using public datasets housed in GCP. To give you experience with different ways to use those datasets, you will use the web UI (BiqQuery) and the command-line tools, and work with them in jupyter notebooks.
 
-- We will be using the Bay Area Bike Share Trips Data (<https://cloud.google.com/bigquery/public-data/bay-bike-share>). 
+- We will be using the Bay Area Bike Share Trips Data, to get to the data click ADD DATA, then open bigquert-public-data, find san_francisco and in there bikeshare_trips (NOT san_francisco_bikeshare). 
 
 ::: notes
 Go over what the dataset is on the webpage
@@ -134,12 +134,12 @@ You will not answer these questions this week just answer the questions assigned
 ## the `;`
 
     SELECT * 
-    FROM Customers;
+    FROM <data set>;
 
 VS 
 
     SELECT * 
-    FROM Customers
+    FROM <data set>
 
 ::: notes
 - Nearly all other sql implementations (and what you will see in the tutorial), end statements with a `;`
@@ -163,6 +163,7 @@ VS
 - Google was going to create their own sql that worked different :)
 - It's silly, but the way the table reference part, the "FROM" part, is written is different.
 - So, now there's the `#standardSQL` flag
+- Watch out for the back ticks!
 :::
 
 
@@ -244,7 +245,7 @@ Answer: something like 75
 ##
 
 	#standardSQL
-	SELECT min(time), max(time)
+	SELECT min(start_date), max(end_date)
 	FROM `bigquery-public-data.san_francisco.bikeshare_status`
 
 
@@ -301,57 +302,6 @@ This shows that you get multiple entries for each `station_id` b/c diff values o
 ::: notes
 If there's any time, break in groups to do whatever questions they come up with. 
 Rotate between groups to see what folks are coming up with.
-:::
-
-
-# 
-## SecureShell (SSH)
-
-#
-## remote terminal connections
-
-##
-
-    ssh science@xxx.xxx.xxx.xxx
-
-::: notes
-for your cloud instance, look up:
-- the ip address
-- password for the `science` user
-:::
-
-
-#
-## copying files
-
-##
-
-On your laptop, run
-
-    scp some_file science@xxx.xxx.xxx.xxx:
-
-or 
-
-    scp some_file science@xxx.xxx.xxx.xxx:/tmp/
-
-
-::: notes
-copying files from your laptop to the instance
-
-note the colon!
-:::
-
-##
-
-On your laptop, run
-
-    scp science@xxx.xxx.xxx.xxx:~/w205/a_file.py .
-
-
-::: notes
-copying files from the instance to your laptop
-
-note the period!
 :::
 
 
