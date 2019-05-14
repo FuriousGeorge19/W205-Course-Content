@@ -50,6 +50,20 @@ cp ~/w205/course-content//08-Querying-Data/docker-compose.yml .
 Walk through the docker-compose.yml file
 :::
 
+## Download the dataset for World Cup players
+
+- In `~/w205/`
+
+```
+curl -L -o players.json https://goo.gl/vsuCpZ
+```
+
+::: notes
+easier than github dataset b/c it's flat
+
+really could be `~/w205/<your_workspace>` for this week!
+:::
+
 ## Spin up the cluster
 
 ```
@@ -127,19 +141,7 @@ docker-compose exec kafka kafka-topics --create --topic players --partitions 1 -
 
     Created topic "players".
 
-## Download the dataset for github players
 
-- In `~/w205/`
-
-```
-curl -L -o players.json https://goo.gl/vsuCpZ
-```
-
-::: notes
-easier than github dataset b/c it's flat
-
-really could be `~/w205/<your_workspace>` for this week!
-:::
 
 ## Use kafkacat to produce test messages to the `players` topic
 
@@ -597,6 +599,13 @@ docker-compose down
 - kafka has the same kind of replicaton factors and partitions as hadoop
 - gives you the choice 
 :::
+
+## Week 8 Videos
+
+- Context for similar pipeline in reality( aka, at scale, in production)
+- Presto query walkthrough
+- Partitioning
+- How query jobs are scheduled & executed with distributed resources
 
 #
 

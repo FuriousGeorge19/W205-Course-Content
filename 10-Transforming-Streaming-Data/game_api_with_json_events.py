@@ -23,9 +23,3 @@ def purchase_a_sword():
     purchase_sword_event = {'event_type': 'purchase_sword'}
     log_to_kafka('events', purchase_sword_event)
     return "Sword Purchased!\n"
-
-@app.route("/purchase_a_frog")
-def purchase_a_frog():
-    purchase_frog_event = {'event_type': 'purchase_frog'}
-    log_to_kafka('events', purchase_frog_event)
-    return "Frog Purchased!\n"

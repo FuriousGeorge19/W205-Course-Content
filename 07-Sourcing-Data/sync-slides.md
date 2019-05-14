@@ -14,15 +14,8 @@ author: Week 07 - sync session
 Please get course-eval links from slack
 
 
-## Assignment Review
-- Review your Assignment 06
-- Get ready to share
+## Assignment 06 Breakout
 
-::: notes
-Breakout at about 5 after the hour:
-- Check in with each group 
-- have students share screen
-:::
 
 
 #
@@ -422,7 +415,9 @@ docker-compose exec mids \
 ```
 
 ::: notes
-docker-compose exec mids bash -c "cat /w205/github-example-large.json | jq '.[]' -c | kafkacat -P -b kafka:29092 -t foo && echo 'Produced 100 messages.'"
+```
+     docker-compose exec mids bash -c "cat /w205/github-example-large.json | jq '.[]' -c | kafkacat -P -b kafka:29092 -t foo && echo 'Produced 100 messages.'"
+```
 :::
 
 ## Should see something like
@@ -579,7 +574,7 @@ Nico Williams
 
 
 #
-## Assignment 07
+## Assignment 7
 - Use Project 2 data
 - Step through this process (use spark to read from kafka)
 - What you turn in:
@@ -589,6 +584,14 @@ Nico Williams
     * Run `history > <user-name>-history.txt`
     * Save the relevant portion of your history as `<user-name>-annotations.md`
     * Annotate the file with explanations of what you were doing at each point.
+
+## Week 7 Videos:
+
+- Sourcing Data
+- Context for Project 2 : The idea is where do you get the data that flows into our pipeline? You wouldn’t usually get it from a file.
+-  Big Question: What do I need to do to data coming in to get it into Kafka? change the API client code? change app server code?
+
+
 
 
 

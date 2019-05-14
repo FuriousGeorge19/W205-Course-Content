@@ -9,16 +9,14 @@ author: Week 05 - sync session
 
 
 #
-## While we're getting started
+## Assignment 04 Breakout
 
-- Review your Assignment 04
-- Get ready to share
+
 
 ::: notes
 Breakout at about 5 after the hour:
 - Check in with each group on their solution to the assignment
 - Answer questions as people have them on what they had trouble with
-- Have 3-4 people present
 :::
 
 
@@ -28,7 +26,9 @@ Breakout at about 5 after the hour:
 ## Today
 - Assignment 04 wraps up the Query Project
 - Creating basic `docker-compose` clusters
-- NoSQL stores with `docker-compose`
+- NoSQL store (Redis) with `docker-compose`
+- Redis to track state
+
 
 ::: notes
 - Watching RDBs and NoSQL videos b/t week 4 & week 5
@@ -38,11 +38,7 @@ Breakout at about 5 after the hour:
 - (docker compose + how to run a notebook in the container)
 :::
 
-## Between Class 5 & Class 6
 
-- async material in Week 5 syllabus (Virtualization, Hadoop)
-- Readings in Week 5 syllabus
-- Assignment 05
 
 
 ## Class 6
@@ -212,7 +208,7 @@ Start up the cluster
 
 
 #
-## More docker-compose with Redis
+## Clusters with docker-compose
 
 ## Setup
 
@@ -354,6 +350,44 @@ remember, you can copy/paste this from the `course-content` repo
     docker-compose down
 
 #
+
+
+## Wrapping Up
+
+## Assignment 5
+
+- Follow the steps we did in class to get redis and the mids base container talking. = Follow the steps we did in class 
+- What you turn in:
+	- In your /assignment-05-user name repo:
+		- docker-compose.ymls
+		- once you've run the example on your terminal
+		- Run history > -user name-history.txt (ok for this to be messy)
+		- Save the relevant portion of your history as user name-annotations.md
+		- Annotate the file with explanations of what you were doing at each point (See htmartin-annotations.md)
+
+## Assignment 5: Bonus& More bonus
+- extra challenge
+- not about extra credit
+
+
+
+
+
+## Week 5 Videos
+
+- Hadoop
+- Some basics. We won't use Hadoop until later in the project
+- Virtualization
+- The notion of using docker-compose to bring up clusters of services. This is the core of Project 2.
+
+
+
+#
+
+## Extras
+
+
+
 ## Automate notebook startup
 
 ##
@@ -410,7 +444,7 @@ Just for fun,
 
 
 #
-## Extras
+
 
 ## Redis to track state
 
@@ -515,17 +549,6 @@ print date sorted list of where all bikes are
 
     docker-compose down
 
-
-#
-## Summary
-
-## { data-background="images/pipeline-overall.svg" }
-
-::: notes
-Using docker compose
-Assembled a set of services
-running a query within that
-:::
 
 
 #

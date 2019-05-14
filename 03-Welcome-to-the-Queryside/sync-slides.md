@@ -15,11 +15,14 @@ author: Week 03 - sync session
 
 # 
 
-## Assignment 2
+## Assignment 2 Breakout
 
-## What was your coolest query?
+## Share queries
 
-- take a minute, be ready to present
+- Questions? 
+- Problems? 
+- Queries that you wanted to do but you couldn't figure out how?
+
 
 ::: notes
 breakout
@@ -57,7 +60,6 @@ breakout
     SELECT count(distinct bike_number)
     FROM `bigquery-public-data.san_francisco.bikeshare_trips`
 
-## Due tomorrow morning
 
 
 #
@@ -69,8 +71,9 @@ breakout
 
 ## 
 
-- You got started with lots of stuff this week
+- This week, videos about various tools you can use to work with your data 
 - Working with files: json, csv etc
+- So for  today's class activity, we’re  going to work with some command line tools to manipulate data in some handy  ways.
 
 
 #
@@ -86,7 +89,7 @@ curl -L -o lp_data.csv https://goo.gl/FDFPYB
 ```
 
 ::: notes
-make sure they go into `~/w205` on your droplet.
+make sure they go into `~/w205` on your cloud instance.
 
 i.e., `cd w205` first
 :::
@@ -262,7 +265,7 @@ Descending
 
 ## setup
 
-(from your mids droplet)
+(from your mids cloud instance)
 
 - auth the GCP client
   ```
@@ -363,6 +366,15 @@ bq query --use_legacy_sql=false 'SELECT min(time), max(time) FROM `bigquery-publ
 ## Summary
 - Command line tools and jq to dive into your data
 - BigQuery from the command line
+
+## Onward
+
+- This week's videos may seem like kind of a mixed bag. 
+- Starting to transition between Project 1 & Project 2. 
+- Working with query tools (bigquery and Athena)
+- Getting a glimpse of how to use jupyter notebooks for Assignment 4
+- Looking ahead at some bits of docker manipulation from the command line, getting ready for Project 2. 
+- Also you'll see your first supplemental tag
 
 
 #

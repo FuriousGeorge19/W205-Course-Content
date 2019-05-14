@@ -84,34 +84,63 @@ Instructors specify each section's slack channel
 ## Cloud Instances
 
 ::: notes
-We'll be working from cloud instances ("Droplets") in this class
+We'll be working from cloud instances in this class
 :::
 
 
-## Access
+##
 
-- URL:
-  ```
-  http://<ip_address>:8000/
-  ```
-
-- Login: `science`
-
-- Password: (provided over slack)
+1. Sign up for GCP account
+2. Create a w205 image in your account
+3. Create your instance
+4. Access your instance
 
 ::: notes
-Instructors hand out ip addresses and passwords
-
-Students familiar with SecureShell can ssh directly to the droplets
+walk through this in class using cloud.google.com
 :::
 
-## JupyterHub Terminal
+## Create a w205 image in your account
 
 ::: notes
-copy/paste files via the jupyterhub file browser
-
-We'll use SecureShell for this in the future
+- name the image something you'll remember
+- select cloud storage object as the source
+- paste in the bucket url for the current w205 image
+- takes 5-10mins to create
 :::
+
+## Create your instance
+
+::: notes
+- Change bootdisk to our w205 image created above
+- Change 10G bootdisk to 100G bootdisk
+- Allow default service account to access all Google Cloud APIs
+- allow `http` traffic (not `https` for now)
+:::
+
+## Access your instance
+
+SSH in and set a password
+
+```
+sudo passwd <username>
+```
+
+::: notes
+gcp creates/injects usernames when you first ssh into the instance
+
+ssh access uses keys, but we'll need a password set in order to use jupyterhub
+:::
+
+## Access JupyterHub
+
+- JupyterHub:
+  ```
+  http://<ip_address>/
+  ```
+
+- Login: (created by google cloud)
+
+- Password: (created by you)
 
 
 #
@@ -148,7 +177,7 @@ For now, just follow along
   docker run \
     -it \
     --rm \
-    -v /home/science/w205:/w205 \
+    -v ~/w205:/w205 \
     midsw205/base:latest \
     bash
   ```
@@ -158,7 +187,7 @@ For now, just follow along
 Like we said, we'll get into what all those options mean etc, just keep track for now
 
 ```
-docker run -it --rm -v /home/science/w205:/w205 midsw205/base:latest bash
+docker run -it --rm -v ~/w205:/w205 midsw205/base:latest bash
 ```
 :::
 
@@ -316,34 +345,20 @@ blob/master/01-Introduction/async-videos.md
 This section is a walk through of how we will iterate through assignments.
 :::
 
-## Class 1
-
-- Preview, discussion, walkthrough set up for github for Assignment 1
 
 ## Between Class 1 & Class 2
 
 - async material for Week 1
 - Readings for Week 1
-- Turn in Assignment 01
 
-## Class 2
 
-- Groups share Assignment 01
-- Preview Query Project
-- Preview, discussion, SQL query activities to prepare for Assignment 2
-- Can revise Assignment 01 & turn in morning after Class 2
 
 ## Between Class 2 & Class 3
 
 - async material for Week 2
 - Readings for Week 2
-- Turn in Assignment 02
 
-## Class 3
 
-- Groups share Assignment 02
-- Preview, discussion, do google cloud platform setup and sql statements for Assignment 03
-- Can revise Assignment 02 & turn in morning after Class 3
 
 
 #
@@ -416,9 +431,14 @@ bonuses as above
 
 ## Levels of Expertise
 ::: notes
-If you're brand new to something, you'll get it taken care of. If you've nailed it, get creative
-talk about survey results?
+- If you're brand new to something, you'll get it taken care of. 
+- If you've nailed it, get creative
 :::
+
+
+
+## Async
+-   To get ready for project 1, videos - how events are generated
 
 
 #

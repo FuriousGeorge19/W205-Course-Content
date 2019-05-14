@@ -1,3 +1,9 @@
+---
+title: Fundamentals of Data Engineering
+author: Tutorial - Alternative Spark Clients
+...
+
+---
 
 # Spark Clients
 

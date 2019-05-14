@@ -54,6 +54,8 @@ direct links:
 [video](https://ucb-mids.s3.amazonaws.com/prod/output_video_general/c38c7114b9ffb228aa7551556eae16cb/mp4_med.mp4),
 [slides](https://s3.amazonaws.com/ucb-mids/prod/UCB-MIDS_0019/Slides/Unit+8/8.1.2-Business-Decisions-as-Queries.pdf)
 
+- TAG: Supplemental
+
 ##
 8.1.3: `query-walkthrough`
 
@@ -113,6 +115,8 @@ direct links:
 direct links:
 [video](https://ucb-mids.s3.amazonaws.com/prod/output_video_general/6d63dbd3206465e479ca9c691e0bc055/mp4_med.mp4),
 [slides](https://s3.amazonaws.com/ucb-mids/prod/UCB-MIDS_0019/Slides/Unit+8/8.3.2-Tools.pdf)
+
+- TAG: Supplemental
 
 #
 <img class="logo" src="http://people.ischool.berkeley.edu/~mark.mims/course-development/2017-mids-w205/media/berkeley-school-of-information-logo.png"/>

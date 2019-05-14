@@ -171,7 +171,7 @@ docker-compose up -d
 ## Web-app
 
 - Take our instrumented web-app from before
-`~/w205/full-stack/game_api.py`
+`~/w205/full-stack2/game_api.py`
 
 ```python
 #!/usr/bin/env python
@@ -209,14 +209,14 @@ def purchase_a_sword():
 ## run flask
 ```
 docker-compose exec mids \
-  env FLASK_APP=/w205/full-stack/game_api.py \
+  env FLASK_APP=/w205/full-stack2/game_api.py \
   flask run --host 0.0.0.0
 ```
 
 ::: notes
 
 ```
-docker-compose exec mids env FLASK_APP=/w205/full-stack/game_api.py flask run --host 0.0.0.0
+docker-compose exec mids env FLASK_APP=/w205/full-stack2/game_api.py flask run --host 0.0.0.0
 ```
 
 :::

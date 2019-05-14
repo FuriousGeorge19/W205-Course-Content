@@ -273,9 +273,12 @@ docker-compose exec mids env FLASK_APP=/w205/spark-from-files/game_api.py flask 
 ```
 :::
 
-## Generate events from browser
-- localhost:5000/
-- localhost:5000/purchase_a_sword
+## Generate events
+
+Use curl
+- `docker-compose exec mids curl http://localhost:5000/`
+- `docker-compose exec mids curl http://localhost:5000/purchase_a_sword`
+
 
 ::: notes
 ```

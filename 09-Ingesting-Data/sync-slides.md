@@ -367,6 +367,12 @@ docker-compose exec mids bash -c "kafkacat -C -b kafka:29092 -t events -o beginn
 ::: notes
 :::
 
+#
+
+## Week 9 Videos
+
+- Basics of brokers, producers, consumers, topics
+- Context for using Kafka in a pipeline in reality( aka, at scale, in production)
 
 # Summary
 

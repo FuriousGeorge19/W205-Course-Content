@@ -8,10 +8,11 @@ author: Week 02 - sync session
 # 
 
 ## Assignment 1
-- We will usually do a breakout to share solutions and ask questions, but this week's was pretty straightforward.
+- Breakout
 - Questions on process?
 
-## Your droplet set up
+
+## Your cloud instance set up
 
 - repos cloned:
     - `course-content`
@@ -25,17 +26,10 @@ author: Week 02 - sync session
 we defer cli-support for this until next week
 :::
 
-## Due tomorrow morning
-
 
 # 
 ## Some things about this class
 
-## How to read
-
-- Two screens (or devices)
-- Reading
-- Following along with coding
 
 ## Pacing
 
@@ -52,17 +46,7 @@ We'll be reading/watching screencasts ahead of what we can do
 
 ![](images/pipeline-overall.svg)
 
-## Events
 
-- What sort of events feed this pipeline?
-- How were these events captured?
-
-::: notes
-Fed from device events:
-
-- station kiosk (?)
-- user app (?)
-:::
 
 ## Main thing to pay attention to
 
@@ -106,8 +90,23 @@ business requirements get encoded as queries of data
 Go over what the dataset is on the webpage
 :::
 
+## Get Going: Google account
+
+- Go to <https://cloud.google.com/bigquery/>
+- Click on "Try it Free"
+- It asks for credit card, but you get free credit and it does not autorenew after the credit is used 
+
+::: notes
+(**OR CHANGE THIS IF SOME SORT OF OTHER ACCESS INFO**)
+:::
+
+
 ## Problem Statement
-- You're a data scientist at Ford GoBike (<https://www.fordgobike.com/>), the company running Bay Area Bikeshare. You are trying to increase ridership, and you want to offer deals through the mobile app to do so. What deals do you offer though? Currently, your company has three options: a flat price for a single one-way trip, a day pass that allows unlimited 30-minute rides for 24 hours and an annual membership. 
+- You're a data scientist at Ford GoBike (<https://www.fordgobike.com/>), the company running Bay Area Bikeshare. You are trying to increase ridership, and you want to offer deals through the mobile app to do so. What deals do you offer though? Currently, your company has three options: 
+
+- a flat price for a single one-way trip, 
+- a day pass that allows unlimited 30-minute rides for 24 hours, 
+- and an annual membership. 
 
 ## Questions
 
@@ -115,22 +114,14 @@ Go over what the dataset is on the webpage
   * What are the 5 most popular trips that you would call "commuter trips"?
   * What are your recommendations for offers (justify based on your findings)?
 
-
-# 
-## Get Going: Google account
-
-- Go to <https://cloud.google.com/bigquery/>
-- Click on "Try it Free"
-- It asks for credit card, but you get $300 free and it does not autorenew after the $300 credit is used, 
-
 ::: notes
-(**OR CHANGE THIS IF SOME SORT OF OTHER ACCESS INFO**)
+You will not answer these questions this week just answer the questions assigned for this week 
 :::
 
 
 ## Working with BQ gui
 
-<https://bigquery.cloud.google.com/table/bigquery-public-data:san_francisco.bikeshare_status>
+<https://cloud.google.com/bigquery/public-data/bay-bike-share>
 
 ## Tutorial
 
@@ -151,7 +142,7 @@ VS
     FROM Customers
 
 ::: notes
-- Nearly all other sql implementations (and what students will see in the tutorial), end statements with a `;`
+- Nearly all other sql implementations (and what you will see in the tutorial), end statements with a `;`
 - BQ doesn't
 - btw, the CAPITALIZATION isn't necessary :)
 :::
@@ -174,26 +165,7 @@ VS
 - So, now there's the `#standardSQL` flag
 :::
 
-## The Big Difference
 
-
-    SELECT distinct(bikes_available) 
-    FROM [bigquery-public-data:san_francisco.bikeshare_status]
-
-
-NO
-
-
-    #standardSQL
-    SELECT distinct(bikes_available) 
-    FROM `bigquery-public-data.san_francisco.bikeshare_status`
-
-YES
-
-::: notes
-- It's in doing things with distinct that I've noticed the biggest differences from regular (aka "standard" SQL)
-- You get: Error: syntax error at: 1.1 - 1.42. SELECT DISTINCT is currently not supported. Please use GROUP BY instead to get the same effect.
-:::
 
 ## For this class
 
@@ -208,7 +180,18 @@ YES
 ::: notes
 We're doing this one, but you can use either
 :::
+#
+## Events
 
+- What sort of events feed this pipeline?
+- How were these events captured?
+
+::: notes
+Fed from device events:
+
+- station kiosk (?)
+- user app (?)
+:::
 
 #
 ## Querying Data
@@ -293,74 +276,20 @@ I decided that a station's total bikes would `= docks_available + bikes_availabl
 Stuff to explore:
 
 - each station "has" different unique numbers of bikes [probably b/c e.g., docks are added to stations, etc, etc, etc]
+- if you create a view, use these queries:
 
-**Next slides will help unpack what they find here**
-:::
-
-## What's up with that?
-
-::: notes
-Getitng into queries to help figure out the issue from last slide
-:::
-
-##
-
-	#standardSQL
-	SELECT station_id, docks_available, bikes_available, time, 
-	(docks_available + bikes_available) as total_bikes
-	FROM `bigquery-public-data.san_francisco.bikeshare_status`
-	WHERE station_id = 90
-    ORDER BY total_bikes
-
-
-::: notes
-The point: 
-
-- query returns 8916 results 
-- but if ordered by `total_bikes`, can click "First" and "Last" to see what the values are
-:::
-
-## Get a table with `total_bikes` in it
-
-::: notes
-"Ok, so we don't want to go clicking through 8900 results to figure out what the unique values for `total_bikes` for a station are."
-
-- On this one, just show it
-:::
-
-## 
-
-	#standardSQL
-	SELECT station_id, docks_available, bikes_available, time, 
-	(docks_available + bikes_available) as total_bikes
-	FROM `bigquery-public-data.san_francisco.bikeshare_status`
-
-::: notes
-- This is the query to create the `total_bikes` table (which is totally a view, but BQ is weird about views, something about legacy sql vs standard sql)
-- Do "Save Table"
-- Window will pop up, need to have added a dataset to your project earlier, then enter dataset name and add a name for the table.
-- I'm calling it `total_bikes`
-:::
-
-## 
 
 	#standardSQL
 	SELECT distinct (station_id), total_bikes
 	 FROM `ambient-cubist-185918.bike_trips_data.total_bikes`
-
-::: notes
-This shows that you get multiple entries for each `station_id` b/c diff values of total bikes
-:::
-
-##
 
 	#standardSQL
 	SELECT distinct station_id, total_bikes
 	FROM `ambient-cubist-185918.bike_trips_data.total_bikes`
 	WHERE station_id = 22
 
-::: notes
-This lets you explore each station's total number of bikes
+
+This shows that you get multiple entries for each `station_id` b/c diff values of total bikes
 :::
 
 
