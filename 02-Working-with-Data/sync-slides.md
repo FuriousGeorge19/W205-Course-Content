@@ -293,56 +293,6 @@ Rotate between groups to see what folks are coming up with.
 :::
 
 
-# 
-## SecureShell (SSH)
-
-#
-## remote terminal connections
-
-##
-
-    ssh science@xxx.xxx.xxx.xxx
-
-::: notes
-for your cloud instance, look up:
-- the ip address
-- password for the `science` user
-:::
-
-
-#
-## copying files
-
-##
-
-On your laptop, run
-
-    scp some_file science@xxx.xxx.xxx.xxx:
-
-or 
-
-    scp some_file science@xxx.xxx.xxx.xxx:/tmp/
-
-
-::: notes
-copying files from your laptop to the instance
-
-note the colon!
-:::
-
-##
-
-On your laptop, run
-
-    scp science@xxx.xxx.xxx.xxx:~/w205/a_file.py .
-
-
-::: notes
-copying files from the instance to your laptop
-
-note the period!
-:::
-
 
 # 
 ## Summary
