@@ -99,8 +99,9 @@ i.e., `cd w205` first
 ## Install jq
 
 
-`sudo apt update`
-`sudo apt install jq`
+- `sudo apt update`
+
+- `sudo apt install jq`
 
 ## What's in this file?
 
