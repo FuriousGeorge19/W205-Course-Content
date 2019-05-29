@@ -139,8 +139,7 @@ then they're only "in" one place
 
 # 
 
-## Creating a GitHub Pull-Request(PR)
-- From the command-line
+## Git Branching
 
 ## Clone a repo from GitHub
 
