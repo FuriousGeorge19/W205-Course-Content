@@ -3,12 +3,13 @@
 #### Themes: Relational and NoSQL datastores
 
 #### Readings
-
+##### Required
 >   Using Docker
 >   by Adrian Mouat
 >   Chapter 1. The What and Why of Containers
 >   https://www.safaribooksonline.com/library/view/using-docker/9781491915752/ch01.html#what_and_why
 
+##### Optional
 >   Modern Linux Administration
 >   by Sam R. Alapati
 >   Chapter 1. Modern Linux System Administration
