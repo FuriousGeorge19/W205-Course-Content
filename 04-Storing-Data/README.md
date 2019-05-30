@@ -10,10 +10,10 @@
 >   https://www.safaribooksonline.com/library/view/using-docker/9781491915752/ch01.html#what_and_why
 
 ##### Optional
->   Modern Linux Administration
->   by Sam R. Alapati
->   Chapter 1. Modern Linux System Administration
->   https://www.safaribooksonline.com/library/view/modern-linux-administration/9781491935941/ch01.html#idm139918689681584
+>   Linux in a Nutshell
+>   by By Stephen Figgins, Arnold Robbins, Ellen Siever, Robert Love
+>   Chapter 1. Introduction
+>   https://www.oreilly.com/library/view/linux-in-a/9780596806088/ch01.html
 
 #### Asynchronous Content
 
