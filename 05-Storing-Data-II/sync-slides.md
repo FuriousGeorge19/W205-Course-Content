@@ -295,6 +295,64 @@ Connect to the mids container
 
 #
 
+## Jupyter Notebooks
+
+
+## Change the `docker-compose.yml` file 
+
+    ---
+    version: '2'
+    services:
+      redis:
+        image: redis:latest
+        expose:
+          - "6379"
+
+      mids:
+        image: midsw205/base:latest
+        stdin_open: true
+        tty: true
+        expose:
+          - "8888"
+        ports:
+          - "8888:8888"
+
+::: notes
+- Add a port for the `mids` service
+- Expose adds ports
+- Ports exposes it out to the host
+- Port is... channel for services to talk to each other.
+:::
+
+## Save that and bring it up
+
+    docker-compose up -d
+
+## Start up a notebook
+
+    docker-compose exec mids jupyter notebook --no-browser --port 8888 --ip 0.0.0.0 --allow-root
+
+::: notes
+remember, you can copy/paste this from the `course-content` repo
+:::
+
+## Copy token... should look something like
+
+    open http://0.0.0.0:8888/?token=<your token>
+
+## Open a browser
+
+    http://0.0.0.0:8888
+
+## Paste token
+
+## Drop the cluster when you're done
+
+    docker-compose down
+
+
+#
+
 
 ## Wrapping Up
 
