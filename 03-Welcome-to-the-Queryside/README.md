@@ -27,7 +27,7 @@
 >   Stanford Online, by Jennifer Widom
 >   https://lagunita.stanford.edu/courses/Engineering/db/2014_1/about
 
-Note: The above resources are useful to develop a stronger understanding of SQL and develop a sense of comfort when working with relational databases. However these same concepts can be used to join and query mltiple tables in BigQuery by joining based on common fields or columns.
+Note: The above resources are useful to develop a stronger understanding of SQL and develop a sense of comfort when working with relational databases. However these same concepts can be used to join and query multiple tables in BigQuery by joining based on common fields or columns.
 
 #### Asynchronous Content
 
