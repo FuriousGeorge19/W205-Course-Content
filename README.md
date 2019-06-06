@@ -331,6 +331,20 @@ the live classroom for specific weeks in the term.
 >   Chapter 3. Query Primer
 >   https://www.safaribooksonline.com/library/view/learning-sql-2nd/9780596801847/ch03.html
 
+>   The SQL tutorial for data analysis from basic to advanced
+>   Complete Basic, Intermediate and Advanced
+>   https://mode.com/sql-tutorial/
+
+>   SQL Zoo
+>   Learn SQL from basics to advanced step by step
+>   https://sqlzoo.net/wiki/SQL_Tutorial
+
+>   Introduction to Databases 
+>   Stanford Online, by Jennifer Widom
+>   https://lagunita.stanford.edu/courses/Engineering/db/2014_1/about
+
+Note: The above resources are useful to develop a stronger understanding of SQL and develop a sense of comfort when working with relational databases. However these same concepts can be used to join and query multiple tables in BigQuery by joining based on common fields or columns.
+
 #### Asynchronous Content
 
     3.1 What is the queryside?
@@ -360,16 +374,17 @@ the live classroom for specific weeks in the term.
 #### Themes: Relational and NoSQL datastores
 
 #### Readings
-
+##### Required
 >   Using Docker
 >   by Adrian Mouat
 >   Chapter 1. The What and Why of Containers
 >   https://www.safaribooksonline.com/library/view/using-docker/9781491915752/ch01.html#what_and_why
 
->   Modern Linux Administration
->   by Sam R. Alapati
->   Chapter 1. Modern Linux System Administration
->   https://www.safaribooksonline.com/library/view/modern-linux-administration/9781491935941/ch01.html#idm139918689681584
+##### Optional
+>   Linux in a Nutshell
+>   by By Stephen Figgins, Arnold Robbins, Ellen Siever, Robert Love
+>   Chapter 1. Introduction
+>   https://www.oreilly.com/library/view/linux-in-a/9780596806088/ch01.html
 
 #### Asynchronous Content
 
