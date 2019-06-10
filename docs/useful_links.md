@@ -12,7 +12,7 @@ This is a more or less unsorted list of more or less useful links for W205
 * PySpark Cheat Sheet: https://s3.amazonaws.com/assets.datacamp.com/blog_assets/PySpark_Cheat_Sheet_Python.pdf
 * PySpark Tutorial: https://www.dezyre.com/apache-spark-tutorial/pyspark-tutorial
 * Kafka Documentation: https://kafka.apache.org/documentation/
-* Docker Cheat Sheet: https://medium.com/the-code-review/top-10-docker-commands-you-cant-live-without-54fb6377f481
+* Docker Cheat Sheet: https://blog.pavelsklenar.com/10-useful-docker-commands-tip-tricks/
 * Docker images used in MIDS W205: https://github.com/mids-w205-fund-of-data-eng/docker-images
 * REDIS Datastore documentation: https://redis.io/topics/introduction
 * Streaming and Kafka in PySpark: https://spark.apache.org/docs/2.2.0/structured-streaming-kafka-integration.html
