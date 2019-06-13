@@ -4,10 +4,11 @@
 
 #### Readings
 
->   Modern Linux Administration
->   by Sam R. Alapati
->   Chapter 15. Security and Compliance in the Modern Systems Environment
->   https://www.safaribooksonline.com/library/view/modern-linux-administration/9781491935941/ch15.html
+##### Required
+
+> Linux in a Nutshell by By Stephen Figgins, Arnold Robbins, Ellen Siever, Robert Love Chapter 1. 2. System and Network Administration Overview
+> https://www.oreilly.com/library/view/linux-in-a/9780596806088/ch02.html
+
 
 #### Asynchronous Content
 
