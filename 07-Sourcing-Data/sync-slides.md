@@ -383,8 +383,8 @@ docker-compose exec kafka kafka-topics --describe --topic foo --zookeeper zookee
 ## Check out our messages
 
 ```
-docker-compose exec mids bash -c "cat /w205/github-example-large.json"
-docker-compose exec mids bash -c "cat /w205/github-example-large.json | jq '.'"
+docker-compose exec mids bash -c "cat /w205/spark-with-kafka/github-example-large.json"
+docker-compose exec mids bash -c "cat /w205/spark-with-kafka/github-example-large.json | jq '.'"
 ```
 
 ::: notes
@@ -396,7 +396,7 @@ pretty print
 ## Individual messages
 
 ```
-docker-compose exec mids bash -c "cat /w205/github-example-large.json | jq '.[]' -c"
+docker-compose exec mids bash -c "cat /w205/spark-with-kafka/github-example-large.json | jq '.[]' -c"
 ```
 
 ::: notes
@@ -409,14 +409,15 @@ take time to go over jsonlines (Show examples from jsonlines.org)
 
 ```
 docker-compose exec mids \
-  bash -c "cat /w205/github-example-large.json \
+  bash -c "cat /w205/spark-with-kafka/github-example-large.json \
     | jq '.[]' -c \
     | kafkacat -P -b kafka:29092 -t foo && echo 'Produced 100 messages.'"
 ```
 
 ::: notes
 ```
-     docker-compose exec mids bash -c "cat /w205/github-example-large.json | jq '.[]' -c | kafkacat -P -b kafka:29092 -t foo && echo 'Produced 100 messages.'"
+     docker-compose exec mids bash -c "cat /w205/spark-with-kafka
+     /github-example-large.json | jq '.[]' -c | kafkacat -P -b kafka:29092 -t foo && echo 'Produced 100 messages.'"
 ```
 :::
 
