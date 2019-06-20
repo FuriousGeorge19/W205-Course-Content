@@ -6,8 +6,11 @@
 
 ##### Required
 
-> Linux in a Nutshell by By Stephen Figgins, Arnold Robbins, Ellen Siever, Robert Love Chapter 1. 2. System and Network Administration Overview
-> https://www.oreilly.com/library/view/linux-in-a/9780596806088/ch02.html
+> Learning Apache Kafka By Nishant Garg Chapter 1. Introducing Kafka
+> https://www.oreilly.com/library/view/learning-apache-kafka/9781784393090/ch01.html
+
+> Learning Apache Kafka By Nishant Garg Chapter 2. Setting Up a Kafka Cluster 
+> https://www.oreilly.com/library/view/learning-apache-kafka/9781784393090/ch02.html
 
 
 #### Asynchronous Content
