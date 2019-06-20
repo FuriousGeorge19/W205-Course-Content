@@ -4,13 +4,6 @@
 
 #### Readings
 
-##### Required
-
-> - Learning Apache Kafka By Nishant Garg Chapter 2. Setting Up a Kafka Cluster 
-> - https://www.oreilly.com/library/view/learning-apache-kafka/9781784393090/ch02.html
-
-##### Optional
-
 > - Learning Apache Kafka By Nishant Garg Chapter 1. Introducing Kafka 
 > - https://www.oreilly.com/library/view/learning-apache-kafka/9781784393090/ch01.html
 
