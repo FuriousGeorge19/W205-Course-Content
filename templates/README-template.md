@@ -72,74 +72,22 @@ URL for our current w205 student tools image:
 
 ## Evaluation & Grading
 
-### Assignments
+### Projects
 
-There are 12 assignments that cumulatively form 3 projects:
+There are three projects:
 
 - Query Project
 - Tracking User Activity
 - Understanding User Behavior
 
-Each assignment will be a part of one of these projects.
+that collectively form the core of this course. Your work on them is one of the
+best ways for you to learn, and they each count for a third of your grade in this
+course.
 
-These assignments are the core of this course. Your work on them is one of the
-best ways for you to learn.  Each assignment will be a hands-on lab that is
-completed both individually and revisited during the synchronous weekly group
-sessions. Ten of the twelve assignments will be graded.
+### Due Dates for Projects
 
-### Due Dates for Assignments
-
-To allow you to get the most out of each assignment, we'll work on them
-iteratively and, at each instructor's discretion, in groups.
-For example, for Assignment 1:
-
-1. you'll work in groups and hear from us about the content of the assignment
-   in Week 1
-2. you'll work on it independently and/or in groups during the week, coming to
-   Week 2's synchronous session with an attempt at the assignment and any
-   questions you have
-3. we will review it and address questions during Week 2's synchronous session
-4. the final version of the assignment will be due the end of week 2
-
-So each assignment is due the Friday of the week following the week in which it
-was assigned. This leaves you at least a week to complete each assignment.
-
-No work may be accepted after the last day of instruction (Unless an incomplete
-has been approved due to extreme circumstances by the Dean’s office).
-
-Assignments may vary by section, so check with your section instructor for
-definitive due dates.
-
-
-### How Grades are Assigned
-
-Each assignment is scored 0-10 according to:
-
-- No late submissions (why we drop the lowest two assignment grades)
-- Unless otherwise stated in the assignment, GitHub must be used from the git
-  command line utility and follow proper source code control (penalty -1)
-- Submissions in markdown should all be professionally formatted (penalty -1)
-- All data in table format must be formatted in markdown or Pandas (penalty -1)
-- For assignments 6 through 12, all steps in class must be repeated and
-  separately annotated, including python and pyspark steps. Grader will
-  estimate the percentage of steps missing or not separately annotated and
-  assess a penalty of -1 for anything missing and -1 for each additional 10%
-  missing
-
-Your overall final semester grade will calculated as follows:
-
-| Semester Letter Grade   |   Rubric   |
-| :---: | :------------------- |
-| A+ | The average of the highest 10 of the 12 assignments should be 9.7000 or higher without rounding |
-| A  | The average of the highest 10 of the 12 assignments should be 9.3000 or higher without rounding |
-| A- | The average of the highest 10 of the 12 assignments should be 9.0000 or higher without rounding |
-| B+ | The average of the highest 10 of the 12 assignments should be 8.7000 or higher without rounding |
-| B  | The average of the highest 10 of the 12 assignments should be 8.3000 or higher without rounding |
-| B- | The average of the highest 10 of the 12 assignments should be 8.0000 or higher without rounding |
-| Below B- | Instructor’s discretion, but no harsher than the pattern above |
-
-These may vary by section, so check with your instructor for definitive grading
-policies.
+Please check with your section instructor for definitive due dates for your
+projects.
 
 
 ## Readings
