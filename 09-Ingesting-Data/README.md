@@ -6,8 +6,13 @@
 
 >   Kafka: The Definitive Guide, 1st Edition
 >   by Gwen Shapira, Neha Narkhede, Todd Palino
->   Chapter 7. Building Data Pipelines
->   https://www.safaribooksonline.com/library/view/kafka-the-definitive/9781491936153/ch07.html
+>   Chapter 1. Meet Kafka
+>   https://www.oreilly.com/library/view/kafka-the-definitive/9781491936153/ch01.html
+
+>   Flask Web Development, 2nd Edition
+>   by Miguel Grinberg
+>   Chapter 2. Basic Application Structure
+>   https://www.oreilly.com/library/view/flask-web-development/9781491991725/ch02.html
 
 
 #### Asynchronous Content
