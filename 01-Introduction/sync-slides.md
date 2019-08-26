@@ -289,10 +289,11 @@ Do this in the gui
 #
 ## How this class works
 
+
 ## Syllabus
 
 ```
-https://github.com/mids-w205-martin-mims/course-content
+https://mids-w205-fund-of-data-eng.github.io/course-content/
 ```
 
 ::: notes

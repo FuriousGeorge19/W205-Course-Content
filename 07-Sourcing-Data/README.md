@@ -4,10 +4,9 @@
 
 #### Readings
 
->   Modern Linux Administration
->   by Sam R. Alapati
->   Chapter 15. Security and Compliance in the Modern Systems Environment
->   https://www.safaribooksonline.com/library/view/modern-linux-administration/9781491935941/ch15.html
+> - Learning Apache Kafka By Nishant Garg Chapter 1. Introducing Kafka 
+> - https://www.oreilly.com/library/view/learning-apache-kafka/9781784393090/ch01.html
+
 
 #### Asynchronous Content
 

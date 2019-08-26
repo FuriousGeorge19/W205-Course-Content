@@ -7,6 +7,7 @@ run_pandoc := docker run --rm -t \
 	-v `pwd`:/source \
 	-v `python -c 'import os, sys; print(os.path.realpath("images"))'`:/source/images \
 	-v `python -c 'import os, sys; print(os.path.realpath("reveal.js"))'`:/source/reveal.js \
+	--user $(shell id -u):$(shell id -g) \
 	midsw205/pandoc:2.0.7
 
 run_decktape := docker run --rm -t \

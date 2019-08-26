@@ -76,74 +76,22 @@ URL for our current w205 student tools image:
 
 ## Evaluation & Grading
 
-### Assignments
+### Projects
 
-There are 12 assignments that cumulatively form 3 projects:
+There are three projects:
 
 - Query Project
 - Tracking User Activity
 - Understanding User Behavior
 
-Each assignment will be a part of one of these projects.
+that collectively form the core of this course. Your work on them is one of the
+best ways for you to learn, and they each count for a third of your grade in this
+course.
 
-These assignments are the core of this course. Your work on them is one of the
-best ways for you to learn.  Each assignment will be a hands-on lab that is
-completed both individually and revisited during the synchronous weekly group
-sessions. Ten of the twelve assignments will be graded.
+### Due Dates for Projects
 
-### Due Dates for Assignments
-
-To allow you to get the most out of each assignment, we'll work on them
-iteratively and, at each instructor's discretion, in groups.
-For example, for Assignment 1:
-
-1. you'll work in groups and hear from us about the content of the assignment
-   in Week 1
-2. you'll work on it independently and/or in groups during the week, coming to
-   Week 2's synchronous session with an attempt at the assignment and any
-   questions you have
-3. we will review it and address questions during Week 2's synchronous session
-4. the final version of the assignment will be due the end of week 2
-
-So each assignment is due the Friday of the week following the week in which it
-was assigned. This leaves you at least a week to complete each assignment.
-
-No work may be accepted after the last day of instruction (Unless an incomplete
-has been approved due to extreme circumstances by the Dean’s office).
-
-Assignments may vary by section, so check with your section instructor for
-definitive due dates.
-
-
-### How Grades are Assigned
-
-Each assignment is scored 0-10 according to:
-
-- No late submissions (why we drop the lowest two assignment grades)
-- Unless otherwise stated in the assignment, GitHub must be used from the git
-  command line utility and follow proper source code control (penalty -1)
-- Submissions in markdown should all be professionally formatted (penalty -1)
-- All data in table format must be formatted in markdown or Pandas (penalty -1)
-- For assignments 6 through 12, all steps in class must be repeated and
-  separately annotated, including python and pyspark steps. Grader will
-  estimate the percentage of steps missing or not separately annotated and
-  assess a penalty of -1 for anything missing and -1 for each additional 10%
-  missing
-
-Your overall final semester grade will calculated as follows:
-
-| Semester Letter Grade   |   Rubric   |
-| :---: | :------------------- |
-| A+ | The average of the highest 10 of the 12 assignments should be 9.7000 or higher without rounding |
-| A  | The average of the highest 10 of the 12 assignments should be 9.3000 or higher without rounding |
-| A- | The average of the highest 10 of the 12 assignments should be 9.0000 or higher without rounding |
-| B+ | The average of the highest 10 of the 12 assignments should be 8.7000 or higher without rounding |
-| B  | The average of the highest 10 of the 12 assignments should be 8.3000 or higher without rounding |
-| B- | The average of the highest 10 of the 12 assignments should be 8.0000 or higher without rounding |
-| Below B- | Instructor’s discretion, but no harsher than the pattern above |
-
-These may vary by section, so check with your instructor for definitive grading
-policies.
+Please check with your section instructor for definitive due dates for your
+projects.
 
 
 ## Readings
@@ -331,6 +279,20 @@ the live classroom for specific weeks in the term.
 >   Chapter 3. Query Primer
 >   https://www.safaribooksonline.com/library/view/learning-sql-2nd/9780596801847/ch03.html
 
+>   The SQL tutorial for data analysis from basic to advanced
+>   Complete Basic, Intermediate and Advanced
+>   https://mode.com/sql-tutorial/
+
+>   SQL Zoo
+>   Learn SQL from basics to advanced step by step
+>   https://sqlzoo.net/wiki/SQL_Tutorial
+
+>   Introduction to Databases 
+>   Stanford Online, by Jennifer Widom
+>   https://lagunita.stanford.edu/courses/Engineering/db/2014_1/about
+
+Note: The above resources are useful to develop a stronger understanding of SQL and develop a sense of comfort when working with relational databases. However these same concepts can be used to join and query multiple tables in BigQuery by joining based on common fields or columns.
+
 #### Asynchronous Content
 
     3.1 What is the queryside?
@@ -360,16 +322,17 @@ the live classroom for specific weeks in the term.
 #### Themes: Relational and NoSQL datastores
 
 #### Readings
-
+##### Required
 >   Using Docker
 >   by Adrian Mouat
 >   Chapter 1. The What and Why of Containers
 >   https://www.safaribooksonline.com/library/view/using-docker/9781491915752/ch01.html#what_and_why
 
->   Modern Linux Administration
->   by Sam R. Alapati
->   Chapter 1. Modern Linux System Administration
->   https://www.safaribooksonline.com/library/view/modern-linux-administration/9781491935941/ch01.html#idm139918689681584
+##### Optional
+>   Linux in a Nutshell
+>   by By Stephen Figgins, Arnold Robbins, Ellen Siever, Robert Love
+>   Chapter 1. Introduction
+>   https://www.oreilly.com/library/view/linux-in-a/9780596806088/ch01.html
 
 #### Asynchronous Content
 
@@ -472,10 +435,9 @@ the live classroom for specific weeks in the term.
 
 #### Readings
 
->   Modern Linux Administration
->   by Sam R. Alapati
->   Chapter 15. Security and Compliance in the Modern Systems Environment
->   https://www.safaribooksonline.com/library/view/modern-linux-administration/9781491935941/ch15.html
+> - Learning Apache Kafka By Nishant Garg Chapter 1. Introducing Kafka 
+> - https://www.oreilly.com/library/view/learning-apache-kafka/9781784393090/ch01.html
+
 
 #### Asynchronous Content
 
@@ -540,8 +502,13 @@ the live classroom for specific weeks in the term.
 
 >   Kafka: The Definitive Guide, 1st Edition
 >   by Gwen Shapira, Neha Narkhede, Todd Palino
->   Chapter 7. Building Data Pipelines
->   https://www.safaribooksonline.com/library/view/kafka-the-definitive/9781491936153/ch07.html
+>   Chapter 1. Meet Kafka
+>   https://www.oreilly.com/library/view/kafka-the-definitive/9781491936153/ch01.html
+
+>   Flask Web Development, 2nd Edition
+>   by Miguel Grinberg
+>   Chapter 2. Basic Application Structure
+>   https://www.oreilly.com/library/view/flask-web-development/9781491991725/ch02.html
 
 
 #### Asynchronous Content

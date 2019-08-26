@@ -15,6 +15,8 @@ author: Week 03 - sync session
 
 # 
 
+## Assignment 1 Checkin
+
 ## Assignment 2 Breakout
 
 ## Share queries
@@ -93,6 +95,13 @@ make sure they go into `~/w205` on your cloud instance.
 
 i.e., `cd w205` first
 :::
+
+## Install jq
+
+
+- `sudo apt update`
+
+- `sudo apt install jq`
 
 ## What's in this file?
 
@@ -263,25 +272,8 @@ Descending
 
 ## bq cli
 
-## setup
 
-(from your mids cloud instance)
 
-- auth the GCP client
-  ```
-  gcloud init
-  ```
-  and copy/paste the link
-
-- associate `bq` with a project
-  ```
-  bq
-  ```
-  and select project if asked
-
-::: notes
-`gcloud init` will print an oauth link that needs to be copied over to a browser
-:::
 
 ##
 

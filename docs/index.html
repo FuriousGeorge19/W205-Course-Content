@@ -59,79 +59,16 @@
 <p>To follow those instructions, you’ll need the following Google Cloud Storage URL for our current w205 student tools image:</p>
 <pre><code>gs://mids-w205/mids-w205-tools-bionic-1553717198.tar.gz</code></pre>
 <h2 id="evaluation-grading">Evaluation &amp; Grading</h2>
-<h3 id="assignments">Assignments</h3>
-<p>There are 12 assignments that cumulatively form 3 projects:</p>
+<h3 id="projects">Projects</h3>
+<p>There are three projects:</p>
 <ul>
 <li>Query Project</li>
 <li>Tracking User Activity</li>
 <li>Understanding User Behavior</li>
 </ul>
-<p>Each assignment will be a part of one of these projects.</p>
-<p>These assignments are the core of this course. Your work on them is one of the best ways for you to learn. Each assignment will be a hands-on lab that is completed both individually and revisited during the synchronous weekly group sessions. Ten of the twelve assignments will be graded.</p>
-<h3 id="due-dates-for-assignments">Due Dates for Assignments</h3>
-<p>To allow you to get the most out of each assignment, we’ll work on them iteratively and, at each instructor’s discretion, in groups. For example, for Assignment 1:</p>
-<ol type="1">
-<li>you’ll work in groups and hear from us about the content of the assignment in Week 1</li>
-<li>you’ll work on it independently and/or in groups during the week, coming to Week 2’s synchronous session with an attempt at the assignment and any questions you have</li>
-<li>we will review it and address questions during Week 2’s synchronous session</li>
-<li>the final version of the assignment will be due the end of week 2</li>
-</ol>
-<p>So each assignment is due the Friday of the week following the week in which it was assigned. This leaves you at least a week to complete each assignment.</p>
-<p>No work may be accepted after the last day of instruction (Unless an incomplete has been approved due to extreme circumstances by the Dean’s office).</p>
-<p>Assignments may vary by section, so check with your section instructor for definitive due dates.</p>
-<h3 id="how-grades-are-assigned">How Grades are Assigned</h3>
-<p>Each assignment is scored 0-10 according to:</p>
-<ul>
-<li>No late submissions (why we drop the lowest two assignment grades)</li>
-<li>Unless otherwise stated in the assignment, GitHub must be used from the git command line utility and follow proper source code control (penalty -1)</li>
-<li>Submissions in markdown should all be professionally formatted (penalty -1)</li>
-<li>All data in table format must be formatted in markdown or Pandas (penalty -1)</li>
-<li>For assignments 6 through 12, all steps in class must be repeated and separately annotated, including python and pyspark steps. Grader will estimate the percentage of steps missing or not separately annotated and assess a penalty of -1 for anything missing and -1 for each additional 10% missing</li>
-</ul>
-<p>Your overall final semester grade will calculated as follows:</p>
-<table>
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 80%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: center;">Semester Letter Grade</th>
-<th style="text-align: left;">Rubric</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">A+</td>
-<td style="text-align: left;">The average of the highest 10 of the 12 assignments should be 9.7000 or higher without rounding</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">A</td>
-<td style="text-align: left;">The average of the highest 10 of the 12 assignments should be 9.3000 or higher without rounding</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">A-</td>
-<td style="text-align: left;">The average of the highest 10 of the 12 assignments should be 9.0000 or higher without rounding</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">B+</td>
-<td style="text-align: left;">The average of the highest 10 of the 12 assignments should be 8.7000 or higher without rounding</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">B</td>
-<td style="text-align: left;">The average of the highest 10 of the 12 assignments should be 8.3000 or higher without rounding</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">B-</td>
-<td style="text-align: left;">The average of the highest 10 of the 12 assignments should be 8.0000 or higher without rounding</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">Below B-</td>
-<td style="text-align: left;">Instructor’s discretion, but no harsher than the pattern above</td>
-</tr>
-</tbody>
-</table>
-<p>These may vary by section, so check with your instructor for definitive grading policies.</p>
+<p>that collectively form the core of this course. Your work on them is one of the best ways for you to learn, and they each count for a third of your grade in this course.</p>
+<h3 id="due-dates-for-projects">Due Dates for Projects</h3>
+<p>Please check with your section instructor for definitive due dates for your projects.</p>
 <h2 id="readings">Readings</h2>
 <p>Most readings are available through a subscription to https://www.safaribooksonline.com/. Other readings are blog posts and links.</p>
 <h2 id="prerequisites">Prerequisites</h2>
@@ -265,6 +202,16 @@ Insight Data Science blog https://blog.insightdatascience.com/data-science-vs-da
 <blockquote>
 <p>Learning SQL, 2nd Edition by Alan Beaulieu Chapter 3. Query Primer https://www.safaribooksonline.com/library/view/learning-sql-2nd/9780596801847/ch03.html</p>
 </blockquote>
+<blockquote>
+<p>The SQL tutorial for data analysis from basic to advanced Complete Basic, Intermediate and Advanced https://mode.com/sql-tutorial/</p>
+</blockquote>
+<blockquote>
+<p>SQL Zoo Learn SQL from basics to advanced step by step https://sqlzoo.net/wiki/SQL_Tutorial</p>
+</blockquote>
+<blockquote>
+<p>Introduction to Databases Stanford Online, by Jennifer Widom https://lagunita.stanford.edu/courses/Engineering/db/2014_1/about</p>
+</blockquote>
+<p>Note: The above resources are useful to develop a stronger understanding of SQL and develop a sense of comfort when working with relational databases. However these same concepts can be used to join and query multiple tables in BigQuery by joining based on common fields or columns.</p>
 <h4 id="asynchronous-content-2">Asynchronous Content</h4>
 <pre><code>3.1 What is the queryside?
   3.1.1 Revisiting Pipelines [lecture]
@@ -288,11 +235,13 @@ Insight Data Science blog https://blog.insightdatascience.com/data-science-vs-da
 <h2 id="week-04---storing-data">Week 04 - Storing Data</h2>
 <h4 id="themes-relational-and-nosql-datastores">Themes: Relational and NoSQL datastores</h4>
 <h4 id="readings-4">Readings</h4>
+<h5 id="required">Required</h5>
 <blockquote>
 <p>Using Docker by Adrian Mouat Chapter 1. The What and Why of Containers https://www.safaribooksonline.com/library/view/using-docker/9781491915752/ch01.html#what_and_why</p>
 </blockquote>
+<h5 id="optional">Optional</h5>
 <blockquote>
-<p>Modern Linux Administration by Sam R. Alapati Chapter 1. Modern Linux System Administration https://www.safaribooksonline.com/library/view/modern-linux-administration/9781491935941/ch01.html#idm139918689681584</p>
+<p>Linux in a Nutshell by By Stephen Figgins, Arnold Robbins, Ellen Siever, Robert Love Chapter 1. Introduction https://www.oreilly.com/library/view/linux-in-a/9780596806088/ch01.html</p>
 </blockquote>
 <h4 id="asynchronous-content-3">Asynchronous Content</h4>
 <pre><code>4.1 Introduction
@@ -370,7 +319,10 @@ Insight Data Science blog https://blog.insightdatascience.com/data-science-vs-da
 <h4 id="themes-data-and-its-provenance-security-and-privacy">Themes: Data and its provenance, security and privacy</h4>
 <h4 id="readings-7">Readings</h4>
 <blockquote>
-<p>Modern Linux Administration by Sam R. Alapati Chapter 15. Security and Compliance in the Modern Systems Environment https://www.safaribooksonline.com/library/view/modern-linux-administration/9781491935941/ch15.html</p>
+<ul>
+<li>Learning Apache Kafka By Nishant Garg Chapter 1. Introducing Kafka</li>
+<li>https://www.oreilly.com/library/view/learning-apache-kafka/9781784393090/ch01.html</li>
+</ul>
 </blockquote>
 <h4 id="asynchronous-content-6">Asynchronous Content</h4>
 <pre><code>7.1 Pipeline Context
@@ -421,7 +373,10 @@ Insight Data Science blog https://blog.insightdatascience.com/data-science-vs-da
 <h4 id="themes-ingesting-streaming-data-using-kafka-considerations-of-latency.">Themes: Ingesting streaming data, using Kafka, considerations of latency.</h4>
 <h4 id="readings-9">Readings</h4>
 <blockquote>
-<p>Kafka: The Definitive Guide, 1st Edition by Gwen Shapira, Neha Narkhede, Todd Palino Chapter 7. Building Data Pipelines https://www.safaribooksonline.com/library/view/kafka-the-definitive/9781491936153/ch07.html</p>
+<p>Kafka: The Definitive Guide, 1st Edition by Gwen Shapira, Neha Narkhede, Todd Palino Chapter 1. Meet Kafka https://www.oreilly.com/library/view/kafka-the-definitive/9781491936153/ch01.html</p>
+</blockquote>
+<blockquote>
+<p>Flask Web Development, 2nd Edition by Miguel Grinberg Chapter 2. Basic Application Structure https://www.oreilly.com/library/view/flask-web-development/9781491991725/ch02.html</p>
 </blockquote>
 <h4 id="asynchronous-content-8">Asynchronous Content</h4>
 <pre><code>9.1 Pipeline Context
