@@ -61,6 +61,143 @@ Here, we're trying to follow good practices for data engineering and use appropr
 this will probably take some getting used to at first (unless you already use git all day every day, which is great, help your friends)
 :::
 
+#
+## How this class works
+
+
+## Syllabus
+
+```
+https://mids-w205-fund-of-data-eng.github.io/course-content/
+```
+
+::: notes
+Prereqs
+Video links
+Readings
+:::
+
+## Asyncronous Content
+
+```
+https://github.com/mids-w205-martin-mims/course-content/ \
+blob/master/01-Introduction/async-videos.md
+```
+
+- Same as in ISVC, but you can access it all in one place here.
+
+## Readings
+
+- No one textbook available for this course.
+- Using subscription service to cover the range of topics.
+- `https://www.safaribooksonline.com/pricing/`
+- Individual option: $39/month (can stop whenever you want)
+- Quick note: Get the mobile apps.
+
+## Prerequisites
+
+- Resources listed under prereqs
+- Safari has tons of other materials you can help yourself with.
+
+
+## Course Outline
+
+- 4 sections:  
+- 3-week Introduction
+- 5-week Basics section 
+- 4-week Streaming Data section
+- Putting it All Together
+
+
+::: notes
+- 3-week Introduction covers the basics of storage and retrieval concepts and tools
+- 5-week Basics section  provides a deeper exploration of working with data and data pipelines
+- 4-week section that focuses on Streaming Data; and a 
+- 1-week wrapup, Putting it All Together, integrates concepts and skills from the entire course into a cohesive model of the data pipeline.
+:::
+
+
+#
+## Student Projects
+
+## Student Projects
+
+1. Querying Data
+2. Tracking User Activity
+3. Understanding User Behavior
+
+## { data-background="images/pipeline-overall.svg" } 
+
+::: notes
+Back to the pipeline - What part are we in?
+:::
+
+## Querying Data
+
+- Use existing tools/pipeline/dataset
+- Answer basic business questions
+
+::: notes
+data-driven business decisions
+
+prompt/reinforce the connection
+
+validation/testing?  (how good are our results?)
+
+(intro to model management?)
+:::
+
+## Tracking User Activity
+
+- Use provided pipeline components
+- Transform/store data
+- Answer business questions
+- Bonus:
+    - Trigger notifications
+
+::: notes
+"Catching and Transforming Data using plumbing that's provided"
+
+Catching Data
+
+Classifying Events
+Filtering/Sorting/Grouping
+Transforming Data
+
+Storing Data
+:::
+
+## Understanding User Behavior
+
+- Assemble an end-to-end pipeline
+- Ingest/transform/store data
+- Answer comprehensive business questions
+- Bonus:
+    - Manage sessionization / state
+
+::: notes
+end-to-end pipeline for understanding behavior
+
+you assemble the plumbing
+
+baseline: queries to answer questions about the user activity
+
+bonuses as above
+:::
+
+## Levels of Expertise
+::: notes
+- If you're brand new to something, you'll get it taken care of. 
+- If you've nailed it, get creative
+:::
+
+
+
+## Async
+-   To get ready for project 1, videos - how events are generated
+
+
+#
 ## Activities
 
 - Let's get going!
@@ -284,162 +421,6 @@ Or just use whatever text editor you have, these are basically directions for do
 ::: notes
 Do this in the gui
 :::
-
-
-#
-## How this class works
-
-
-## Syllabus
-
-```
-https://mids-w205-fund-of-data-eng.github.io/course-content/
-```
-
-::: notes
-Prereqs
-Video links
-Readings
-:::
-
-## Asyncronous Content
-
-```
-https://github.com/mids-w205-martin-mims/course-content/ \
-blob/master/01-Introduction/async-videos.md
-```
-
-- Same as in ISVC, but you can access it all in one place here.
-
-## Readings
-
-- No one textbook available for this course.
-- Using subscription service to cover the range of topics.
-- `https://www.safaribooksonline.com/pricing/`
-- Individual option: $39/month (can stop whenever you want)
-- Quick note: Get the mobile apps.
-
-## Prerequisites
-
-- Resources listed under prereqs
-- Safari has tons of other materials you can help yourself with.
-
-## Course Outline
-
-- 4 sections:  
-- 3-week Introduction
-- 5-week Basics section 
-- 4-week Streaming Data section
-- Putting it All Together
-
-
-::: notes
-- 3-week Introduction covers the basics of storage and retrieval concepts and tools
-- 5-week Basics section  provides a deeper exploration of working with data and data pipelines
-- 4-week section that focuses on Streaming Data; and a 
-- 1-week wrapup, Putting it All Together, integrates concepts and skills from the entire course into a cohesive model of the data pipeline.
-:::
-
-## Class flow
-
-::: notes
-This section is a walk through of how we will iterate through assignments.
-:::
-
-
-## Between Class 1 & Class 2
-
-- async material for Week 1
-- Readings for Week 1
-
-
-
-## Between Class 2 & Class 3
-
-- async material for Week 2
-- Readings for Week 2
-
-
-
-
-#
-## Student Projects
-
-## Student Projects
-
-1. Querying Data
-2. Tracking User Activity
-3. Understanding User Behavior
-
-## { data-background="images/pipeline-overall.svg" } 
-
-::: notes
-Back to the pipeline - What part are we in?
-:::
-
-## Querying Data
-
-- Use existing tools/pipeline/dataset
-- Answer basic business questions
-
-::: notes
-data-driven business decisions
-
-prompt/reinforce the connection
-
-validation/testing?  (how good are our results?)
-
-(intro to model management?)
-:::
-
-## Tracking User Activity
-
-- Use provided pipeline components
-- Transform/store data
-- Answer business questions
-- Bonus:
-    - Trigger notifications
-
-::: notes
-"Catching and Transforming Data using plumbing that's provided"
-
-Catching Data
-
-Classifying Events
-Filtering/Sorting/Grouping
-Transforming Data
-
-Storing Data
-:::
-
-## Understanding User Behavior
-
-- Assemble an end-to-end pipeline
-- Ingest/transform/store data
-- Answer comprehensive business questions
-- Bonus:
-    - Manage sessionization / state
-
-::: notes
-end-to-end pipeline for understanding behavior
-
-you assemble the plumbing
-
-baseline: queries to answer questions about the user activity
-
-bonuses as above
-:::
-
-## Levels of Expertise
-::: notes
-- If you're brand new to something, you'll get it taken care of. 
-- If you've nailed it, get creative
-:::
-
-
-
-## Async
--   To get ready for project 1, videos - how events are generated
 
 
 #
