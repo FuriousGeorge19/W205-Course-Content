@@ -107,15 +107,6 @@ Go over what the dataset is on the webpage
 
 <https://console.cloud.google.com/bigquery>
 
-## Breakout
-
-- Make up 3 questions about the bike data& answer using the SQL tutorial
-
-<https://www.w3schools.com/sql/default.asp>
-
-#
-- Breakout
-- Make up 3 questions about the bike data& answer using the SQL tutorial
 
 #
 ## Some annoying specific stuff about BQ
@@ -301,7 +292,6 @@ Rotate between groups to see what folks are coming up with.
 - Answered using empirical data
 - By running queries against (raw?) events
 - Need a pipeline in place to capture these raw events
-- SSH
 
 #
 
