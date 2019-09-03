@@ -7,10 +7,6 @@ author: Week 02 - sync session
 
 # 
 
-## Assignment 1
-- Breakout
-- Questions on process?
-
 
 ## Your cloud instance set up
 
@@ -20,7 +16,7 @@ author: Week 02 - sync session
 
 ## How to do a PR
 
-- Review process from gui 
+- Process from gui 
 
 ::: notes
 we defer cli-support for this until next week
@@ -104,7 +100,6 @@ Go over what the dataset is on the webpage
   * What are your recommendations for offers (justify based on your findings)?
 
 ::: notes
-You will not answer these questions this week just answer the questions assigned for this week 
 :::
 
 
@@ -112,10 +107,15 @@ You will not answer these questions this week just answer the questions assigned
 
 <https://console.cloud.google.com/bigquery>
 
-## Tutorial
+## Breakout
+
+- Make up 3 questions about the bike data& answer using the SQL tutorial
 
 <https://www.w3schools.com/sql/default.asp>
 
+#
+- Breakout
+- Make up 3 questions about the bike data& answer using the SQL tutorial
 
 #
 ## Some annoying specific stuff about BQ
