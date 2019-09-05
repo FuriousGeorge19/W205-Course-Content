@@ -23,8 +23,3 @@
       5.2.3 - Composing Containers [screencast]
       5.2.4 - Failure in Distributed Systems [lecture]
     
-#### Due Friday after Week 5 Synchronous Session: 
-- Assignment 04 - Querying data from BigQuery - finishing up  (Query Project)
-
-
-
