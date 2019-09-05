@@ -256,12 +256,6 @@ the live classroom for specific weeks in the term.
       2.2.4 Introduction to Jupyter Notebooks [tutorial]
       2.2.5 Introduction to Docker [tutorial]
 
-
-#### Due Friday after Week 2 Synchronous Session: 
-- Assignment 01: Set up and prerequisites
-
-
-
 ## Week 03 - Welcome to the Queryside
 
 #### Themes: SQL, query tools
@@ -310,11 +304,6 @@ Note: The above resources are useful to develop a stronger understanding of SQL 
       3.3.3 Using Docker [tutorial]
       3.3.4 Using Containers to Run Services with Docker [tutorial] 
 
-
-#### Due Friday after Week 3 Synchronous Session: 
-- Assignment 02: Querying data with BigQuery
-
-
 ## Part 2 - The Basics
 
 ## Week 04 - Storing Data
@@ -350,11 +339,6 @@ Note: The above resources are useful to develop a stronger understanding of SQL 
       4.3.3 - NoSQL - Document Store [screencast]
       4.3.4 - NoSQL - Key-Value Store [screencast]
 
-
-#### Due Friday after Week 4 Synchronous Session: 
-- Assignment 03 - Querying data from the BigQuery CLI - set up (Query Project)
-
-
 ## Week 05 - Storing Data II
 
 #### Themes: Introduction to cloud concepts and Hadoop
@@ -380,11 +364,6 @@ Note: The above resources are useful to develop a stronger understanding of SQL 
       5.2.3 - Composing Containers [screencast]
       5.2.4 - Failure in Distributed Systems [lecture]
     
-#### Due Friday after Week 5 Synchronous Session: 
-- Assignment 04 - Querying data from BigQuery - finishing up  (Query Project)
-
-
-
 ## Week 06 - Transforming Data
 
 #### Themes: ETL and its discontents, more Hadoop, and container management
@@ -424,11 +403,6 @@ Note: The above resources are useful to develop a stronger understanding of SQL 
       6.4.2 - Introduction to Schedulers [screencast]
       6.4.3 - Using Schedulers [screencast]
 
-
-#### Due Friday after Week 6 Synchronous Session: 
-- Assignment 05 - Use a python redis client library to connect to the redis server on a cluster.
-
-
 ## Week 07 - Sourcing Data
 
 #### Themes: Data and its provenance, security and privacy
@@ -459,9 +433,6 @@ Note: The above resources are useful to develop a stronger understanding of SQL 
       7.4.1 - Security and Privacy [lecture]
       7.4.2 - Sensitive Data [screencast]
 
-#### Due Friday after Week 7 Synchronous Session: 
-- Assignment 06 - Get and clean data (Tracking User Activity Project)
-
 
 ## Week 08 - Querying Data
 
@@ -487,9 +458,6 @@ Note: The above resources are useful to develop a stronger understanding of SQL 
     8.3 Query Planning
       8.3.1 - Query Optimization [screencast]
       8.3.2 - Using the Tools [screencast]
-
-#### Due Friday after Week 8 Synchronous Session: 
-- Assignment 07 - Set up pipeline (Tracking User Activity Project)
 
 
 ## Part 3 - Streaming
@@ -524,11 +492,6 @@ Note: The above resources are useful to develop a stronger understanding of SQL 
       9.2.5 - Batch vs. Real Time [screencast]
       9.2.6 - Driven by Queries [screencast]
 
-#### Due Friday after Week 9 Synchronous Session: 
-- Assignment 08 - Build and Write-up Pipeline (Tracking User Activity Project)
-
-
-
 ## Week 10 - Transforming Streaming Data
 
 #### Themes: NoETL, batch vs streaming, in-memory computing
@@ -557,11 +520,6 @@ Note: The above resources are useful to develop a stronger understanding of SQL 
 
     10.4 Take Action!
       10.4.1 * Take Action! [lecture]
-
-#### Due Friday after Week 10 Synchronous Session: 
-- Assignment 09 - Define Your Pipeline (Understanding User Behavior Project)
-
-
 
 ## Week 11 - Storing Data III
 
@@ -592,11 +550,6 @@ Note: The above resources are useful to develop a stronger understanding of SQL 
     11.5 Activity
       11.5.1 - User Activity [lecture]
 
-#### Due Friday after Week 11 Synchronous Session: 
-- Assignment 10 - Set up pipeline, Part 1 (Understanding User Behavior Project)
-
-
-
 ## Week 12 - Querying Data II
 
 #### Themes: Structured streaming, streaming queries, caching vs. stream queries
@@ -616,11 +569,6 @@ Note: The above resources are useful to develop a stronger understanding of SQL 
       12.1.3 - A walk down memory lane - data mining [screencast]
       12.1.4 - Replay [screencast]
       12.1.5 - Caching queries [screencast]
-
-#### Due Friday after Week 12 Synchronous Session: 
-- Assignment 11 - Set up pipeline, Part 2 (Understanding User Behavior Project)
-
-
 
 ## Part 4 - Putting it All Together
 
@@ -651,10 +599,6 @@ Note: The above resources are useful to develop a stronger understanding of SQL 
     13.3 Using Public Clouds
       13.3.1 - AWS
       13.3.2 - GCP
-
-#### Due Friday after Week 13 Synchronous Session: 
-- Assignment 12 - Synthesis Assignment (Understanding User Behavior Project)
-
 
 ## Week 14 - Patterns for Data Pipelines
 
