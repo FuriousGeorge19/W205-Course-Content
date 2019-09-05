@@ -54,7 +54,7 @@ This pipeline is your anchor, basically where are we and how does here relate to
 - Getting used to
 
 ::: notes
-For your other classes, they may use a variety of ways to get content, turn in assignments etc. 
+For your other classes, they may use a variety of ways to get content, turn in projects etc. 
 
 Here, we're trying to follow good practices for data engineering and use appropriate tools. 
 
@@ -405,7 +405,7 @@ Or just use whatever text editor you have, these are basically directions for do
 
 
 ## Git: submit a PR
-- All assignments submitted as PRs
+- All projects submitted as PRs
   ```
   https://github.com/mids-w205-martin-mims/signup-<user-name>
   ```
