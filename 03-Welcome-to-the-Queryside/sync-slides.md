@@ -8,16 +8,13 @@ author: Week 03 - sync session
 #
 
 ## Overview
-- Go over Assignment 2 results
 - Dive into command line tools for figuring out what you have in datasets
 - Setting up BigQuery from the command line
 - What's up next?
 
 # 
 
-## Assignment 1 Checkin
-
-## Assignment 2 Breakout
+## Project Breakout
 
 ## Share queries
 
@@ -364,7 +361,7 @@ bq query --use_legacy_sql=false 'SELECT min(time), max(time) FROM `bigquery-publ
 - This week's videos may seem like kind of a mixed bag. 
 - Starting to transition between Project 1 & Project 2. 
 - Working with query tools (bigquery and Athena)
-- Getting a glimpse of how to use jupyter notebooks for Assignment 4
+- Getting a glimpse of how to use jupyter notebooks for Project 1
 - Looking ahead at some bits of docker manipulation from the command line, getting ready for Project 2. 
 - Also you'll see your first supplemental tag
 
