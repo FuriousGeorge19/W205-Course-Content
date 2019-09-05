@@ -28,7 +28,4 @@
       7.4.1 - Security and Privacy [lecture]
       7.4.2 - Sensitive Data [screencast]
 
-#### Due Friday after Week 7 Synchronous Session: 
-- Assignment 06 - Get and clean data (Tracking User Activity Project)
-
 
