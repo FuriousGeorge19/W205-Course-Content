@@ -31,8 +31,3 @@
       4.3.3 - NoSQL - Document Store [screencast]
       4.3.4 - NoSQL - Key-Value Store [screencast]
 
-
-#### Due Friday after Week 4 Synchronous Session: 
-- Assignment 03 - Querying data from the BigQuery CLI - set up (Query Project)
-
-

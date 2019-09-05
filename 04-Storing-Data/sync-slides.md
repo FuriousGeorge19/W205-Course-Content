@@ -14,23 +14,22 @@ author: Week 04 - sync session
 
 ::: notes
 Breakout at about 5 after the hour:
-- Check in with each group on their solution to the assignment
+- Check in with each group on Project 1
 - Answer questions as people have them on what they had trouble with
 - Usually takes 10-20 minutes
 :::
 
 #
 ## Overview
-- Go over Assignment 3 
 - Intro Docker
 - PRs from the command line
 
 # 
-## Assignment 3 Breakout
+## Project Breakout
 
 # 
 
-## Assignment 3: Our Project Questions
+## Our Project Questions
 - What is a trip?
 - What are the most common trips?
 - How does this differ based on trip type (commuter vs all)?
@@ -52,11 +51,11 @@ Breakout at about 5 after the hour:
 
 ## Where are we in the Query Project?
 
-- Assignment 3: Answer your Project Questions
-- Assignment 4: Use Jupyter Notebook to do some visualizations and write up your reasoning for the recommendations you choose to make.
+- Answer your Project Questions
+- Use Jupyter Notebook to do some visualizations and write up your reasoning for the recommendations you choose to make.
 
 ::: notes
-use bigquery or bq cli for assignment 3
+use bigquery or bq cli for some of this
 :::
 
 
@@ -145,10 +144,10 @@ then they're only "in" one place
 
 ```
 git clone \
-  https://github.com/mids-w205-martin-mims/assignment-02-htmartin
+  https://github.com/mids-w205-martin-mims/signup-htmartin
 ```
 
-    cd assignment-02-htmartin
+    cd signtup-htmartin
 
 ## Create a branch to work from
 
