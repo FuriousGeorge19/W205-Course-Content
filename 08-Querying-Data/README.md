@@ -23,7 +23,4 @@
       8.3.1 - Query Optimization [screencast]
       8.3.2 - Using the Tools [screencast]
 
-#### Due Friday after Week 8 Synchronous Session: 
-- Assignment 07 - Set up pipeline (Tracking User Activity Project)
-
 

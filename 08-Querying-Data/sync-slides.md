@@ -6,8 +6,8 @@ author: Week 08 - sync session
 ---
 
 #
-## Assignment Review
-- Review your Assignment 07
+## Project Review
+- Review your Project 2
 - Get ready to share
 
 ::: notes
