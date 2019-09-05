@@ -12,7 +12,6 @@ author: Week 02 - sync session
 
 - repos cloned:
     - `course-content`
-    - `assignment-01-<user-name>`
 
 ## How to do a PR
 
