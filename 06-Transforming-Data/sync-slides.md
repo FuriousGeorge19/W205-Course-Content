@@ -13,9 +13,6 @@ author: Week 06 - sync session
 - Get ready to share
 
 
-## Due Friday (PR)
-
-
 # 
 ## Pipes 
 
