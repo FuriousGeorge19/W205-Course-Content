@@ -28,8 +28,3 @@
       9.2.5 - Batch vs. Real Time [screencast]
       9.2.6 - Driven by Queries [screencast]
 
-#### Due Friday after Week 9 Synchronous Session: 
-- Assignment 08 - Build and Write-up Pipeline (Tracking User Activity Project)
-
-
-

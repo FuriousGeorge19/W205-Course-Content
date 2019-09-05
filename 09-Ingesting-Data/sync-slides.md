@@ -8,8 +8,8 @@ author: Week 09 - sync session
  
 
 #
-## Assignment Review
-- Review your Assignment 08
+## Project Review
+- Review your Project 2
 - Get ready to share
 
 ::: notes
