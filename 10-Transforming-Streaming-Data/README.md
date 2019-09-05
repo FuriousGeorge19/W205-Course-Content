@@ -27,8 +27,3 @@
     10.4 Take Action!
       10.4.1 * Take Action! [lecture]
 
-#### Due Friday after Week 10 Synchronous Session: 
-- Assignment 09 - Define Your Pipeline (Understanding User Behavior Project)
-
-
-
