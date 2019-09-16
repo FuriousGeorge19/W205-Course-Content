@@ -62,7 +62,7 @@ breakout
 #
 ## Housekeeping
 
-- Channel etiquette
+- Debugging
 
 ## Activities: async content
 
@@ -93,6 +93,7 @@ i.e., `cd w205` first
 
 ## Install jq
 
+- `sudo usermod -aG sudo <username>` or install it all in the GCloud SSH
 
 - `sudo apt update`
 
