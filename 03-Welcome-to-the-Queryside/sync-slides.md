@@ -8,16 +8,11 @@ author: Week 03 - sync session
 #
 
 ## Overview
-- Go over Assignment 2 results
 - Dive into command line tools for figuring out what you have in datasets
 - Setting up BigQuery from the command line
 - What's up next?
 
 # 
-
-## Assignment 1 Checkin
-
-## Assignment 2 Breakout
 
 ## Share queries
 
