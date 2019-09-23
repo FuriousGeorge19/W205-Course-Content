@@ -21,7 +21,6 @@ Breakout at about 5 after the hour:
 
 #
 ## Overview
-- Go over Assignment 3 
 - Intro Docker
 - PRs from the command line
 
