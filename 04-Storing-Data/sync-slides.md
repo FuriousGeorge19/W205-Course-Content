@@ -9,6 +9,8 @@ author: Week 04 - sync session
 #
 ## While we're getting started
 
+- Open slides for week 04
+- Start your VM
 - Review your Project Questions 
 - Get ready to share
 
@@ -17,6 +19,7 @@ Breakout at about 5 after the hour:
 - Check in with each group on their solution to the assignment
 - Answer questions as people have them on what they had trouble with
 - Usually takes 10-20 minutes
+- Reminder: TA office hours on Saturdays! 8AM PST
 :::
 
 #
@@ -25,11 +28,11 @@ Breakout at about 5 after the hour:
 - PRs from the command line
 
 # 
-## Assignment 3 Breakout
+## Project 1 Breakout
 
 # 
 
-## Assignment 3: Our Project Questions
+## Project 1: Our Project Questions
 - What is a trip?
 - What are the most common trips?
 - How does this differ based on trip type (commuter vs all)?
@@ -40,24 +43,6 @@ Breakout at about 5 after the hour:
   * A trip during rush hour
   * Write a query to determine if a trip happens from 7-9 am or 4-7 pm. (or how many trips do...)
 :::
-
-## Housekeeping
-
-- Class flow
-
-:::notes
-- The following few slides review the flow of when things are due and what readings/videos go with which week.
-:::
-
-## Where are we in the Query Project?
-
-- Assignment 3: Answer your Project Questions
-- Assignment 4: Use Jupyter Notebook to do some visualizations and write up your reasoning for the recommendations you choose to make.
-
-::: notes
-use bigquery or bq cli for assignment 3
-:::
-
 
 #
 ## Docker: Where am I?
@@ -129,7 +114,7 @@ I hope some of this simplifies when we start using the containers to _just_ run 
 `docker run [<opts>] <image> [<command>]`
 ... e.g., 
 ME: check this query for backticks from bq cli sql
-`docker run -it --rm midsw205/base bq query --use_legacy_sql=false 'select count(*) from mytable'`
+`docker run -it --rm midsw205/base bq query --use_legacy_sql=false 'select count(*) from `bigquery-public-data.san_francisco.bikeshare_trips`'`
 in one go (edited)
 
 then they're only "in" one place
@@ -143,8 +128,7 @@ then they're only "in" one place
 ## Clone a repo from GitHub
 
 ```
-git clone \
-  https://github.com/mids-w205-martin-mims/assignment-02-htmartin
+git clone https://github.com/mids-w205-schioberg/project-1-dschioberg.git
 ```
 
     cd assignment-02-htmartin
@@ -201,7 +185,7 @@ docker-compose is for this
 ## Week 4 videos 
 - Relational Data Stores  
 - NoSQL Data Stores
-- Understand the RDB store we've been working with with big query
+- Understand the RDB store we've been working with big query
 - Get ready to work with the nosql store redis next week as we start Project 2
 
 
