@@ -9,13 +9,13 @@ author: Week 05 - sync session
 
 
 #
-## Project 01 Breakout
+## Project Review
 
 
 
 ::: notes
 Breakout at about 5 after the hour:
-- Check in with each group on their solution 
+- Check in with each group on their projects
 - Answer questions as people have them on what they had trouble with
 :::
 
@@ -24,6 +24,7 @@ Breakout at about 5 after the hour:
 ## Where are we?
 
 ## Today
+- Wraps up the Query Project
 - Creating basic `docker-compose` clusters
 - NoSQL store (Redis) with `docker-compose`
 - Redis to track state
@@ -41,7 +42,7 @@ Breakout at about 5 after the hour:
 
 
 ## Class 6
-- Start "Tracking User Activity" Project 
+- Start "Tracking User Activity" Project 2
 
 
 # 
@@ -293,7 +294,6 @@ Connect to the mids container
     docker-compose ps
 
 #
-
 ## Jupyter Notebooks
 
 
@@ -349,12 +349,8 @@ remember, you can copy/paste this from the `course-content` repo
 
     docker-compose down
 
-
 #
-
-
 ## Wrapping Up
-
 
 
 ## Week 5 Videos
