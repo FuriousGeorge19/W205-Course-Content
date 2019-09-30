@@ -9,13 +9,13 @@ author: Week 05 - sync session
 
 
 #
-## Assignment 04 Breakout
+## Project 01 Breakout
 
 
 
 ::: notes
 Breakout at about 5 after the hour:
-- Check in with each group on their solution to the assignment
+- Check in with each group on their solution 
 - Answer questions as people have them on what they had trouble with
 :::
 
@@ -24,7 +24,6 @@ Breakout at about 5 after the hour:
 ## Where are we?
 
 ## Today
-- Assignment 04 wraps up the Query Project
 - Creating basic `docker-compose` clusters
 - NoSQL store (Redis) with `docker-compose`
 - Redis to track state
@@ -42,7 +41,7 @@ Breakout at about 5 after the hour:
 
 
 ## Class 6
-- Start "Tracking User Activity" Project (spans Assignments 6-8)
+- Start "Tracking User Activity" Project 
 
 
 # 
@@ -355,23 +354,6 @@ remember, you can copy/paste this from the `course-content` repo
 
 
 ## Wrapping Up
-
-## Assignment 5
-
-- Follow the steps we did in class to get redis and the mids base container talking. = Follow the steps we did in class 
-- What you turn in:
-	- In your /assignment-05-user name repo:
-		- docker-compose.ymls
-		- once you've run the example on your terminal
-		- Run history > -user name-history.txt (ok for this to be messy)
-		- Save the relevant portion of your history as user name-annotations.md
-		- Annotate the file with explanations of what you were doing at each point (See htmartin-annotations.md)
-
-## Assignment 5: Bonus& More bonus
-- extra challenge
-- not about extra credit
-
-
 
 
 
