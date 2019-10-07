@@ -9,18 +9,8 @@ author: Week 06 - sync session
 
 ## While we're getting started
 
-- Review your Assignment 05
+- Review your Project 1
 - Get ready to share
-
-## Assignment 05 Breakout
-
--  bonus activities?
--  What is different about the redis-standalone & redis-cluster examples? 
-
-::: notes
-:::
-
-## Due Friday (PR)
 
 
 # 
@@ -498,10 +488,11 @@ docker-compose exec mids bash -c "kafkacat -C -b kafka:29092 -t foo -o beginning
     docker-compose down
 
 #
-## Assignment 06
+## Project 2
+
 - Step through this process using the Project 2 data
 - What you turn in:
-- In your `/assignment-06-<user-name>` repo:
+- In your `/project-2-<user-name>` repo:
   * your `docker-compose.yml` 
   * once you've run the example on your terminal
     * Run `history > <user-name>-history.txt`
@@ -521,7 +512,7 @@ docker-compose exec mids bash -c "kafkacat -C -b kafka:29092 -t foo -o beginning
 ## Summary
 - Test that we can spin up containers, publish & consume messages with simple numbers messages.
 - Work through some actual data from github
-- Prep for assignment
+- Prep for Project 2
 
 
 
