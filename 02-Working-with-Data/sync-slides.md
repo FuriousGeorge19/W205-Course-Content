@@ -7,20 +7,15 @@ author: Week 02 - sync session
 
 # 
 
-## Assignment 1
-- Breakout
-- Questions on process?
-
 
 ## Your cloud instance set up
 
 - repos cloned:
     - `course-content`
-    - `assignment-01-<user-name>`
 
 ## How to do a PR
 
-- Review process from gui 
+- Process from gui 
 
 ::: notes
 we defer cli-support for this until next week
@@ -104,17 +99,12 @@ Go over what the dataset is on the webpage
   * What are your recommendations for offers (justify based on your findings)?
 
 ::: notes
-You will not answer these questions this week just answer the questions assigned for this week 
 :::
 
 
 ## Working with BQ gui
 
 <https://console.cloud.google.com/bigquery>
-
-## Tutorial
-
-<https://www.w3schools.com/sql/default.asp>
 
 
 #
@@ -301,7 +291,6 @@ Rotate between groups to see what folks are coming up with.
 - Answered using empirical data
 - By running queries against (raw?) events
 - Need a pipeline in place to capture these raw events
-- SSH
 
 #
 

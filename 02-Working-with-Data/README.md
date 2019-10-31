@@ -30,9 +30,3 @@
       2.2.4 Introduction to Jupyter Notebooks [tutorial]
       2.2.5 Introduction to Docker [tutorial]
 
-
-#### Due Friday after Week 2 Synchronous Session: 
-- Assignment 01: Set up and prerequisites
-
-
-
