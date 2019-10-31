@@ -294,31 +294,7 @@ Connect to the mids container
     docker-compose ps
 
 #
-## Jupyter Notebooks - advanced option!
-
-This is not needed for any part of the project and only recommended for advanced students
-
-## Prepare by changing you firewall settings in GCloud
-
-## Add firewall rule to open port 8888
-- In the Google Cloud, we need to add a firewall rule to allow traffic on port 8888.
-- Navigation Menu => VPC Network => Firewall Rules
-
-- Check under the column Protocols / ports and see if you have an entry: tcp:8888
-- If you do not, on the top, click on CREATE FIREWALL RULE and fill out as follows:
-    - Name: jupyter-notebook
-    - Description: Adds Jupyter Notebook access via port 8888
-    - Logs: Off
-    - Network: default
-    - Priority: 1000
-    - Direction of traffic: Ingress
-    - Action on match: Allow
-    - Targets: All instances in the network
-    - Source filter: IP ranges
-    - Source IP ranges: 0.0.0.0/0
-    - Second source filter: None
-    - Protocols and ports: Specified protocols and ports check tcp and put 8888 in the box next to it
-    - Click blue Create button
+## Jupyter Notebooks
 
 
 ## Change the `docker-compose.yml` file 

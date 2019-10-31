@@ -37,8 +37,3 @@
       6.4.2 - Introduction to Schedulers [screencast]
       6.4.3 - Using Schedulers [screencast]
 
-
-#### Due Friday after Week 6 Synchronous Session: 
-- Assignment 05 - Use a python redis client library to connect to the redis server on a cluster.
-
-

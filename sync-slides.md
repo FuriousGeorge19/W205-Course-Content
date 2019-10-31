@@ -1,533 +1,424 @@
 ---
 title: Fundamentals of Data Engineering
-author: Week 05 - sync session
+author: Week 03 - sync session
 ...
 
 ---
 
+#
+
+## Overview
+- Dive into command line tools for figuring out what you have in datasets
+- Setting up BigQuery from the command line
+- What's up next?
+
+# 
+
+## Project Breakout
+
+## Share queries
+
+- Questions? 
+- Problems? 
+- Queries that you wanted to do but you couldn't figure out how?
+
+
+::: notes
+breakout
+:::
+
+
+## What's the size of this dataset? (i.e., how many trips)
+
+`983648`
+ 
+
+    #standardSQL
+    SELECT count(*) FROM `bigquery-public-data.san_francisco.bikeshare_trips`
+
+
+## What is the earliest start time and latest end time for a trip?
+
+`2013-08-29 09:08:00` 
+`2016-08-31 23:48:00`
+
+
+    #standardSQL
+    SELECT min(start_date) 
+    FROM `bigquery-public-data.san_francisco.bikeshare_trips`
+
+    #standardSQL
+    SELECT max(end_date) 
+    FROM `bigquery-public-data.san_francisco.bikeshare_trips`
+
+## How many bikes are there?
+
+`700`
+
+    #standardSQL
+    SELECT count(distinct bike_number)
+    FROM `bigquery-public-data.san_francisco.bikeshare_trips`
 
 
 
 #
-## Project Review
+## Housekeeping
 
+- Channel etiquette
 
+## Activities: async content
 
-::: notes
-Breakout at about 5 after the hour:
-- Check in with each group on their projects
-- Answer questions as people have them on what they had trouble with
-:::
+## 
+
+- This week, videos about various tools you can use to work with your data 
+- Working with files: json, csv etc
+- So for  today's class activity, we’re  going to work with some command line tools to manipulate data in some handy  ways.
 
 
 #
-## Where are we?
+## Finding stuff out about your data
 
-## Today
-- Wraps up the Query Project
-- Creating basic `docker-compose` clusters
-- NoSQL store (Redis) with `docker-compose`
-- Redis to track state
+## Download Datasets
 
+Save data into your `w205` directory
+```
+cd ~/w205
+curl -L -o annot_fpid.json https://goo.gl/qWiu7d
+curl -L -o lp_data.csv https://goo.gl/FDFPYB
+```
 
 ::: notes
-- Watching RDBs and NoSQL videos b/t week 4 & week 5
+make sure they go into `~/w205` on your cloud instance.
 
-- spin up 2 containers: redis & midsw205/base
-- run python in one that's talking to redis in the other
-- (docker compose + how to run a notebook in the container)
+i.e., `cd w205` first
+:::
+
+## Install jq
+
+
+- `sudo apt update`
+
+- `sudo apt install jq`
+
+## What's in this file?
+
+`head lp_data.csv`
+
+`tail lp_data.csv`
+
+::: notes
+
+- Lots of csvs and tsvs I get sent/access to have e.g., 17M rows
+- I don't want to have to open that or `cat` it or even `| less`
+:::
+
+## What are variables in here?
+
+`head -n1 lp_data.csv`
+
+::: notes
+
+
+:::
+
+## How many entries?
+
+`cat lp_data.csv | wc -l`
+
+::: notes
+
+- 100 rows
+:::
+
+## How about sorting?
+
+`cat lp_data.csv | sort`
+
+::: notes
+
+- it sorts by usage
+- but it's treating numbers weird
+:::
+
+## Take a look at what options there are for sort
+
+`man sort`
+
+::: notes
+
+- Ask them to generate options
+
+    -g, --general-numeric-sort
+    compare according to general numerical value
+
+     -n, --numeric-sort
+    compare according to string numerical value
 :::
 
 
+## fix so sorting correctly
 
+`cat lp_data.csv | sort -g`
 
-## Class 6
-- Start "Tracking User Activity" Project 2
+`cat lp_data.csv | sort -n`
 
 
 # 
-## Where are we in the pipeline?
 
-## { data-background="images/pipeline-overall.svg" }
+## Find out which topics are more popular
+
+## What have we got in this file?
+
+`head annot_fpid.json`
 
 ::: notes
-we're orchestrating pipeline components
 
-this is tough, so let's take it one step at a time
+- It will scroll all over the page, 
+- b/c it's json, it's just one line, so head is everything
 :::
 
+## Hmmm, what now? jq
+
+pretty print the json
+
+
+`cat annot_fpid.json | jq .`
+
+::: notes
+
+- There's a slide for a jq reference at the end here, we're just going to do a little in class
+:::
+
+## Just the terms
+
+`cat annot_fpid.json | jq '.[][]'`
+
+::: notes
+
+- 
+:::
+
+## Remove the ""s
+
+`cat annot_fpid.json | jq '.[][]' -r`
+
+::: notes
+
+- 
+:::
+
+## Can we sort that?
+
+`cat annot_fpid.json | jq '.[][]' -r | sort `
+
+::: notes
+
+- Hmmm, there's lots of repeated terms
+:::
+
+## Unique values only
+
+    cat annot_fpid.json | jq '.[][]' -r | 
+    sort | uniq 
+
+::: notes
+
+- 
+:::
+
+## How could I find out how many of each of those unique values there are?
+
+    cat annot_fpid.json | jq '.[][]' -r | 
+    sort | uniq -c 
+
+::: notes
+
+- 
+:::
+
+## Now, how could I sort by that?
+
+
+    cat annot_fpid.json | jq '.[][]' -r | 
+    sort | uniq -c | sort -g
+
+Ascending
+
+    cat annot_fpid.json | jq '.[][]' -r | 
+    sort | uniq -c | sort -gr
+
+Descending
+
+::: notes
+
+- 
+:::
+
+## So, what are the top ten terms?
+
+    cat annot_fpid.json | jq '.[][]' -r | 
+    sort | uniq -c | sort -gr | head -10
+
+
+::: notes
+
+- 
+:::
 
 #
-## Docker
 
-## Docker
-
-Let's play with Redis
-
-::: notes
-redis is a nosql key-value store
-:::
-
-## spin it up
-
-```
-docker run redis
-```
-
-::: notes
-this is lame:
-- ties up a terminal
-- named strangely
-- tough to connect
-
-ctrl-c to exit
-:::
-
-## 
-
-```
-docker run -d redis
-```
-
-::: notes
-lame:
-- named strangely
-- tough to connect
-:::
-
-## 
-
-```
-docker run -d --name redis redis
-```
-
-::: notes
-still need to connect
-:::
-
-## 
-
-```
-docker run -d --name redis -p 6379:6379 redis
-```
-
-::: notes
-This still sucks though...  imagine doing that for:
-- flask
-- kafka
-- spark
-- hdfs
-- presto
-- etc
-
-let's simplify
-:::
+## bq cli
 
 
-# 
-## Docker compose
 
 
 ##
 
-- helps manage options easily
-- manage multiple containers at once
+```
+bq query --use_legacy_sql=false '
+SELECT count(*)
+FROM `bigquery-public-data.san_francisco.bikeshare_status`'
+```
 
 ::: notes
-let's look at an example
+107,501,619
+
+The point: you can use `select *` to actually answer questions.
+
+```
+bq query --use_legacy_sql=false 'SELECT count(*) FROM `bigquery-public-data.san_francisco.bikeshare_status`'
+```
 :::
 
-## Update your course content repo in w205
+## How many stations are there?
+
+##
 
 ```
-cd ~/w205/course-content
-git pull --all
+bq query --use_legacy_sql=false '
+SELECT count(distinct station_id)
+FROM `bigquery-public-data.san_francisco.bikeshare_status`'
 ```
-
-## Docker compose .yml file
-
-```
-mkdir ~/w205/redis-standalone
-cd ~/w205/redis-standalone
-cp ../course-content/05-Storing-Data-II/example-0-docker-compose.yml docker-compose.yml
-```
-
-
-## i.e., 
-
-```
----
-version: '2'
-services:
-  redis:
-    image: redis
-    expose:
-      - "6379"
-    ports:
-      - "6379:6379"
-```
-
-## Spinup
-
-Start up the cluster
-
-    docker-compose up -d
-
-
-## Check stuff
-
-    docker-compose ps
-
-
-## Peek at the logs
-
-    docker-compose logs redis
-
-## Should see log output ending in
-
-    Ready to accept connections
-
-## Run stuff
-
-    ipython
-
-## Try out redis
-
-    import redis
-    r = redis.Redis(host='localhost', port='6379')
-    r.keys()
-    exit
-
-## Tear down your stack
-
-    docker-compose down
-
-## Verify 
-
-    docker-compose ps
-
-
-#
-## Clusters with docker-compose
-
-## Setup
-
-## Create a workspace for this other example
-
-    mkdir ~/w205/redis-cluster
-    cd ~/w205/redis-cluster
-    cp ../course-content/05-Storing-Data-II/example-1-docker-compose.yml docker-compose.yml
-
-
-## Save the following to `docker-compose.yml` in that directory
-
-```
----
-version: '2'
-services:
-  redis:
-    image: redis:latest
-    expose:
-      - "6379"
-
-  mids:
-    image: midsw205/base:latest
-    stdin_open: true
-    tty: true
-```
-
-
-## Spinup
-
-Start up the cluster
-
-    docker-compose up -d
-
-
-## Check stuff
-
-    docker-compose ps
-
-## Should see
-
-             Name                        Command               State    Ports     
-    ---------------------------------------------------------------------------
-    redisexample_midsbase_1   /bin/bash                        Up      8888/tcp 
-    redisexample_redis_1      docker-entrypoint.sh redis ...   Up      6379/tcp 
-
-
-## Peek at the logs
-
-    docker-compose logs redis
-
-## Should see log output ending in
-
-    Ready to accept connections
-
-## Run stuff
-
-Connect to the mids container
-
-    docker-compose exec mids bash
-
-## At the prompt, run 
-
-    ipython
-
-## Try out redis
-
-    import redis
-    r = redis.Redis(host='redis', port='6379')
-    r.keys()
-    exit
-
-## Exit that container
-
-    exit
-
-## Tear down your stack
-
-    docker-compose down
-
-## Verify 
-
-    docker-compose ps
-
-#
-## Jupyter Notebooks
-
-
-## Change the `docker-compose.yml` file 
-
-    ---
-    version: '2'
-    services:
-      redis:
-        image: redis:latest
-        expose:
-          - "6379"
-
-      mids:
-        image: midsw205/base:latest
-        stdin_open: true
-        tty: true
-        expose:
-          - "8888"
-        ports:
-          - "8888:8888"
 
 ::: notes
-- Add a port for the `mids` service
-- Expose adds ports
-- Ports exposes it out to the host
-- Port is... channel for services to talk to each other.
+The point: how to count unique
+Answer: something like 75
+
+```
+bq query --use_legacy_sql=false 'SELECT count(distinct station_id) FROM `bigquery-public-data.san_francisco.bikeshare_status`'
+```
 :::
 
-## Save that and bring it up
 
-    docker-compose up -d
+## How long a time period do these data cover?
 
-## Start up a notebook
+##
 
-    docker-compose exec mids jupyter notebook --no-browser --port 8888 --ip 0.0.0.0 --allow-root
+```
+bq query --use_legacy_sql=false '
+SELECT min(time), max(time)
+FROM `bigquery-public-data.san_francisco.bikeshare_status`'
+```
+
 
 ::: notes
-remember, you can copy/paste this from the `course-content` repo
+- 2013-08-29 12:06:01.000 UTC   
+- 2016-08-31 23:58:59.000 UTC   
+
+```
+bq query --use_legacy_sql=false 'SELECT min(time), max(time) FROM `bigquery-public-data.san_francisco.bikeshare_status`'
+```
 :::
 
-## Copy token... should look something like
-
-    open http://0.0.0.0:8888/?token=<your token>
-
-## Open a browser
-
-    http://0.0.0.0:8888
-
-## Paste token
-
-## Drop the cluster when you're done
-
-    docker-compose down
 
 #
-## Wrapping Up
+## Generate Ideas
 
+- What do you know?
+- What will you need to find out?
 
-## Week 5 Videos
+::: notes
 
-- Hadoop
-- Some basics. We won't use Hadoop until later in the project
-- Virtualization
-- The notion of using docker-compose to bring up clusters of services. This is the core of Project 2.
+- breakout
+- Generate Ideas = get them going on generating questions for project 
+- If they don't come up with anything, ask:
+  1. What do you know?
+    * i.e., what variables do you have? what do they mean? 
+  2. What will you need to find out?
+    * i.e., how to use those variables in some combo to figure out:
+    * What's a trip?
+    * What's a commuter trip?
+    * etc
+:::
 
+#
+## Summary
+- Command line tools and jq to dive into your data
+- BigQuery from the command line
+
+## Onward
+
+- This week's videos may seem like kind of a mixed bag. 
+- Starting to transition between Project 1 & Project 2. 
+- Working with query tools (bigquery and Athena)
+- Getting a glimpse of how to use jupyter notebooks for Project 1
+- Looking ahead at some bits of docker manipulation from the command line, getting ready for Project 2. 
+- Also you'll see your first supplemental tag
 
 
 #
-
 ## Extras
 
-
-
-## Automate notebook startup
-
-##
-
-Just for fun,
-
-    ---
-    version: '2'
-    services:
-      redis:
-        image: redis:latest
-        expose:
-          - "6379"
-
-      mids:
-        image: midsw205/base:latest
-        stdin_open: true
-        tty: true
-        expose:
-          - "8888"
-        ports:
-          - "8888:8888"
-        command: jupyter notebook --no-browser --port 8888 --ip 0.0.0.0 --allow-root
-
-## Test it out
-
-    docker-compose up -d
-
-## Run to get the token 
-
-    docker-compose logs mids
-
-## Open a browser
-
-    open http://0.0.0.0:8888/?token=<your token>
-
-## Open New Python3 Notebook
-
-## Try redis
-
-    import redis
-    r = redis.Redis(host='redis', port='6379')
-    r.keys()
-    
-## Add some values
-
-    r.set('foo', 'bar')
-    value = r.get('foo')
-    print(value)
-
-## Drop cluster
-
-    docker-compose down
-
-
-#
-
-
-## Redis to track state
-
 ::: notes
-See nosql-kv-stores-video-hd1080-h264-30fps.mp4 
+- All of this is stuff you can use or not.
 :::
 
-## Setup
+## Resources
 
-Download data:
+## sed and awk
 
-    cd ~/w205/
-    curl -L -o trips.csv https://goo.gl/QvHLKe
+<http://www.catonmat.net/blog/awk-one-liners-explained-part-one/>
+<http://www.catonmat.net/blog/sed-one-liners-explained-part-one/>
 
-## Setup
+## jq
 
-Add volumes to your `docker-compose.yml`:
+<https://stedolan.github.io/jq/tutorial/>
 
-    volumes:
-      - ~/w205:/w205
+## Advanced options 
 
+## Sort by 'product_name'
 
-## 
-
-    ---
-    version: '2'
-    services:
-      redis:
-        image: redis:latest
-        expose:
-          - "6379"
-
-      mids:
-        image: midsw205/base:latest
-        stdin_open: true
-        tty: true
-        volumes:
-          - ~/w205:/w205
-        expose:
-          - "8888"
-        ports:
-          - "8888:8888"
-        command: jupyter notebook --no-browser --port 8888 --ip 0.0.0.0 --allow-root
-
-
-## Spin up cluster
-
-    docker-compose up -d
-
-## Run to get the token 
-
-    docker-compose logs mids
-
-## Open a browser
-
-    open http://0.0.0.0:8888/?token=<your token>
-
-## Open New Python3 Notebook
-
-## 
-
-    import redis
-    import pandas as pd
-
-##
-
-    trips=pd.read_csv('trips.csv')
-
-    date_sorted_trips = trips.sort_values(by='end_date')
-
-    date_sorted_trips.head()
-
-##
-
-    for trip in date_sorted_trips.itertuples():
-      print(trip.end_date, '', trip.bike_number, '', trip.end_station_name)
+```
+cat lp_data.csv | awk -F',' '{ print $2,$1 }' | sort
+```
 
 ::: notes
-print date sorted list of where all bikes are
+```
+cat lp_data.csv | awk -F',' '{ print $2,$1 }' | sort
+```
+
+- Put in extras for add ons or activities if folks finish early
+
+- This switches the columns and sorts on LP title
+- but you find out that some LPs have ""s around the titles
 :::
 
 
-##
+## Fix the ""s issue
 
-    current_bike_locations = redis.Redis(host='redis', port='6379')
-    current_bike_locations.keys()
-    
-## Add values
+```
+cat lp_data.csv  | awk -F',' '{ print $2,$1 }' | sed 's/"//' | sort | less
+```
 
-    for trip in date_sorted_trips.itertuples():
-      current_bike_locations.set(trip.bike_number, trip.end_station_name)
+::: notes
+```
+cat lp_data.csv  | awk -F',' '{ print $2,$1 }' | sed 's/"//' | sort | less
+```
 
-##
+- the sed part here takes out the "" 
+- and then we sort based on title
+:::
 
-    current_bike_locations.keys()
-
-## Where is bike 92? 
-
-    current_bike_locations.get('92')
-
-## Drop cluster
-
-    docker-compose down
 
 
 

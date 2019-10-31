@@ -46,8 +46,3 @@ Note: The above resources are useful to develop a stronger understanding of SQL 
       3.3.3 Using Docker [tutorial]
       3.3.4 Using Containers to Run Services with Docker [tutorial] 
 
-
-#### Due Friday after Week 3 Synchronous Session: 
-- Assignment 02: Querying data with BigQuery
-
-
