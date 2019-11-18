@@ -7,8 +7,8 @@ author: Week 12 - sync session
 
 
 #
-## Assignment Review
-- Review your Assignment 11
+## Project Review
+- Review your Project 3
 - Get ready to share
 - `docker pull midsw205/base:latest`
 - `git pull` in `~/w205/course-content`
