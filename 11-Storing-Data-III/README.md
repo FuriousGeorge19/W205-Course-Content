@@ -27,8 +27,3 @@
     11.5 Activity
       11.5.1 - User Activity [lecture]
 
-#### Due Friday after Week 11 Synchronous Session: 
-- Assignment 10 - Set up pipeline, Part 1 (Understanding User Behavior Project)
-
-
-
