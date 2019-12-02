@@ -26,7 +26,3 @@
       13.3.1 - AWS
       13.3.2 - GCP
 
-#### Due Friday after Week 13 Synchronous Session: 
-- Assignment 12 - Synthesis Assignment (Understanding User Behavior Project)
-
-
