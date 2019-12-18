@@ -62,16 +62,31 @@ Students will:
 
 ## Course Tools
 
-In this class we will be using cloud instances on Google Cloud Platform (GCP).
-We will set these up in the first week of class, but if you'd like to get a
-head start, here are [video
-instructions](https://s3-us-west-2.amazonaws.com/mids-w205-fund-of-data-eng/setup-mids-utils-on-gcp.mp4)
-for how to do that.
+In this class we will be using cloud instances on Google Cloud Platform (GCP)
+for all class activities and projects. We will set these up in the first week
+of class, but if you'd like to get a head start, here are some notes.
 
-To follow those instructions, you'll need the following Google Cloud Storage
-URL for our current w205 student tools image:
+We'll have you
+[create](https://cloud.google.com/ai-platform/notebooks/docs/create-new)
+an
+[AI Platform Notebook](https://cloud.google.com/ai-platform-notebooks/)
+instance for class.
+These are general instructions as well as a general
+[video on AI Platform Notebooks](https://www.youtube.com/watch?v=Eu57QKNHaiY)
+that goes into a little more depth.
 
-    gs://mids-w205/mids-w205-tools-bionic-1553717198.tar.gz
+The only differences to note for class are:
+
+- Sign up with your UCB ISchool email address and you should get a fresh $300
+  credit for GCP.  This should more than cover the instance expense for the
+  semester
+
+- Please create your instance from the TensorFlow-2.0 image when prompted
+
+- We recommend you customize the AI Platform Notebook Instance to be smaller
+  (cheaper) than the default.  A single cpu core with 4G RAM and no GPU should
+  suffice for class.  You can always increase/add these later if you want to
+  use this for other projects/classes
 
 
 ## Evaluation & Grading
