@@ -228,56 +228,43 @@ We'll be working from cloud instances in this class
 ##
 
 1. Sign up for GCP account
-2. Create a w205 image in your account
-3. Create your instance
-4. Access your instance
+2. Create your instance
+3. Access your instance
 
 ::: notes
-walk through this in class using cloud.google.com
-:::
 
-## Create a w205 image in your account
+- walk through this in class using cloud.google.com
 
-::: notes
-- name the image something you'll remember
-- select cloud storage object as the source
-- paste in the bucket url for the current w205 image
-- takes 5-10mins to create
+- using ISchool email should get a fresh $300 credit which should more than
+  cover the instance for the semester
 :::
 
 ## Create your instance
 
 ::: notes
-- Change bootdisk to our w205 image created above
-- Change 10G bootdisk to 100G bootdisk
-- Allow default service account to access all Google Cloud APIs
-- allow `http` traffic (not `https` for now)
-:::
 
-## Access your instance
-
-SSH in and set a password
-
-```
-sudo passwd <username>
-```
-
-::: notes
-gcp creates/injects usernames when you first ssh into the instance
-
-ssh access uses keys, but we'll need a password set in order to use jupyterhub
+- AI Platform -> Notebooks -> Create
+- Customize machine type
+- Customize bookdisk to keep after deleting the instance
 :::
 
 ## Access JupyterHub
 
-- JupyterHub:
-  ```
-  http://<ip_address>/
-  ```
+AI Platform -> Notebooks -> "Open Jupyterlab"
 
-- Login: (created by google cloud)
 
-- Password: (created by you)
+## Access your instance
+
+- Compute Engine -> VM Instances -> "SSH"
+- Settings -> Change Linux Login -> "jupyter"
+
+::: notes
+
+- gcp creates/injects usernames when you first ssh into the instance
+
+- We need to use the settings in the top right of the SSH terminal and change
+  the login user to "jupyter" to see the same stuff as jupyterlab
+:::
 
 
 #
