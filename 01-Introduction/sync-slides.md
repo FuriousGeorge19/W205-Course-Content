@@ -54,13 +54,150 @@ This pipeline is your anchor, basically where are we and how does here relate to
 - Getting used to
 
 ::: notes
-For your other classes, they may use a variety of ways to get content, turn in assignments etc. 
+For your other classes, they may use a variety of ways to get content, turn in projects etc. 
 
 Here, we're trying to follow good practices for data engineering and use appropriate tools. 
 
 this will probably take some getting used to at first (unless you already use git all day every day, which is great, help your friends)
 :::
 
+#
+## How this class works
+
+
+## Syllabus
+
+```
+https://mids-w205-fund-of-data-eng.github.io/course-content/
+```
+
+::: notes
+Prereqs
+Video links
+Readings
+:::
+
+## Asyncronous Content
+
+```
+https://github.com/mids-w205-martin-mims/course-content/ \
+blob/master/01-Introduction/async-videos.md
+```
+
+- Same as in ISVC, but you can access it all in one place here.
+
+## Readings
+
+- No one textbook available for this course.
+- Using subscription service to cover the range of topics.
+- `https://www.safaribooksonline.com/pricing/`
+- Individual option: $39/month (can stop whenever you want)
+- Quick note: Get the mobile apps.
+
+## Prerequisites
+
+- Resources listed under prereqs
+- Safari has tons of other materials you can help yourself with.
+
+
+## Course Outline
+
+- 4 sections:  
+- 3-week Introduction
+- 5-week Basics section 
+- 4-week Streaming Data section
+- Putting it All Together
+
+
+::: notes
+- 3-week Introduction covers the basics of storage and retrieval concepts and tools
+- 5-week Basics section  provides a deeper exploration of working with data and data pipelines
+- 4-week section that focuses on Streaming Data; and a 
+- 1-week wrapup, Putting it All Together, integrates concepts and skills from the entire course into a cohesive model of the data pipeline.
+:::
+
+
+#
+## Student Projects
+
+## Student Projects
+
+1. Querying Data
+2. Tracking User Activity
+3. Understanding User Behavior
+
+## { data-background="images/pipeline-overall.svg" } 
+
+::: notes
+Back to the pipeline - What part are we in?
+:::
+
+## Querying Data
+
+- Use existing tools/pipeline/dataset
+- Answer basic business questions
+
+::: notes
+data-driven business decisions
+
+prompt/reinforce the connection
+
+validation/testing?  (how good are our results?)
+
+(intro to model management?)
+:::
+
+## Tracking User Activity
+
+- Use provided pipeline components
+- Transform/store data
+- Answer business questions
+- Bonus:
+    - Trigger notifications
+
+::: notes
+"Catching and Transforming Data using plumbing that's provided"
+
+Catching Data
+
+Classifying Events
+Filtering/Sorting/Grouping
+Transforming Data
+
+Storing Data
+:::
+
+## Understanding User Behavior
+
+- Assemble an end-to-end pipeline
+- Ingest/transform/store data
+- Answer comprehensive business questions
+- Bonus:
+    - Manage sessionization / state
+
+::: notes
+end-to-end pipeline for understanding behavior
+
+you assemble the plumbing
+
+baseline: queries to answer questions about the user activity
+
+bonuses as above
+:::
+
+## Levels of Expertise
+::: notes
+- If you're brand new to something, you'll get it taken care of. 
+- If you've nailed it, get creative
+:::
+
+
+
+## Async
+-   To get ready for project 1, videos - how events are generated
+
+
+#
 ## Activities
 
 - Let's get going!
@@ -91,56 +228,43 @@ We'll be working from cloud instances in this class
 ##
 
 1. Sign up for GCP account
-2. Create a w205 image in your account
-3. Create your instance
-4. Access your instance
+2. Create your instance
+3. Access your instance
 
 ::: notes
-walk through this in class using cloud.google.com
-:::
 
-## Create a w205 image in your account
+- walk through this in class using cloud.google.com
 
-::: notes
-- name the image something you'll remember
-- select cloud storage object as the source
-- paste in the bucket url for the current w205 image
-- takes 5-10mins to create
+- using ISchool email should get a fresh $300 credit which should more than
+  cover the instance for the semester
 :::
 
 ## Create your instance
 
 ::: notes
-- Change bootdisk to our w205 image created above
-- Change 10G bootdisk to 100G bootdisk
-- Allow default service account to access all Google Cloud APIs
-- allow `http` traffic (not `https` for now)
-:::
 
-## Access your instance
-
-SSH in and set a password
-
-```
-sudo passwd <username>
-```
-
-::: notes
-gcp creates/injects usernames when you first ssh into the instance
-
-ssh access uses keys, but we'll need a password set in order to use jupyterhub
+- AI Platform -> Notebooks -> Create
+- Customize machine type
+- Customize bookdisk to keep after deleting the instance
 :::
 
 ## Access JupyterHub
 
-- JupyterHub:
-  ```
-  http://<ip_address>/
-  ```
+AI Platform -> Notebooks -> "Open Jupyterlab"
 
-- Login: (created by google cloud)
 
-- Password: (created by you)
+## Access your instance
+
+- Compute Engine -> VM Instances -> "SSH"
+- Settings -> Change Linux Login -> "jupyter"
+
+::: notes
+
+- gcp creates/injects usernames when you first ssh into the instance
+
+- We need to use the settings in the top right of the SSH terminal and change
+  the login user to "jupyter" to see the same stuff as jupyterlab
+:::
 
 
 #
@@ -268,7 +392,7 @@ Or just use whatever text editor you have, these are basically directions for do
 
 
 ## Git: submit a PR
-- All assignments submitted as PRs
+- All projects submitted as PRs
   ```
   https://github.com/mids-w205-martin-mims/signup-<user-name>
   ```
@@ -284,162 +408,6 @@ Or just use whatever text editor you have, these are basically directions for do
 ::: notes
 Do this in the gui
 :::
-
-
-#
-## How this class works
-
-
-## Syllabus
-
-```
-https://mids-w205-fund-of-data-eng.github.io/course-content/
-```
-
-::: notes
-Prereqs
-Video links
-Readings
-:::
-
-## Asyncronous Content
-
-```
-https://github.com/mids-w205-martin-mims/course-content/ \
-blob/master/01-Introduction/async-videos.md
-```
-
-- Same as in ISVC, but you can access it all in one place here.
-
-## Readings
-
-- No one textbook available for this course.
-- Using subscription service to cover the range of topics.
-- `https://www.safaribooksonline.com/pricing/`
-- Individual option: $39/month (can stop whenever you want)
-- Quick note: Get the mobile apps.
-
-## Prerequisites
-
-- Resources listed under prereqs
-- Safari has tons of other materials you can help yourself with.
-
-## Course Outline
-
-- 4 sections:  
-- 3-week Introduction
-- 5-week Basics section 
-- 4-week Streaming Data section
-- Putting it All Together
-
-
-::: notes
-- 3-week Introduction covers the basics of storage and retrieval concepts and tools
-- 5-week Basics section  provides a deeper exploration of working with data and data pipelines
-- 4-week section that focuses on Streaming Data; and a 
-- 1-week wrapup, Putting it All Together, integrates concepts and skills from the entire course into a cohesive model of the data pipeline.
-:::
-
-## Class flow
-
-::: notes
-This section is a walk through of how we will iterate through assignments.
-:::
-
-
-## Between Class 1 & Class 2
-
-- async material for Week 1
-- Readings for Week 1
-
-
-
-## Between Class 2 & Class 3
-
-- async material for Week 2
-- Readings for Week 2
-
-
-
-
-#
-## Student Projects
-
-## Student Projects
-
-1. Querying Data
-2. Tracking User Activity
-3. Understanding User Behavior
-
-## { data-background="images/pipeline-overall.svg" } 
-
-::: notes
-Back to the pipeline - What part are we in?
-:::
-
-## Querying Data
-
-- Use existing tools/pipeline/dataset
-- Answer basic business questions
-
-::: notes
-data-driven business decisions
-
-prompt/reinforce the connection
-
-validation/testing?  (how good are our results?)
-
-(intro to model management?)
-:::
-
-## Tracking User Activity
-
-- Use provided pipeline components
-- Transform/store data
-- Answer business questions
-- Bonus:
-    - Trigger notifications
-
-::: notes
-"Catching and Transforming Data using plumbing that's provided"
-
-Catching Data
-
-Classifying Events
-Filtering/Sorting/Grouping
-Transforming Data
-
-Storing Data
-:::
-
-## Understanding User Behavior
-
-- Assemble an end-to-end pipeline
-- Ingest/transform/store data
-- Answer comprehensive business questions
-- Bonus:
-    - Manage sessionization / state
-
-::: notes
-end-to-end pipeline for understanding behavior
-
-you assemble the plumbing
-
-baseline: queries to answer questions about the user activity
-
-bonuses as above
-:::
-
-## Levels of Expertise
-::: notes
-- If you're brand new to something, you'll get it taken care of. 
-- If you've nailed it, get creative
-:::
-
-
-
-## Async
--   To get ready for project 1, videos - how events are generated
 
 
 #

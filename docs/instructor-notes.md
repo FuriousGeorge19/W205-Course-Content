@@ -207,24 +207,42 @@ testing our mids w205 student tools AMI. If a student has already spent their
 free tier, there are potential sources of help from the department.  Let's try
 to take that on a case-by-case basis.
 
-## MIDS w205 Student Tools Images
+## MIDS w205 Student Notebook Instances
 
-We maintain an image for the students to use for the cloud instances we expect
-them to use throughout the semester. This provides a handful of particularly
-useful tools for this class right out of the box:
+We expect students to do all of the work for the semester in cloud instances
+that come with Google Cloud AI Platform Notebooks.  The corresponding instances
+provide a handful of particularly useful tools for this class right out of the
+box:
 
+- docker
 - common python (2&3) ML tools and libraries
-- jupyterhub (listening on port `TCP/80`)
-    - with terminal access!
-    - `basic_auth` over bare `http`, so be careful
+- jupyterlab (which includes terminal access to the underlying instance)
 
-Here are [cloud instance setup
-instructions](https://s3-us-west-2.amazonaws.com/mids-w205-fund-of-data-eng/setup-mids-utils-on-gcp.mp4).
+We'll have students
+[create](https://cloud.google.com/ai-platform/notebooks/docs/create-new)
+an
+[AI Platform Notebook](https://cloud.google.com/ai-platform-notebooks/)
+instance for class.  Here's a
+[video on AI Platform Notebooks](https://www.youtube.com/watch?v=Eu57QKNHaiY)
+that goes into a little more depth.
 
-These are maintained under the packer directory in our
-[docker-images](https://github.com/mids-w205-fund-of-data-eng/docker-images/)
-repo.
+These are general install instructions. The only differences to note for class
+are:
 
+- Sign up with your UCB ISchool email address and you should get a fresh $300
+  credit for GCP.  This should more than cover the instance expense for the
+  semester
+
+- Please create your instance from the TensorFlow-2.0 image when prompted
+
+- We recommend you customize the AI Platform Notebook Instance to be smaller
+  (cheaper) than the default.  A single cpu core with 4G RAM and no GPU should
+  suffice for class.  You can always increase/add these later if you want to
+  use this for other projects/classes
+
+Students can spin them up for the whole semester or use them as needed.  We
+expect students will find these instances useful throughout the entire MIDS
+program.
 
 # Docker Images
 
