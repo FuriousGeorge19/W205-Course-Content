@@ -13,12 +13,12 @@ author: Week 02 - sync session
 - repos cloned:
     - `course-content`
 
-## How to do a PR
+## How to create a new branch, commit to that and do a PR
 
-- Process from gui 
+- Process from commandline and giu this time
 
 ::: notes
-we defer cli-support for this until next week
+we have gone through the gui last week, now let's how this works from the commandline. Note: you can't create a PR from the cli, PRs are github specific
 :::
 
 
