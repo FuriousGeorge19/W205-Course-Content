@@ -13,12 +13,12 @@ author: Week 02 - sync session
 - repos cloned:
     - `course-content`
 
-## How to do a PR
+## How to create a new branch, commit to that and do a PR
 
-- Process from gui 
+- Process from commandline and giu this time
 
 ::: notes
-we defer cli-support for this until next week
+we have gone through the gui last week, now let's how this works from the commandline. Note: you can't create a PR from the cli, PRs are github specific
 :::
 
 
@@ -78,7 +78,7 @@ business requirements get encoded as queries of data
 
 - In the Query Project, you will get practice with SQL while learning about Google Cloud Platform (GCP) and BiqQuery. You'll answer business-driven questions using public datasets housed in GCP. To give you experience with different ways to use those datasets, you will use the web UI (BiqQuery) and the command-line tools, and work with them in jupyter notebooks.
 
-- We will be using the Bay Area Bike Share Trips Data (<https://cloud.google.com/bigquery/public-data/bay-bike-share>). 
+- We will be using the Bay Area Bike Share Trips Data, follow the class walk through to find the data set. 
 
 ::: notes
 Go over what the dataset is on the webpage
@@ -86,7 +86,7 @@ Go over what the dataset is on the webpage
 
 
 ## Problem Statement
-- You're a data scientist at Ford GoBike (<https://www.fordgobike.com/>), the company running Bay Area Bikeshare. You are trying to increase ridership, and you want to offer deals through the mobile app to do so. What deals do you offer though? Currently, your company has three options: 
+- You're a data scientist at a company formerly known Ford GoBike, now Lyft bay wheels (<https://www.lyft.com/bikes/bay-wheels>). You are trying to increase ridership, and you want to offer deals through the mobile app to do so. What deals do you offer though? Currently, your company has three options: 
 
 - a flat price for a single one-way trip, 
 - a day pass that allows unlimited 30-minute rides for 24 hours, 
