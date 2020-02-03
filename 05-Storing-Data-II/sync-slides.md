@@ -144,6 +144,13 @@ cd ~/w205/course-content
 git pull --all
 ```
 
+## Install Docker Compose
+
+```
+sudo apt update
+sudo apt install docker-compose
+```
+
 ## Docker compose .yml file
 
 ```
