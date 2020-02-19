@@ -5,15 +5,6 @@ author: Week 07 - sync session
 
 ---
 
-#
-## While we're getting started
-
-
-- Mid-Course Survey
-
-Please get course-eval links from slack
-
-
 ## Project Review
 
 
