@@ -60,12 +60,6 @@ breakout
     FROM `bigquery-public-data.san_francisco.bikeshare_trips`
 
 
-
-#
-## Housekeeping
-
-- Channel etiquette
-
 ## Activities: async content
 
 ## 
@@ -93,12 +87,6 @@ make sure they go into `~/w205` on your cloud instance.
 i.e., `cd w205` first
 :::
 
-## Install jq
-
-
-- `sudo apt update`
-
-- `sudo apt install jq`
 
 ## What's in this file?
 
