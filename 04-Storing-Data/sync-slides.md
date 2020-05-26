@@ -22,7 +22,6 @@ Breakout at about 5 after the hour:
 #
 ## Overview
 - Intro Docker
-- PRs from the command line
 
 # 
 ## Project Review
@@ -41,13 +40,6 @@ Breakout at about 5 after the hour:
   * Write a query to determine if a trip happens from 7-9 am or 4-7 pm. (or how many trips do...)
 :::
 
-## Housekeeping
-
-- Class flow
-
-:::notes
-- The following few slides review the flow of when things are due and what readings/videos go with which week.
-:::
 
 ## Where are we in the Query Project?
 
@@ -136,61 +128,8 @@ then they're only "in" one place
 :::
 
 
-# 
-
-## Git Branching
-
-## Clone a repo from GitHub
-
-```
-git clone \
-  https://github.com/mids-w205-martin-mims/signup-htmartin
-```
-
-    cd signtup-htmartin
-
-## Create a branch to work from
-
-    git branch my-cool-feature
-
-## Switch to that branch
-
-    git checkout my-cool-feature
-
-## Make changes to code
-
-    vi README.md
-
-::: notes
-- M: no vi in container?
-:::
-
-## Commit those changes
-
-    git commit -m'updated README' README.md
-
-## Push those up to GitHub
-
-    git push origin my-cool-feature
-
-
-## Note  
-- If this is the first time you've pushed to the remote `my-cool-feature` branch, then this command will automatically _create_ that branch in your github repo and then push your changes to it.
-
-## Pull Request from the GitHub Web-UI
-
-- Select "New Pull-Request"
-
-- Select branches so that you are "Requesting to merge changes from `my-cool-feature` branch _into_ `master`."
-
-- Select your instructor(s) to review.
-
-- Submit
-
-
 #
 ## Summary
-- git branching
 - using docker
 
 ::: notes
