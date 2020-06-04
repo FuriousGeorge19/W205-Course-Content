@@ -302,8 +302,23 @@ Connect to the mids container
     docker-compose ps
 
 #
-## Jupyter Notebooks
+## Wrapping Up
 
+
+## Week 5 Videos
+
+- Hadoop
+- Some basics. We won't use Hadoop until later in the project
+- Virtualization
+- The notion of using docker-compose to bring up clusters of services. This is the core of Project 2.
+
+
+
+#
+
+## Extras
+
+## Jupyter Notebooks
 
 ## Change the `docker-compose.yml` file 
 
@@ -357,25 +372,8 @@ remember, you can copy/paste this from the `course-content` repo
 
     docker-compose down
 
-#
-## Wrapping Up
-
-
-## Week 5 Videos
-
-- Hadoop
-- Some basics. We won't use Hadoop until later in the project
-- Virtualization
-- The notion of using docker-compose to bring up clusters of services. This is the core of Project 2.
-
-
 
 #
-
-## Extras
-
-
-
 ## Automate notebook startup
 
 ##
