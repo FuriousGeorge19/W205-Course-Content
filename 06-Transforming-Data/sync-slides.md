@@ -7,12 +7,6 @@ author: Week 06 - sync session
 
 
 
-## While we're getting started
-
-- Review your Project 1
-- Get ready to share
-
-
 # 
 ## Pipes 
 
