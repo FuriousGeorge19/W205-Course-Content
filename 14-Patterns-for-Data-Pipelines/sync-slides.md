@@ -25,7 +25,7 @@ cp ~/w205/course-content/14-Patterns-for-Data-Pipelines/*.py .
 #
 ## Announcements
 
-- repos - fork or clone your repos by 27Apr2018
+- repos - fork or clone your repos soon!
 - future - `course-content` tagged by semester
 
 ::: notes
