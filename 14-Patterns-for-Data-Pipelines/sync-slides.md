@@ -367,8 +367,7 @@ create external table if not exists default.sword_purchases (
     Accept string,
     Host string,
     User_Agent string,
-    event_type string,
-    timestamp string
+    event_type string
     
   )
   stored as parquet 
