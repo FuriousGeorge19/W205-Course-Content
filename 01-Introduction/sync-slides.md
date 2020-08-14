@@ -91,12 +91,13 @@ blob/master/01-Introduction/async-videos.md
 - No one textbook available for this course.
 - Using subscription service to cover the range of topics.
 - `https://www.safaribooksonline.com/pricing/`
-- Individual option: $39/month (can stop whenever you want)
+- Individual option: $49/month (can stop whenever you want)
 - Quick note: Get the mobile apps.
+- Most content also available through UCB: `https://guides.lib.berkeley.edu/c.php?g=530750&p=3630483`
 
 ## Prerequisites
 
-- Resources listed under prereqs
+- Resources listed under prerequisites in the Syllabus.
 - Safari has tons of other materials you can help yourself with.
 
 
