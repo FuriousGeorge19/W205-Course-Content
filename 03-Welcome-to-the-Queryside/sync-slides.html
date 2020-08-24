@@ -84,19 +84,10 @@ FROM `bigquery-public-data.san_francisco.bikeshare_trips`</code></pre>
 SELECT count(distinct bike_number)
 FROM `bigquery-public-data.san_francisco.bikeshare_trips`</code></pre>
 </section>
-</section>
-<section id="section-2" class="slide level1">
-<h1></h1>
-<section id="housekeeping" class="level2">
-<h2>Housekeeping</h2>
-<ul>
-<li>Channel etiquette</li>
-</ul>
-</section>
 <section id="activities-async-content" class="level2">
 <h2>Activities: async content</h2>
 </section>
-<section id="section-3" class="level2">
+<section id="section-2" class="level2">
 <h2></h2>
 <ul>
 <li>This week, videos about various tools you can use to work with your data</li>
@@ -105,7 +96,7 @@ FROM `bigquery-public-data.san_francisco.bikeshare_trips`</code></pre>
 </ul>
 </section>
 </section>
-<section id="section-4" class="slide level1">
+<section id="section-3" class="slide level1">
 <h1></h1>
 <section id="finding-stuff-out-about-your-data" class="level2">
 <h2>Finding stuff out about your data</h2>
@@ -120,13 +111,6 @@ curl -L -o lp_data.csv https://goo.gl/FDFPYB</code></pre>
 <p>make sure they go into <code>~/w205</code> on your cloud instance.</p>
 <p>i.e., <code>cd w205</code> first</p>
 </aside>
-</section>
-<section id="install-jq" class="level2">
-<h2>Install jq</h2>
-<ul>
-<li><p><code>sudo apt update</code></p></li>
-<li><p><code>sudo apt install jq</code></p></li>
-</ul>
 </section>
 <section id="whats-in-this-file" class="level2">
 <h2>What’s in this file?</h2>
@@ -182,7 +166,7 @@ curl -L -o lp_data.csv https://goo.gl/FDFPYB</code></pre>
 <p><code>cat lp_data.csv | sort -n</code></p>
 </section>
 </section>
-<section id="section-5" class="slide level1">
+<section id="section-4" class="slide level1">
 <h1></h1>
 <section id="find-out-which-topics-are-more-popular" class="level2">
 <h2>Find out which topics are more popular</h2>
@@ -279,12 +263,12 @@ sort | uniq -c | sort -gr | head -10</code></pre>
 </aside>
 </section>
 </section>
-<section id="section-6" class="slide level1">
+<section id="section-5" class="slide level1">
 <h1></h1>
 <section id="bq-cli" class="level2">
 <h2>bq cli</h2>
 </section>
-<section id="section-7" class="level2">
+<section id="section-6" class="level2">
 <h2></h2>
 <pre><code>bq query --use_legacy_sql=false &#39;
 SELECT count(*)
@@ -298,7 +282,7 @@ FROM `bigquery-public-data.san_francisco.bikeshare_status`&#39;</code></pre>
 <section id="how-many-stations-are-there" class="level2">
 <h2>How many stations are there?</h2>
 </section>
-<section id="section-8" class="level2">
+<section id="section-7" class="level2">
 <h2></h2>
 <pre><code>bq query --use_legacy_sql=false &#39;
 SELECT count(distinct station_id)
@@ -311,7 +295,7 @@ FROM `bigquery-public-data.san_francisco.bikeshare_status`&#39;</code></pre>
 <section id="how-long-a-time-period-do-these-data-cover" class="level2">
 <h2>How long a time period do these data cover?</h2>
 </section>
-<section id="section-9" class="level2">
+<section id="section-8" class="level2">
 <h2></h2>
 <pre><code>bq query --use_legacy_sql=false &#39;
 SELECT min(time), max(time)
@@ -326,7 +310,7 @@ FROM `bigquery-public-data.san_francisco.bikeshare_status`&#39;</code></pre>
 </aside>
 </section>
 </section>
-<section id="section-10" class="slide level1">
+<section id="section-9" class="slide level1">
 <h1></h1>
 <section id="generate-ideas" class="level2">
 <h2>Generate Ideas</h2>
@@ -358,7 +342,7 @@ FROM `bigquery-public-data.san_francisco.bikeshare_status`&#39;</code></pre>
 </aside>
 </section>
 </section>
-<section id="section-11" class="slide level1">
+<section id="section-10" class="slide level1">
 <h1></h1>
 <section id="summary" class="level2">
 <h2>Summary</h2>
@@ -379,7 +363,7 @@ FROM `bigquery-public-data.san_francisco.bikeshare_status`&#39;</code></pre>
 </ul>
 </section>
 </section>
-<section id="section-12" class="slide level1">
+<section id="section-11" class="slide level1">
 <h1></h1>
 <section id="extras" class="level2">
 <h2>Extras</h2>
@@ -427,7 +411,7 @@ FROM `bigquery-public-data.san_francisco.bikeshare_status`&#39;</code></pre>
 </aside>
 </section>
 </section>
-<section id="section-13" class="slide level1">
+<section id="section-12" class="slide level1">
 <h1></h1>
 <p><img class="logo" src="images/berkeley-school-of-information-logo.png"/></p>
 </section>
