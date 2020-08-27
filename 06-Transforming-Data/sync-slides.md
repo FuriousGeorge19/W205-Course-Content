@@ -7,12 +7,6 @@ author: Week 06 - sync session
 
 
 
-## While we're getting started
-
-- Review your Project 1
-- Get ready to share
-
-
 # 
 ## Pipes 
 
@@ -488,17 +482,6 @@ docker-compose exec mids bash -c "kafkacat -C -b kafka:29092 -t foo -o beginning
     docker-compose down
 
 #
-## Project 2
-
-- Step through this process using the Project 2 data
-- What you turn in:
-- In your `/project-2-<user-name>` repo:
-  * your `docker-compose.yml` 
-  * once you've run the example on your terminal
-    * Run `history > <user-name>-history.txt`
-    * Save the relevant portion of your history as `<user-name>-annotations.md`
-    * Annotate the file with explanations of what you were doing at each point (See `htmartin-annotations.md`)
-
 ## Week 6 Videos
 
 - Discussion of traditional ETL (get it out of the way).

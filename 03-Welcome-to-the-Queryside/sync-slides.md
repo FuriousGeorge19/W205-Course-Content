@@ -60,7 +60,10 @@ breakout
     FROM `bigquery-public-data.san_francisco.bikeshare_trips`
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> upstream/master
 ## Activities: async content
 
 ## 

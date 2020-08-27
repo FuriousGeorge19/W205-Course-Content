@@ -362,12 +362,13 @@ docker-compose exec cloudera hive
 
 ```sql
 create external table if not exists default.sword_purchases (
+    raw_event string,
+    timestamp string,
     Accept string,
     Host string,
     User_Agent string,
-    event_type string,
-    timestamp string,
-    raw_event string
+    event_type string
+    
   )
   stored as parquet 
   location '/tmp/sword_purchases'
