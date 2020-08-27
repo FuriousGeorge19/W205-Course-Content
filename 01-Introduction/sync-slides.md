@@ -269,55 +269,6 @@ AI Platform -> Notebooks -> "Open Jupyterlab"
 
 
 #
-## Docker
-
-::: notes
-What is docker? Very brief version
-:::
-
-##
-
-![](images/dontpanic.jpeg)
-
-::: notes
-These commands will look gnarly.
-
-Don't worry about it, we will review....blah, blah,
-
-For now, just follow along
-:::
-
-##
-
-- pull the image:
-  ```
-  docker pull midsw205/base
-  ```
-- create your mids-w205 workspace:
-  ```
-  mkdir w205
-  ```
-- run (set _your_ home directory for "`-v`")
-  ```
-  docker run \
-    -it \
-    --rm \
-    -v ~/w205:/w205 \
-    midsw205/base:latest \
-    bash
-  ```
-- `exit` (or `ctrl-d`)
-
-::: notes
-Like we said, we'll get into what all those options mean etc, just keep track for now
-
-```
-docker run -it --rm -v ~/w205:/w205 midsw205/base:latest bash
-```
-:::
-
-
-#
 ## Git
 
 ::: notes
