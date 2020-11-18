@@ -597,6 +597,258 @@ newdf.describe()
 ::: notes
 :::
 
+#
+## Queries from Presto
+
+## Hive metastore
+
+- Track schema
+- Create a table
+
+::: notes
+- The Hive metastore is a really common tool used to keep track of schema for
+tables used throughout the Hadoop and Spark ecosystem (schema registry).
+
+- To "expose" the schema for our "purchases"... we need to create a table in the
+hive metastore.
+
+- In hadoop ecosystem, 
+- hive is a full on query engine, we don't use it any longer b/c it's slow, but we use the schema registry
+- The hive metastore is friendly with multiple partitions being stored on the fs, everything that talks to hadoop can talk to the hive metastore. 
+- We write it with spark and we want to read it with presto, to get them to agree we track the schema with hive metastore
+- Hive server you usually interface with the thrift server (a seriazation critter) but it's actually set up as a relational db, mysql or postgresql, tracking these table names have these fields etc
+- We have a hive metastore spun up in our cloudera container(that's why we needed a new cloudera container)
+
+- There are two ways
+  * Run hive explicitly and create an external table
+  * Run spark, create a 
+
+:::
+
+## Hard Way
+
+
+```
+docker-compose exec cloudera hive
+```
+
+
+::: notes
+- Run hive in the hadoop container using the hive command line
+- This is what you would do, don't need to actually do it, skip to easier way
+- This is deprecated at this point
+:::
+
+## 
+
+```sql
+create external table if not exists default.purchases2 (
+    Accept string,
+    Host string,
+    User_Agent string,
+    event_type string,
+    timestamp string
+  )
+  stored as parquet 
+  location '/tmp/purchases'
+  tblproperties ("parquet.compress"="SNAPPY");
+```
+
+::: notes
+```
+create external table if not exists default.purchases2 (Accept string, Host string, User_Agent string, event_type string, timestamp string) stored as parquet location '/tmp/purchases'  tblproperties ("parquet.compress"="SNAPPY");
+```
+
+
+:::
+
+## Or... we can do this an easier way
+
+
+```
+docker-compose exec spark pyspark
+```
+
+
+::: notes
+- run spark
+- what we want to do is run another spark job to start up pyspark, could do spark nb etc
+:::
+
+
+##
+
+```python
+df = spark.read.parquet('/tmp/purchases')
+df.registerTempTable('purchases')
+query = """
+create external table purchase_events
+  stored as parquet
+  location '/tmp/purchase_events'
+  as
+  select * from purchases
+"""
+spark.sql(query)
+```
+
+::: notes
+```
+spark.sql("create external table purchase_events stored as parquet location '/tmp/purchase_events' as select * from purchases")
+```
+- read parquet from what we wrote into hdfs
+- register temp table
+- create external table purchase event
+- store as parquet
+- similar to what we saw in hard example
+- we're still going to cheat and implicitly infer schema - but just getting it by select * from another df
+:::
+
+## Can just include all that in job
+
+```python
+#!/usr/bin/env python
+"""Extract events from kafka and write them to hdfs
+"""
+import json
+from pyspark.sql import SparkSession, Row
+from pyspark.sql.functions import udf
+
+
+@udf('boolean')
+def is_purchase(event_as_json):
+    event = json.loads(event_as_json)
+    if event['event_type'] == 'purchase_sword':
+        return True
+    return False
+
+
+def main():
+    """main
+    """
+    spark = SparkSession \
+        .builder \
+        .appName("ExtractEventsJob") \
+        .enableHiveSupport() \
+        .getOrCreate()
+
+    raw_events = spark \
+        .read \
+        .format("kafka") \
+        .option("kafka.bootstrap.servers", "kafka:29092") \
+        .option("subscribe", "events") \
+        .option("startingOffsets", "earliest") \
+        .option("endingOffsets", "latest") \
+        .load()
+
+    purchase_events = raw_events \
+        .select(raw_events.value.cast('string').alias('raw'),
+                raw_events.timestamp.cast('string')) \
+        .filter(is_purchase('raw'))
+
+    extracted_purchase_events = purchase_events \
+        .rdd \
+        .map(lambda r: Row(timestamp=r.timestamp, **json.loads(r.raw))) \
+        .toDF()
+    extracted_purchase_events.printSchema()
+    extracted_purchase_events.show()
+
+    extracted_purchase_events.registerTempTable("extracted_purchase_events")
+
+    spark.sql("""
+        create external table purchases
+        stored as parquet
+        location '/tmp/purchases'
+        as
+        select * from extracted_purchase_events
+    """)
+
+
+if __name__ == "__main__":
+    main()
+```
+
+::: notes
+- Modified filtered_writes.py to register a temp table and then run it from w/in spark itself
+
+:::
+
+## Run this
+
+```
+docker-compose exec spark spark-submit /w205/full-stack2/write_hive_table.py
+```
+
+## See it wrote to hdfs
+
+```
+docker-compose exec cloudera hadoop fs -ls /tmp/
+```
+::: notes
+- This is the first spark job to run - it does it all, read, flatten, write, ?query
+:::
+## and now ...
+
+- Query this with presto
+
+```
+docker-compose exec presto presto --server presto:8080 --catalog hive --schema default
+```
+
+::: notes
+- Presto just a query engine
+- it's talking to the hive thrift server to get the table we just added
+- connected to hdfs to get the data
+- Querying with presto instead of spark bc presto scales well, handles a wider range of sql syntax, can start treating like a database, can configure it to talk to cassandra, s3 directly, kafka directly, mysql, good front end for your company's data lake
+- We're overloading the word presto here
+
+:::
+
+## What tables do we have in Presto?
+
+```
+presto:default> show tables;
+   Table   
+-----------
+ purchases 
+(1 row)
+
+Query 20180404_224746_00009_zsma3, FINISHED, 1 node
+Splits: 2 total, 1 done (50.00%)
+0:00 [1 rows, 34B] [10 rows/s, 342B/s]
+```
+
+## Describe `purchases` table
+
+```
+presto:default> describe purchases;
+   Column   |  Type   | Comment 
+------------+---------+---------
+ accept     | varchar |         
+ host       | varchar |         
+ user-agent | varchar |         
+ event_type | varchar |         
+ timestamp  | varchar |         
+(5 rows)
+
+Query 20180404_224828_00010_zsma3, FINISHED, 1 node
+Splits: 2 total, 1 done (50.00%)
+0:00 [5 rows, 344B] [34 rows/s, 2.31KB/s]
+```
+
+## Query `purchases` table
+
+```
+presto:default> select * from purchases;
+ accept |       host        |   user-agent    |   event_type   |        timestamp        
+--------+-------------------+-----------------+----------------+-------------------------
+ */*    | user1.comcast.com | ApacheBench/2.3 | purchase_sword | 2018-04-04 22:36:13.124 
+ */*    | user1.comcast.com | ApacheBench/2.3 | purchase_sword | 2018-04-04 22:36:13.128 
+ */*    | user1.comcast.com | ApacheBench/2.3 | purchase_sword | 2018-04-04 22:36:13.131 
+ */*    | user1.comcast.com | ApacheBench/2.3 | purchase_sword | 2018-04-04 22:36:13.135 
+ */*    | user1.comcast.com | ApacheBench/2.3 | purchase_sword | 2018-04-04 22:36:13.138
+ ...
+ ```
+
 
 # 
 ## down
