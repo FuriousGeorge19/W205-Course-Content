@@ -55,8 +55,9 @@ Let's walk through this
 ```
 mkdir ~/w205/full-stack/
 cd ~/w205/full-stack
-cp ~/w205/course-content/12-Querying-Data-II/docker-compose.yml .
-cp ~/w205/course-content/12-Querying-Data-II/*.py .
+cp ~/w205/course-content/12a/docker-compose.yml .
+cp ~/w205/course-content/12a/*.py .
+cp ~/w205/course-content/12a/*.sh .
 ```
 
 ::: notes
