@@ -775,7 +775,7 @@ if __name__ == "__main__":
 ## Run this
 
 ```
-docker-compose exec spark spark-submit /w205/full-stack2/write_hive_table.py
+docker-compose exec spark spark-submit /w205/full-stack/write_hive_table.py
 ```
 
 ## See it wrote to hdfs
